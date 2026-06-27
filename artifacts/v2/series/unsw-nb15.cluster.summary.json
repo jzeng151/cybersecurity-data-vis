@@ -1,0 +1,55 @@
+{
+  "k": 8,
+  "silhouette": 0.5317206076868299,
+  "adjusted_rand": 0.34749298397226586,
+  "clusters": [
+    {
+      "cluster": 0,
+      "n": 24474,
+      "dominant": "Normal",
+      "purity": 0.959
+    },
+    {
+      "cluster": 1,
+      "n": 40307,
+      "dominant": "Exploits",
+      "purity": 0.313
+    },
+    {
+      "cluster": 2,
+      "n": 17695,
+      "dominant": "Exploits",
+      "purity": 0.45
+    },
+    {
+      "cluster": 3,
+      "n": 2762,
+      "dominant": "Normal",
+      "purity": 1.0
+    },
+    {
+      "cluster": 4,
+      "n": 34541,
+      "dominant": "Fuzzers",
+      "purity": 0.308
+    },
+    {
+      "cluster": 5,
+      "n": 40805,
+      "dominant": "Generic",
+      "purity": 0.933
+    },
+    {
+      "cluster": 6,
+      "n": 2567,
+      "dominant": "Exploits",
+      "purity": 0.573
+    },
+    {
+      "cluster": 7,
+      "n": 12190,
+      "dominant": "Normal",
+      "purity": 0.915
+    }
+  ]
+}

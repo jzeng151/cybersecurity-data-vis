@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Fake emails sent each month in 2020 \u2014 flat and bumpy, no pattern (a 'nothing here' result)",
+  "width": "container",
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "month": "2020-01-01",
+        "count": 18,
+        "mean": 13.1
+      },
+      {
+        "month": "2020-02-01",
+        "count": 17,
+        "mean": 13.1
+      },
+      {
+        "month": "2020-03-01",
+        "count": 14,
+        "mean": 13.1
+      },
+      {
+        "month": "2020-04-01",
+        "count": 10,
+        "mean": 13.1
+      },
+      {
+        "month": "2020-05-01",
+        "count": 7,
+        "mean": 13.1
+      },
+      {
+        "month": "2020-06-01",
+        "count": 22,
+        "mean": 13.1
+      },
+      {
+        "month": "2020-07-01",
+        "count": 15,
+        "mean": 13.1
+      },
+      {
+        "month": "2020-08-01",
+        "count": 18,
+        "mean": 13.1
+      },
+      {
+        "month": "2020-09-01",
+        "count": 11,
+        "mean": 13.1
+      },
+      {
+        "month": "2020-10-01",
+        "count": 4,
+        "mean": 13.1
+      },
+      {
+        "month": "2020-11-01",
+        "count": 14,
+        "mean": 13.1
+      },
+      {
+        "month": "2020-12-01",
+        "count": 7,
+        "mean": 13.1
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#8a94a6",
+        "strokeDash": [
+          4,
+          4
+        ]
+      },
+      "encoding": {
+        "y": {
+          "field": "mean",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#3b82f6",
+        "point": {
+          "color": "#3b82f6"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "temporal",
+          "timeUnit": "yearmonth",
+          "title": "month (2020)"
+        },
+        "y": {
+          "field": "count",
+          "type": "quantitative",
+          "title": "messages sent"
+        },
+        "tooltip": [
+          {
+            "field": "month",
+            "type": "temporal",
+            "timeUnit": "yearmonth"
+          },
+          {
+            "field": "count",
+            "type": "quantitative"
+          }
+        ]
+      }
+    }
+  ]
+}

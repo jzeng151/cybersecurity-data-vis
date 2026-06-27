@@ -1,0 +1,616 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 0,
+        "expected_exploited": 7.567,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 1,
+        "expected_exploited": 6.594,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 2,
+        "expected_exploited": 5.675,
+        "breach_prob": 0.9999
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 3,
+        "expected_exploited": 4.775,
+        "breach_prob": 0.9993
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 4,
+        "expected_exploited": 3.992,
+        "breach_prob": 0.9966
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 5,
+        "expected_exploited": 3.283,
+        "breach_prob": 0.9885
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 6,
+        "expected_exploited": 2.751,
+        "breach_prob": 0.9754
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 7,
+        "expected_exploited": 2.064,
+        "breach_prob": 0.9213
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 8,
+        "expected_exploited": 1.5,
+        "breach_prob": 0.8196
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 9,
+        "expected_exploited": 1.032,
+        "breach_prob": 0.6606
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 10,
+        "expected_exploited": 0.862,
+        "breach_prob": 0.5911
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 11,
+        "expected_exploited": 0.7,
+        "breach_prob": 0.5121
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 12,
+        "expected_exploited": 0.563,
+        "breach_prob": 0.4346
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 13,
+        "expected_exploited": 0.504,
+        "breach_prob": 0.3991
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 14,
+        "expected_exploited": 0.461,
+        "breach_prob": 0.3719
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 15,
+        "expected_exploited": 0.424,
+        "breach_prob": 0.3481
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 16,
+        "expected_exploited": 0.391,
+        "breach_prob": 0.3254
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 17,
+        "expected_exploited": 0.363,
+        "breach_prob": 0.306
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 18,
+        "expected_exploited": 0.336,
+        "breach_prob": 0.287
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 19,
+        "expected_exploited": 0.31,
+        "breach_prob": 0.2681
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 20,
+        "expected_exploited": 0.289,
+        "breach_prob": 0.2524
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 21,
+        "expected_exploited": 0.269,
+        "breach_prob": 0.2367
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 22,
+        "expected_exploited": 0.249,
+        "breach_prob": 0.2217
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 23,
+        "expected_exploited": 0.232,
+        "breach_prob": 0.2076
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 24,
+        "expected_exploited": 0.214,
+        "breach_prob": 0.1937
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 25,
+        "expected_exploited": 0.199,
+        "breach_prob": 0.181
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 26,
+        "expected_exploited": 0.184,
+        "breach_prob": 0.1683
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 27,
+        "expected_exploited": 0.168,
+        "breach_prob": 0.1554
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 28,
+        "expected_exploited": 0.156,
+        "breach_prob": 0.1445
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 29,
+        "expected_exploited": 0.144,
+        "breach_prob": 0.1343
+      },
+      {
+        "strategy": "KEV / EPSS first",
+        "patched": 30,
+        "expected_exploited": 0.134,
+        "breach_prob": 0.1253
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 0,
+        "expected_exploited": 7.567,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 1,
+        "expected_exploited": 6.594,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 2,
+        "expected_exploited": 5.675,
+        "breach_prob": 0.9999
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 3,
+        "expected_exploited": 4.775,
+        "breach_prob": 0.9993
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 4,
+        "expected_exploited": 3.992,
+        "breach_prob": 0.9966
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 5,
+        "expected_exploited": 3.283,
+        "breach_prob": 0.9885
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 6,
+        "expected_exploited": 2.596,
+        "breach_prob": 0.9631
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 7,
+        "expected_exploited": 2.032,
+        "breach_prob": 0.9155
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 8,
+        "expected_exploited": 1.5,
+        "breach_prob": 0.8196
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 9,
+        "expected_exploited": 1.032,
+        "breach_prob": 0.6606
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 10,
+        "expected_exploited": 0.862,
+        "breach_prob": 0.5911
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 11,
+        "expected_exploited": 0.7,
+        "breach_prob": 0.5121
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 12,
+        "expected_exploited": 0.563,
+        "breach_prob": 0.4346
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 13,
+        "expected_exploited": 0.504,
+        "breach_prob": 0.3991
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 14,
+        "expected_exploited": 0.461,
+        "breach_prob": 0.3719
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 15,
+        "expected_exploited": 0.424,
+        "breach_prob": 0.3481
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 16,
+        "expected_exploited": 0.391,
+        "breach_prob": 0.3254
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 17,
+        "expected_exploited": 0.363,
+        "breach_prob": 0.306
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 18,
+        "expected_exploited": 0.336,
+        "breach_prob": 0.287
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 19,
+        "expected_exploited": 0.31,
+        "breach_prob": 0.2681
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 20,
+        "expected_exploited": 0.289,
+        "breach_prob": 0.2524
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 21,
+        "expected_exploited": 0.269,
+        "breach_prob": 0.2367
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 22,
+        "expected_exploited": 0.249,
+        "breach_prob": 0.2217
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 23,
+        "expected_exploited": 0.232,
+        "breach_prob": 0.2076
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 24,
+        "expected_exploited": 0.214,
+        "breach_prob": 0.1937
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 25,
+        "expected_exploited": 0.199,
+        "breach_prob": 0.181
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 26,
+        "expected_exploited": 0.184,
+        "breach_prob": 0.1683
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 27,
+        "expected_exploited": 0.168,
+        "breach_prob": 0.1554
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 28,
+        "expected_exploited": 0.156,
+        "breach_prob": 0.1445
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 29,
+        "expected_exploited": 0.144,
+        "breach_prob": 0.1343
+      },
+      {
+        "strategy": "EPSS first",
+        "patched": 30,
+        "expected_exploited": 0.134,
+        "breach_prob": 0.1253
+      },
+      {
+        "strategy": "random",
+        "patched": 0,
+        "expected_exploited": 7.567,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 1,
+        "expected_exploited": 7.554,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 2,
+        "expected_exploited": 7.526,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 3,
+        "expected_exploited": 6.743,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 4,
+        "expected_exploited": 6.736,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 5,
+        "expected_exploited": 5.764,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 6,
+        "expected_exploited": 5.76,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 7,
+        "expected_exploited": 5.754,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 8,
+        "expected_exploited": 5.749,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 9,
+        "expected_exploited": 5.748,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 10,
+        "expected_exploited": 5.611,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 11,
+        "expected_exploited": 5.607,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 12,
+        "expected_exploited": 5.605,
+        "breach_prob": 1.0
+      },
+      {
+        "strategy": "random",
+        "patched": 13,
+        "expected_exploited": 5.041,
+        "breach_prob": 0.9999
+      },
+      {
+        "strategy": "random",
+        "patched": 14,
+        "expected_exploited": 5.041,
+        "breach_prob": 0.9999
+      },
+      {
+        "strategy": "random",
+        "patched": 15,
+        "expected_exploited": 5.025,
+        "breach_prob": 0.9999
+      },
+      {
+        "strategy": "random",
+        "patched": 16,
+        "expected_exploited": 5.021,
+        "breach_prob": 0.9999
+      },
+      {
+        "strategy": "random",
+        "patched": 17,
+        "expected_exploited": 4.312,
+        "breach_prob": 0.9997
+      },
+      {
+        "strategy": "random",
+        "patched": 18,
+        "expected_exploited": 4.311,
+        "breach_prob": 0.9997
+      },
+      {
+        "strategy": "random",
+        "patched": 19,
+        "expected_exploited": 4.309,
+        "breach_prob": 0.9997
+      },
+      {
+        "strategy": "random",
+        "patched": 20,
+        "expected_exploited": 3.777,
+        "breach_prob": 0.9994
+      },
+      {
+        "strategy": "random",
+        "patched": 21,
+        "expected_exploited": 3.775,
+        "breach_prob": 0.9994
+      },
+      {
+        "strategy": "random",
+        "patched": 22,
+        "expected_exploited": 3.754,
+        "breach_prob": 0.9994
+      },
+      {
+        "strategy": "random",
+        "patched": 23,
+        "expected_exploited": 3.747,
+        "breach_prob": 0.9994
+      },
+      {
+        "strategy": "random",
+        "patched": 24,
+        "expected_exploited": 3.744,
+        "breach_prob": 0.9994
+      },
+      {
+        "strategy": "random",
+        "patched": 25,
+        "expected_exploited": 3.742,
+        "breach_prob": 0.9994
+      },
+      {
+        "strategy": "random",
+        "patched": 26,
+        "expected_exploited": 3.734,
+        "breach_prob": 0.9994
+      },
+      {
+        "strategy": "random",
+        "patched": 27,
+        "expected_exploited": 3.564,
+        "breach_prob": 0.9993
+      },
+      {
+        "strategy": "random",
+        "patched": 28,
+        "expected_exploited": 3.546,
+        "breach_prob": 0.9993
+      },
+      {
+        "strategy": "random",
+        "patched": 29,
+        "expected_exploited": 3.531,
+        "breach_prob": 0.9992
+      },
+      {
+        "strategy": "random",
+        "patched": 30,
+        "expected_exploited": 3.523,
+        "breach_prob": 0.9992
+      }
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": true,
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "patched",
+      "type": "quantitative",
+      "title": "CVEs patched"
+    },
+    "y": {
+      "field": "expected_exploited",
+      "type": "quantitative",
+      "title": "expected exploited CVEs (30d)"
+    },
+    "color": {
+      "field": "strategy",
+      "type": "nominal",
+      "title": "patch order",
+      "scale": {
+        "domain": [
+          "KEV / EPSS first",
+          "EPSS first",
+          "random"
+        ],
+        "range": [
+          "#d2483f",
+          "#e0a341",
+          "#8a94a6"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "strategy"
+      },
+      {
+        "field": "patched"
+      },
+      {
+        "field": "expected_exploited"
+      },
+      {
+        "field": "breach_prob",
+        "format": ".1%"
+      }
+    ]
+  }
+}

@@ -1,0 +1,557 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The 39 number columns mostly repeat each other",
+    "subtitle": "5 squeezed columns hold 80% of the pattern, 8 hold 90%, 10 hold 94% \u2014 about 29 of 39 number columns barely add anything"
+  },
+  "width": "container",
+  "height": 360,
+  "encoding": {
+    "x": {
+      "field": "pc",
+      "type": "quantitative",
+      "title": "principal component index",
+      "scale": {
+        "domain": [
+          0,
+          40
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "pc": 1,
+            "series": "individual",
+            "value": 0.5007
+          },
+          {
+            "pc": 2,
+            "series": "individual",
+            "value": 0.0964
+          },
+          {
+            "pc": 3,
+            "series": "individual",
+            "value": 0.0889
+          },
+          {
+            "pc": 4,
+            "series": "individual",
+            "value": 0.0614
+          },
+          {
+            "pc": 5,
+            "series": "individual",
+            "value": 0.0569
+          },
+          {
+            "pc": 6,
+            "series": "individual",
+            "value": 0.0471
+          },
+          {
+            "pc": 7,
+            "series": "individual",
+            "value": 0.0369
+          },
+          {
+            "pc": 8,
+            "series": "individual",
+            "value": 0.0228
+          },
+          {
+            "pc": 9,
+            "series": "individual",
+            "value": 0.0173
+          },
+          {
+            "pc": 10,
+            "series": "individual",
+            "value": 0.0142
+          },
+          {
+            "pc": 11,
+            "series": "individual",
+            "value": 0.0095
+          },
+          {
+            "pc": 12,
+            "series": "individual",
+            "value": 0.0086
+          },
+          {
+            "pc": 13,
+            "series": "individual",
+            "value": 0.006
+          },
+          {
+            "pc": 14,
+            "series": "individual",
+            "value": 0.0049
+          },
+          {
+            "pc": 15,
+            "series": "individual",
+            "value": 0.0043
+          },
+          {
+            "pc": 16,
+            "series": "individual",
+            "value": 0.0034
+          },
+          {
+            "pc": 17,
+            "series": "individual",
+            "value": 0.003
+          },
+          {
+            "pc": 18,
+            "series": "individual",
+            "value": 0.0024
+          },
+          {
+            "pc": 19,
+            "series": "individual",
+            "value": 0.0023
+          },
+          {
+            "pc": 20,
+            "series": "individual",
+            "value": 0.0021
+          },
+          {
+            "pc": 21,
+            "series": "individual",
+            "value": 0.0019
+          },
+          {
+            "pc": 22,
+            "series": "individual",
+            "value": 0.0018
+          },
+          {
+            "pc": 23,
+            "series": "individual",
+            "value": 0.0013
+          },
+          {
+            "pc": 24,
+            "series": "individual",
+            "value": 0.0013
+          },
+          {
+            "pc": 25,
+            "series": "individual",
+            "value": 0.0012
+          },
+          {
+            "pc": 26,
+            "series": "individual",
+            "value": 0.001
+          },
+          {
+            "pc": 27,
+            "series": "individual",
+            "value": 0.0009
+          },
+          {
+            "pc": 28,
+            "series": "individual",
+            "value": 0.0005
+          },
+          {
+            "pc": 29,
+            "series": "individual",
+            "value": 0.0003
+          },
+          {
+            "pc": 30,
+            "series": "individual",
+            "value": 0.0003
+          },
+          {
+            "pc": 31,
+            "series": "individual",
+            "value": 0.0002
+          },
+          {
+            "pc": 32,
+            "series": "individual",
+            "value": 0.0001
+          },
+          {
+            "pc": 33,
+            "series": "individual",
+            "value": 0.0001
+          },
+          {
+            "pc": 34,
+            "series": "individual",
+            "value": 0.0
+          },
+          {
+            "pc": 35,
+            "series": "individual",
+            "value": 0.0
+          },
+          {
+            "pc": 36,
+            "series": "individual",
+            "value": 0.0
+          },
+          {
+            "pc": 37,
+            "series": "individual",
+            "value": 0.0
+          },
+          {
+            "pc": 38,
+            "series": "individual",
+            "value": 0.0
+          },
+          {
+            "pc": 39,
+            "series": "individual",
+            "value": 0.0
+          }
+        ]
+      },
+      "mark": {
+        "type": "bar",
+        "color": "#8a94a6",
+        "opacity": 0.6,
+        "width": 4
+      },
+      "encoding": {
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "title": "explained variance ratio",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          }
+        },
+        "color": {
+          "field": "series",
+          "type": "nominal",
+          "title": "variance",
+          "scale": {
+            "domain": [
+              "individual",
+              "cumulative"
+            ],
+            "range": [
+              "#8a94a6",
+              "#3b82f6"
+            ]
+          },
+          "legend": {
+            "orient": "bottom-right"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "pc": 1,
+            "series": "cumulative",
+            "value": 0.5007
+          },
+          {
+            "pc": 2,
+            "series": "cumulative",
+            "value": 0.5971
+          },
+          {
+            "pc": 3,
+            "series": "cumulative",
+            "value": 0.686
+          },
+          {
+            "pc": 4,
+            "series": "cumulative",
+            "value": 0.7474
+          },
+          {
+            "pc": 5,
+            "series": "cumulative",
+            "value": 0.8044
+          },
+          {
+            "pc": 6,
+            "series": "cumulative",
+            "value": 0.8514
+          },
+          {
+            "pc": 7,
+            "series": "cumulative",
+            "value": 0.8884
+          },
+          {
+            "pc": 8,
+            "series": "cumulative",
+            "value": 0.9112
+          },
+          {
+            "pc": 9,
+            "series": "cumulative",
+            "value": 0.9285
+          },
+          {
+            "pc": 10,
+            "series": "cumulative",
+            "value": 0.9427
+          },
+          {
+            "pc": 11,
+            "series": "cumulative",
+            "value": 0.9522
+          },
+          {
+            "pc": 12,
+            "series": "cumulative",
+            "value": 0.9608
+          },
+          {
+            "pc": 13,
+            "series": "cumulative",
+            "value": 0.9668
+          },
+          {
+            "pc": 14,
+            "series": "cumulative",
+            "value": 0.9716
+          },
+          {
+            "pc": 15,
+            "series": "cumulative",
+            "value": 0.9759
+          },
+          {
+            "pc": 16,
+            "series": "cumulative",
+            "value": 0.9793
+          },
+          {
+            "pc": 17,
+            "series": "cumulative",
+            "value": 0.9823
+          },
+          {
+            "pc": 18,
+            "series": "cumulative",
+            "value": 0.9848
+          },
+          {
+            "pc": 19,
+            "series": "cumulative",
+            "value": 0.9871
+          },
+          {
+            "pc": 20,
+            "series": "cumulative",
+            "value": 0.9892
+          },
+          {
+            "pc": 21,
+            "series": "cumulative",
+            "value": 0.991
+          },
+          {
+            "pc": 22,
+            "series": "cumulative",
+            "value": 0.9928
+          },
+          {
+            "pc": 23,
+            "series": "cumulative",
+            "value": 0.9942
+          },
+          {
+            "pc": 24,
+            "series": "cumulative",
+            "value": 0.9954
+          },
+          {
+            "pc": 25,
+            "series": "cumulative",
+            "value": 0.9966
+          },
+          {
+            "pc": 26,
+            "series": "cumulative",
+            "value": 0.9976
+          },
+          {
+            "pc": 27,
+            "series": "cumulative",
+            "value": 0.9985
+          },
+          {
+            "pc": 28,
+            "series": "cumulative",
+            "value": 0.9989
+          },
+          {
+            "pc": 29,
+            "series": "cumulative",
+            "value": 0.9993
+          },
+          {
+            "pc": 30,
+            "series": "cumulative",
+            "value": 0.9995
+          },
+          {
+            "pc": 31,
+            "series": "cumulative",
+            "value": 0.9997
+          },
+          {
+            "pc": 32,
+            "series": "cumulative",
+            "value": 0.9998
+          },
+          {
+            "pc": 33,
+            "series": "cumulative",
+            "value": 0.9999
+          },
+          {
+            "pc": 34,
+            "series": "cumulative",
+            "value": 1.0
+          },
+          {
+            "pc": 35,
+            "series": "cumulative",
+            "value": 1.0
+          },
+          {
+            "pc": 36,
+            "series": "cumulative",
+            "value": 1.0
+          },
+          {
+            "pc": 37,
+            "series": "cumulative",
+            "value": 1.0
+          },
+          {
+            "pc": 38,
+            "series": "cumulative",
+            "value": 1.0
+          },
+          {
+            "pc": 39,
+            "series": "cumulative",
+            "value": 1.0
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "point": true,
+        "color": "#3b82f6"
+      },
+      "encoding": {
+        "y": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "series",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "individual",
+              "cumulative"
+            ],
+            "range": [
+              "#8a94a6",
+              "#3b82f6"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "y": 0.8,
+            "label": "80% \u2192 5 PCs"
+          },
+          {
+            "y": 0.9,
+            "label": "90% \u2192 8 PCs"
+          },
+          {
+            "y": 0.94,
+            "label": "94% \u2192 10 PCs"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#e0a341",
+        "strokeDash": [
+          4,
+          4
+        ]
+      },
+      "encoding": {
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "y": 0.8,
+            "label": "80% \u2192 5 PCs"
+          },
+          {
+            "y": 0.9,
+            "label": "90% \u2192 8 PCs"
+          },
+          {
+            "y": 0.94,
+            "label": "94% \u2192 10 PCs"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 6,
+        "x": 8,
+        "color": "#e0a341",
+        "fontSize": 10
+      },
+      "encoding": {
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    }
+  ]
+}

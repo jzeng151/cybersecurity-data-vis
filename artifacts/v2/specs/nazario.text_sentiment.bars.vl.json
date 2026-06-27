@@ -1,0 +1,143 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Words fake emails use: scary/rushing word-starts and copied brand names (from the subject and sender)",
+  "width": "container",
+  "height": 360,
+  "data": {
+    "values": [
+      {
+        "term": "pending",
+        "count": 10,
+        "kind": "urgency"
+      },
+      {
+        "term": "notification",
+        "count": 10,
+        "kind": "urgency"
+      },
+      {
+        "term": "alert",
+        "count": 8,
+        "kind": "urgency"
+      },
+      {
+        "term": "secur",
+        "count": 8,
+        "kind": "urgency"
+      },
+      {
+        "term": "verif",
+        "count": 7,
+        "kind": "urgency"
+      },
+      {
+        "term": "locked",
+        "count": 7,
+        "kind": "urgency"
+      },
+      {
+        "term": "undeliver",
+        "count": 6,
+        "kind": "urgency"
+      },
+      {
+        "term": "confirm",
+        "count": 5,
+        "kind": "urgency"
+      },
+      {
+        "term": "blocked",
+        "count": 5,
+        "kind": "urgency"
+      },
+      {
+        "term": "required",
+        "count": 3,
+        "kind": "urgency"
+      },
+      {
+        "term": "bank",
+        "count": 10,
+        "kind": "brand"
+      },
+      {
+        "term": "wells",
+        "count": 7,
+        "kind": "brand"
+      },
+      {
+        "term": "fargo",
+        "count": 6,
+        "kind": "brand"
+      },
+      {
+        "term": "paypal",
+        "count": 4,
+        "kind": "brand"
+      },
+      {
+        "term": "netflix",
+        "count": 4,
+        "kind": "brand"
+      },
+      {
+        "term": "microsoft",
+        "count": 3,
+        "kind": "brand"
+      },
+      {
+        "term": "dhl",
+        "count": 3,
+        "kind": "brand"
+      },
+      {
+        "term": "amazon",
+        "count": 3,
+        "kind": "brand"
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "y": {
+      "field": "term",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "lexicon stem / brand"
+    },
+    "x": {
+      "field": "count",
+      "type": "quantitative",
+      "title": "messages containing term"
+    },
+    "color": {
+      "field": "kind",
+      "type": "nominal",
+      "title": "term type",
+      "scale": {
+        "domain": [
+          "urgency",
+          "brand"
+        ],
+        "range": [
+          "#e0a341",
+          "#3b82f6"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "term"
+      },
+      {
+        "field": "kind"
+      },
+      {
+        "field": "count",
+        "type": "quantitative"
+      }
+    ]
+  }
+}

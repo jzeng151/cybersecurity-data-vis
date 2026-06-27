@@ -1,0 +1,68 @@
+{
+  "PC1": [
+    {
+      "feature": "dwin",
+      "loading": 0.21
+    },
+    {
+      "feature": "dtcpb",
+      "loading": 0.21
+    },
+    {
+      "feature": "stcpb",
+      "loading": 0.21
+    },
+    {
+      "feature": "swin",
+      "loading": 0.209
+    },
+    {
+      "feature": "dttl",
+      "loading": 0.208
+    }
+  ],
+  "PC2": [
+    {
+      "feature": "ct_state_ttl",
+      "loading": 0.293
+    },
+    {
+      "feature": "dloss",
+      "loading": -0.273
+    },
+    {
+      "feature": "tcprtt",
+      "loading": 0.235
+    },
+    {
+      "feature": "dload",
+      "loading": -0.232
+    },
+    {
+      "feature": "sinpkt",
+      "loading": 0.23
+    }
+  ],
+  "PC3": [
+    {
+      "feature": "ct_src_dport_ltm",
+      "loading": 0.304
+    },
+    {
+      "feature": "ct_dst_src_ltm",
+      "loading": 0.286
+    },
+    {
+      "feature": "ct_dst_sport_ltm",
+      "loading": 0.285
+    },
+    {
+      "feature": "ct_dst_ltm",
+      "loading": 0.265
+    },
+    {
+      "feature": "ct_srv_src",
+      "loading": 0.264
+    }
+  ]
+}

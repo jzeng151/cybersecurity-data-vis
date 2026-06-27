@@ -1,0 +1,1174 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Groups of fake emails by trick and shape (k=5), squeezed down to 2 directions so they fit on this chart",
+  "width": "container",
+  "height": 420,
+  "data": {
+    "values": [
+      {
+        "x": -0.1757,
+        "y": -0.2982,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4744,
+        "y": 0.2252,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4836,
+        "y": 0.2232,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4764,
+        "y": 0.2236,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1568,
+        "y": -0.8268,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1393,
+        "y": -0.817,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4997,
+        "y": 0.2293,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4997,
+        "y": 0.2293,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1299,
+        "y": -0.8178,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1637,
+        "y": -0.8311,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1637,
+        "y": -0.8311,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1637,
+        "y": -0.8311,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4788,
+        "y": 0.2219,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4986,
+        "y": 0.2284,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1574,
+        "y": -0.8281,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1552,
+        "y": -0.8156,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 2.3692,
+        "y": 2.2732,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 1.1566,
+        "y": -0.8284,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4854,
+        "y": 0.2188,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1416,
+        "y": -0.8193,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4878,
+        "y": 0.2252,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4941,
+        "y": 0.2258,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1513,
+        "y": -0.8205,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1493,
+        "y": -0.8182,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1391,
+        "y": -0.8194,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1423,
+        "y": -0.8169,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4999,
+        "y": 0.23,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.49,
+        "y": 0.2254,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4944,
+        "y": 0.2276,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1544,
+        "y": -0.8137,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4699,
+        "y": 0.2251,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4837,
+        "y": 0.2145,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4833,
+        "y": 0.2143,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1378,
+        "y": -0.81,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1536,
+        "y": -0.807,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4941,
+        "y": 0.2258,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4944,
+        "y": 0.2276,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4765,
+        "y": 0.2216,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4931,
+        "y": 0.2245,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1544,
+        "y": -0.8214,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 2.3726,
+        "y": 2.2759,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 1.1408,
+        "y": -0.8232,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4776,
+        "y": 0.2192,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4764,
+        "y": 0.2236,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4886,
+        "y": 0.2173,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1502,
+        "y": -0.8184,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 2.3749,
+        "y": 2.2761,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 1.1527,
+        "y": -0.8166,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4702,
+        "y": 0.2245,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1522,
+        "y": -0.8147,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4944,
+        "y": 0.2276,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4968,
+        "y": 0.226,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1561,
+        "y": -0.8196,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 2.3703,
+        "y": 2.2883,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": -1.4843,
+        "y": 0.2265,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4911,
+        "y": 0.2248,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4941,
+        "y": 0.2237,
+        "lure_type": "mailbox-quota",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1657,
+        "y": -0.8032,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 2.3703,
+        "y": 2.2883,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 1.1373,
+        "y": -0.8193,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1528,
+        "y": -0.8294,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4986,
+        "y": 0.2284,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.5006,
+        "y": 0.2285,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4901,
+        "y": 0.2207,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4967,
+        "y": 0.2259,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1514,
+        "y": -0.8092,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1585,
+        "y": -0.8314,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1482,
+        "y": -0.8144,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 2.3751,
+        "y": 2.26,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 1.1535,
+        "y": -0.816,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4959,
+        "y": 0.2227,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4959,
+        "y": 0.2227,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4764,
+        "y": 0.2236,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4944,
+        "y": 0.2233,
+        "lure_type": "mailbox-quota",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4959,
+        "y": 0.2227,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4858,
+        "y": 0.2297,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4936,
+        "y": 0.2228,
+        "lure_type": "mailbox-quota",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.158,
+        "y": -0.785,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1599,
+        "y": -0.8319,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.5023,
+        "y": 0.2264,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1607,
+        "y": -0.8329,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4972,
+        "y": 0.223,
+        "lure_type": "mailbox-quota",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 2.3819,
+        "y": 2.2719,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 1.1551,
+        "y": -0.823,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1588,
+        "y": -0.8325,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1302,
+        "y": -0.8125,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4972,
+        "y": 0.223,
+        "lure_type": "mailbox-quota",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 2.3736,
+        "y": 2.2745,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 2.3718,
+        "y": 2.2702,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 2.3645,
+        "y": 2.2681,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": -1.4827,
+        "y": 0.2222,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1561,
+        "y": -0.8295,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1344,
+        "y": -0.8167,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.5008,
+        "y": 0.2244,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4878,
+        "y": 0.2247,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4917,
+        "y": 0.2204,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4853,
+        "y": 0.2276,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1599,
+        "y": -0.8319,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 2.3835,
+        "y": 2.276,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 1.1556,
+        "y": -0.8323,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1598,
+        "y": -0.8196,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1621,
+        "y": -0.8135,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4875,
+        "y": 0.2294,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1505,
+        "y": -0.8187,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1404,
+        "y": -0.8157,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4977,
+        "y": 0.2198,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4912,
+        "y": 0.2201,
+        "lure_type": "mailbox-quota",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1265,
+        "y": -0.8123,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1629,
+        "y": -0.8249,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4783,
+        "y": 0.2314,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4892,
+        "y": 0.2244,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1563,
+        "y": -0.81,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4906,
+        "y": 0.2287,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4837,
+        "y": 0.2198,
+        "lure_type": "mailbox-quota",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4889,
+        "y": 0.2261,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4872,
+        "y": 0.2243,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1554,
+        "y": -0.8084,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4967,
+        "y": 0.2258,
+        "lure_type": "mailbox-quota",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4732,
+        "y": 0.223,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4895,
+        "y": 0.2199,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4843,
+        "y": 0.2206,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4858,
+        "y": 0.2169,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1574,
+        "y": -0.8288,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.135,
+        "y": -0.8125,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4835,
+        "y": 0.2251,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4784,
+        "y": 0.2218,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 2.3746,
+        "y": 2.2856,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": -1.4813,
+        "y": 0.2229,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1541,
+        "y": -0.8146,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4833,
+        "y": 0.2373,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4764,
+        "y": 0.2236,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1457,
+        "y": -0.8225,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4934,
+        "y": 0.219,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1522,
+        "y": -0.8227,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 2.376,
+        "y": 2.2953,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 2.376,
+        "y": 2.2953,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": -1.4847,
+        "y": 0.2237,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1328,
+        "y": -0.8151,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1512,
+        "y": -0.8223,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1543,
+        "y": -0.8195,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1505,
+        "y": -0.8183,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 2.3751,
+        "y": 2.2865,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 2.3792,
+        "y": 2.2959,
+        "lure_type": "file-delivery (attachment)",
+        "has_attachment": true,
+        "html_only": false
+      },
+      {
+        "x": 1.1588,
+        "y": -0.8216,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1608,
+        "y": -0.8198,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4763,
+        "y": 0.2287,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1573,
+        "y": -0.8114,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4858,
+        "y": 0.219,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4775,
+        "y": 0.2281,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1603,
+        "y": -0.8151,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1603,
+        "y": -0.8151,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4953,
+        "y": 0.225,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4975,
+        "y": 0.2266,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1423,
+        "y": -0.8163,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": 1.1445,
+        "y": -0.8089,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      },
+      {
+        "x": -1.4952,
+        "y": 0.2255,
+        "lure_type": "pending-message",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": -1.4844,
+        "y": 0.2206,
+        "lure_type": "credential-verify",
+        "has_attachment": false,
+        "html_only": true
+      },
+      {
+        "x": 1.1562,
+        "y": -0.8154,
+        "lure_type": "brand/account",
+        "has_attachment": false,
+        "html_only": false
+      }
+    ]
+  },
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 70,
+    "opacity": 0.75
+  },
+  "encoding": {
+    "x": {
+      "field": "x",
+      "type": "quantitative",
+      "title": "SVD dimension 1"
+    },
+    "y": {
+      "field": "y",
+      "type": "quantitative",
+      "title": "SVD dimension 2"
+    },
+    "color": {
+      "field": "lure_type",
+      "type": "nominal",
+      "title": "lure type",
+      "scale": {
+        "domain": [
+          "mailbox-quota",
+          "file-delivery (attachment)",
+          "brand/account",
+          "credential-verify",
+          "pending-message"
+        ],
+        "range": [
+          "#3b82f6",
+          "#0ea5e9",
+          "#8b5cf6",
+          "#e0a341",
+          "#14b8a6"
+        ]
+      }
+    },
+    "shape": {
+      "field": "has_attachment",
+      "type": "nominal",
+      "title": "has attachment"
+    },
+    "tooltip": [
+      {
+        "field": "lure_type",
+        "title": "lure type"
+      },
+      {
+        "field": "has_attachment",
+        "title": "attachment"
+      },
+      {
+        "field": "html_only",
+        "title": "html-only"
+      }
+    ]
+  }
+}

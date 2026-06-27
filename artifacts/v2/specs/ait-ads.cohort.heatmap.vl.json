@@ -1,0 +1,917 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 854,
+  "title": "AMiner's new-thing alerts per machine IP and attack step (during attacks, warm-up excluded)",
+  "data": {
+    "values": [
+      {
+        "ip": "10.132.56.171",
+        "stage": "service_scans",
+        "count": 26,
+        "log_count": 1.431
+      },
+      {
+        "ip": "10.143.0.103",
+        "stage": "service_scans",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "10.143.0.103",
+        "stage": "service_stop",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "10.143.0.35",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.143.2.4",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.143.2.4",
+        "stage": "dirb",
+        "count": 63,
+        "log_count": 1.806
+      },
+      {
+        "ip": "10.143.2.4",
+        "stage": "privilege_escalation",
+        "count": 18,
+        "log_count": 1.279
+      },
+      {
+        "ip": "10.143.2.4",
+        "stage": "reverse_shell",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "10.143.2.4",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.143.2.4",
+        "stage": "webshell",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "10.143.2.4",
+        "stage": "wpscan",
+        "count": 3187,
+        "log_count": 3.504
+      },
+      {
+        "ip": "10.182.192.1",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.182.193.181",
+        "stage": "network_scans",
+        "count": 16,
+        "log_count": 1.23
+      },
+      {
+        "ip": "10.182.193.181",
+        "stage": "service_scans",
+        "count": 44,
+        "log_count": 1.653
+      },
+      {
+        "ip": "10.182.193.78",
+        "stage": "dnsteal",
+        "count": 5,
+        "log_count": 0.778
+      },
+      {
+        "ip": "10.182.193.78",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.182.194.196",
+        "stage": "dirb",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "10.182.194.196",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.182.194.196",
+        "stage": "wpscan",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.182.194.5",
+        "stage": "service_scans",
+        "count": 49,
+        "log_count": 1.699
+      },
+      {
+        "ip": "10.229.255.254",
+        "stage": "dnsteal",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.229.255.254",
+        "stage": "service_scans",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "10.237.0.166",
+        "stage": "dnsteal",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.237.0.166",
+        "stage": "service_scans",
+        "count": 24,
+        "log_count": 1.398
+      },
+      {
+        "ip": "10.237.0.4",
+        "stage": "dnsteal",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.237.2.255",
+        "stage": "service_scans",
+        "count": 34,
+        "log_count": 1.544
+      },
+      {
+        "ip": "10.35.32.1",
+        "stage": "dnsteal",
+        "count": 4,
+        "log_count": 0.699
+      },
+      {
+        "ip": "10.35.32.1",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.35.33.111",
+        "stage": "service_scans",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "10.35.33.111",
+        "stage": "service_stop",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "10.35.35.204",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.35.35.206",
+        "stage": "cracking",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "10.35.35.206",
+        "stage": "dirb",
+        "count": 4449,
+        "log_count": 3.648
+      },
+      {
+        "ip": "10.35.35.206",
+        "stage": "privilege_escalation",
+        "count": 7,
+        "log_count": 0.903
+      },
+      {
+        "ip": "10.35.35.206",
+        "stage": "reverse_shell",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.35.35.206",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.35.35.206",
+        "stage": "webshell",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "10.35.35.206",
+        "stage": "wpscan",
+        "count": 4810,
+        "log_count": 3.682
+      },
+      {
+        "ip": "10.38.242.195",
+        "stage": "cracking",
+        "count": 8,
+        "log_count": 0.954
+      },
+      {
+        "ip": "10.38.242.195",
+        "stage": "network_scans",
+        "count": 9,
+        "log_count": 1.0
+      },
+      {
+        "ip": "10.38.242.195",
+        "stage": "service_scans",
+        "count": 25,
+        "log_count": 1.415
+      },
+      {
+        "ip": "10.38.242.230",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.38.243.24",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.38.243.24",
+        "stage": "reverse_shell",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "10.38.243.24",
+        "stage": "service_scans",
+        "count": 49,
+        "log_count": 1.699
+      },
+      {
+        "ip": "172.17.129.140",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.17.130.196",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.17.130.37",
+        "stage": "service_scans",
+        "count": 49,
+        "log_count": 1.699
+      },
+      {
+        "ip": "172.17.131.81",
+        "stage": "service_scans",
+        "count": 34,
+        "log_count": 1.544
+      },
+      {
+        "ip": "172.19.128.1",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.19.130.106",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.19.130.4",
+        "stage": "service_scans",
+        "count": 60,
+        "log_count": 1.785
+      },
+      {
+        "ip": "172.19.130.68",
+        "stage": "service_scans",
+        "count": 50,
+        "log_count": 1.708
+      },
+      {
+        "ip": "172.19.131.174",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.21.128.54",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.21.131.50",
+        "stage": "service_scans",
+        "count": 26,
+        "log_count": 1.431
+      },
+      {
+        "ip": "172.21.240.106",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.21.241.88",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.21.241.88",
+        "stage": "dirb",
+        "count": 31,
+        "log_count": 1.505
+      },
+      {
+        "ip": "172.21.241.88",
+        "stage": "privilege_escalation",
+        "count": 28,
+        "log_count": 1.462
+      },
+      {
+        "ip": "172.21.241.88",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.21.241.88",
+        "stage": "webshell",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "172.21.241.88",
+        "stage": "wpscan",
+        "count": 791,
+        "log_count": 2.899
+      },
+      {
+        "ip": "172.26.240.200",
+        "stage": "service_scans",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "172.26.240.200",
+        "stage": "service_stop",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "172.26.242.35",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.26.243.167",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.26.243.167",
+        "stage": "dirb",
+        "count": 4499,
+        "log_count": 3.653
+      },
+      {
+        "ip": "172.26.243.167",
+        "stage": "privilege_escalation",
+        "count": 6,
+        "log_count": 0.845
+      },
+      {
+        "ip": "172.26.243.167",
+        "stage": "reverse_shell",
+        "count": 4,
+        "log_count": 0.699
+      },
+      {
+        "ip": "172.26.243.167",
+        "stage": "service_scans",
+        "count": 33,
+        "log_count": 1.531
+      },
+      {
+        "ip": "172.26.243.167",
+        "stage": "webshell",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "172.26.243.167",
+        "stage": "wpscan",
+        "count": 3211,
+        "log_count": 3.507
+      },
+      {
+        "ip": "172.27.180.4",
+        "stage": "network_scans",
+        "count": 9,
+        "log_count": 1.0
+      },
+      {
+        "ip": "172.27.180.4",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.27.181.174",
+        "stage": "dnsteal",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "172.27.182.4",
+        "stage": "network_scans",
+        "count": 11,
+        "log_count": 1.079
+      },
+      {
+        "ip": "172.27.182.4",
+        "stage": "service_scans",
+        "count": 29,
+        "log_count": 1.477
+      },
+      {
+        "ip": "172.27.183.254",
+        "stage": "cracking",
+        "count": 93,
+        "log_count": 1.973
+      },
+      {
+        "ip": "172.27.183.254",
+        "stage": "dnsteal",
+        "count": 4,
+        "log_count": 0.699
+      },
+      {
+        "ip": "172.27.183.254",
+        "stage": "service_scans",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "172.28.192.7",
+        "stage": "cracking",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "192.168.1.116",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.1.116",
+        "stage": "dirb",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.104.155",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.104.155",
+        "stage": "dirb",
+        "count": 63,
+        "log_count": 1.806
+      },
+      {
+        "ip": "192.168.104.155",
+        "stage": "privilege_escalation",
+        "count": 30,
+        "log_count": 1.491
+      },
+      {
+        "ip": "192.168.104.155",
+        "stage": "reverse_shell",
+        "count": 6,
+        "log_count": 0.845
+      },
+      {
+        "ip": "192.168.104.155",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.104.155",
+        "stage": "webshell",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "192.168.104.155",
+        "stage": "wpscan",
+        "count": 3293,
+        "log_count": 3.518
+      },
+      {
+        "ip": "192.168.104.214",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.104.218",
+        "stage": "service_scans",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "192.168.104.218",
+        "stage": "service_stop",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "192.168.128.1",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.128.170",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.128.170",
+        "stage": "service_scans",
+        "count": 40,
+        "log_count": 1.613
+      },
+      {
+        "ip": "192.168.130.229",
+        "stage": "dirb",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.130.229",
+        "stage": "dnsteal",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.131.109",
+        "stage": "service_stop",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "192.168.131.215",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.131.215",
+        "stage": "dirb",
+        "count": 4533,
+        "log_count": 3.656
+      },
+      {
+        "ip": "192.168.131.215",
+        "stage": "privilege_escalation",
+        "count": 45,
+        "log_count": 1.663
+      },
+      {
+        "ip": "192.168.131.215",
+        "stage": "reverse_shell",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.131.215",
+        "stage": "service_scans",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.131.215",
+        "stage": "webshell",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "192.168.131.215",
+        "stage": "wpscan",
+        "count": 4861,
+        "log_count": 3.687
+      },
+      {
+        "ip": "192.168.188.179",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.188.179",
+        "stage": "dirb",
+        "count": 31,
+        "log_count": 1.505
+      },
+      {
+        "ip": "192.168.188.179",
+        "stage": "privilege_escalation",
+        "count": 35,
+        "log_count": 1.556
+      },
+      {
+        "ip": "192.168.188.179",
+        "stage": "reverse_shell",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.188.179",
+        "stage": "webshell",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "192.168.188.179",
+        "stage": "wpscan",
+        "count": 781,
+        "log_count": 2.893
+      },
+      {
+        "ip": "192.168.2.114",
+        "stage": "dirb",
+        "count": 4526,
+        "log_count": 3.656
+      },
+      {
+        "ip": "192.168.2.114",
+        "stage": "privilege_escalation",
+        "count": 25,
+        "log_count": 1.415
+      },
+      {
+        "ip": "192.168.2.114",
+        "stage": "reverse_shell",
+        "count": 4,
+        "log_count": 0.699
+      },
+      {
+        "ip": "192.168.2.114",
+        "stage": "service_scans",
+        "count": 7,
+        "log_count": 0.903
+      },
+      {
+        "ip": "192.168.2.114",
+        "stage": "webshell",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "192.168.2.114",
+        "stage": "wpscan",
+        "count": 6653,
+        "log_count": 3.823
+      },
+      {
+        "ip": "192.168.224.185",
+        "stage": "network_scans",
+        "count": 9,
+        "log_count": 1.0
+      },
+      {
+        "ip": "192.168.224.185",
+        "stage": "service_scans",
+        "count": 31,
+        "log_count": 1.505
+      },
+      {
+        "ip": "192.168.231.164",
+        "stage": "service_scans",
+        "count": 40,
+        "log_count": 1.613
+      },
+      {
+        "ip": "192.168.231.254",
+        "stage": "service_scans",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "192.168.231.56",
+        "stage": "service_scans",
+        "count": 40,
+        "log_count": 1.613
+      },
+      {
+        "ip": "192.168.239.254",
+        "stage": "dirb",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.239.254",
+        "stage": "service_scans",
+        "count": 2,
+        "log_count": 0.477
+      },
+      {
+        "ip": "192.168.255.254",
+        "stage": "cracking",
+        "count": 1,
+        "log_count": 0.301
+      },
+      {
+        "ip": "192.168.255.254",
+        "stage": "dnsteal",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "192.168.3.116",
+        "stage": "service_scans",
+        "count": 3,
+        "log_count": 0.602
+      },
+      {
+        "ip": "192.168.3.116",
+        "stage": "service_stop",
+        "count": 4,
+        "log_count": 0.699
+      },
+      {
+        "ip": "192.168.96.99",
+        "stage": "service_scans",
+        "count": 40,
+        "log_count": 1.613
+      },
+      {
+        "ip": "192.168.98.239",
+        "stage": "service_scans",
+        "count": 40,
+        "log_count": 1.613
+      }
+    ]
+  },
+  "mark": {
+    "type": "rect"
+  },
+  "encoding": {
+    "x": {
+      "field": "stage",
+      "type": "nominal",
+      "title": "kill-chain stage",
+      "sort": [
+        "network_scans",
+        "service_scans",
+        "dirb",
+        "wpscan",
+        "webshell",
+        "cracking",
+        "reverse_shell",
+        "privilege_escalation",
+        "service_stop",
+        "dnsteal"
+      ],
+      "axis": {
+        "labelAngle": -40
+      }
+    },
+    "y": {
+      "field": "ip",
+      "type": "nominal",
+      "title": "AMiner source IP",
+      "sort": [
+        "192.168.2.114",
+        "192.168.131.215",
+        "10.35.35.206",
+        "172.26.243.167",
+        "192.168.104.155",
+        "10.143.2.4",
+        "172.21.241.88",
+        "192.168.188.179",
+        "172.27.183.254",
+        "172.19.130.4",
+        "10.182.193.181",
+        "10.38.243.24",
+        "172.19.130.68",
+        "172.17.130.37",
+        "10.182.194.5",
+        "10.38.242.195",
+        "192.168.128.170",
+        "192.168.224.185",
+        "192.168.96.99",
+        "192.168.231.56",
+        "192.168.231.164",
+        "192.168.98.239",
+        "172.27.182.4",
+        "10.237.2.255",
+        "172.17.131.81",
+        "10.132.56.171",
+        "172.21.131.50",
+        "10.237.0.166",
+        "172.27.180.4",
+        "192.168.3.116",
+        "192.168.104.218",
+        "10.182.193.78",
+        "172.26.240.200",
+        "10.35.32.1",
+        "10.35.33.111",
+        "10.143.0.103",
+        "10.182.194.196",
+        "192.168.255.254",
+        "192.168.231.254",
+        "10.229.255.254",
+        "192.168.239.254",
+        "192.168.131.109",
+        "192.168.130.229",
+        "192.168.1.116",
+        "172.28.192.7",
+        "172.19.131.174",
+        "172.19.130.106",
+        "172.17.130.196",
+        "172.19.128.1",
+        "10.38.242.230",
+        "10.35.35.204",
+        "172.17.129.140",
+        "10.237.0.4",
+        "10.182.192.1",
+        "10.143.0.35",
+        "192.168.104.214",
+        "172.26.242.35",
+        "172.21.128.54",
+        "172.27.181.174",
+        "172.21.240.106",
+        "192.168.128.1"
+      ]
+    },
+    "color": {
+      "field": "log_count",
+      "type": "quantitative",
+      "title": "log10(novel events)",
+      "scale": {
+        "range": [
+          "#eef2f7",
+          "#3b82f6"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "ip"
+      },
+      {
+        "field": "stage"
+      },
+      {
+        "field": "count"
+      }
+    ]
+  }
+}

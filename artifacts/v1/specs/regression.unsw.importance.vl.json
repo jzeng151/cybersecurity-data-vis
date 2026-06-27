@@ -1,0 +1,98 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "feature": "sttl",
+        "importance": 0.20444,
+        "share": 0.3844
+      },
+      {
+        "feature": "smean",
+        "importance": 0.04337,
+        "share": 0.0816
+      },
+      {
+        "feature": "sbytes",
+        "importance": 0.04056,
+        "share": 0.0763
+      },
+      {
+        "feature": "ct_dst_src_ltm",
+        "importance": 0.03369,
+        "share": 0.0633
+      },
+      {
+        "feature": "ct_dst_sport_ltm",
+        "importance": 0.02175,
+        "share": 0.0409
+      },
+      {
+        "feature": "dur",
+        "importance": 0.01944,
+        "share": 0.0365
+      },
+      {
+        "feature": "dmean",
+        "importance": 0.01725,
+        "share": 0.0324
+      },
+      {
+        "feature": "synack",
+        "importance": 0.01613,
+        "share": 0.0303
+      },
+      {
+        "feature": "tcprtt",
+        "importance": 0.01456,
+        "share": 0.0274
+      },
+      {
+        "feature": "response_body_len",
+        "importance": 0.01206,
+        "share": 0.0227
+      },
+      {
+        "feature": "ct_src_dport_ltm",
+        "importance": 0.01181,
+        "share": 0.0222
+      },
+      {
+        "feature": "ct_srv_dst",
+        "importance": 0.01162,
+        "share": 0.0219
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "color": "#3b82f6"
+  },
+  "encoding": {
+    "y": {
+      "field": "feature",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null
+    },
+    "x": {
+      "field": "share",
+      "type": "quantitative",
+      "title": "share of permutation importance",
+      "axis": {
+        "format": "%"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "feature"
+      },
+      {
+        "field": "share",
+        "format": ".1%"
+      }
+    ]
+  }
+}

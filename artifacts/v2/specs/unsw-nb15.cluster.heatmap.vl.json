@@ -1,0 +1,564 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Generic and Normal have their own shapes; rare types blend in",
+    "subtitle": "sorted into 8 groups using the top 10 squeezed columns (labels not used)  \u2022  group-vs-label match 0.35, how cleanly groups separate 0.53"
+  },
+  "width": "container",
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "cluster": "c0",
+        "attack_cat": "Normal",
+        "share": 0.959,
+        "count": 23479
+      },
+      {
+        "cluster": "c0",
+        "attack_cat": "Generic",
+        "share": 0.0,
+        "count": 5
+      },
+      {
+        "cluster": "c0",
+        "attack_cat": "Exploits",
+        "share": 0.037,
+        "count": 906
+      },
+      {
+        "cluster": "c0",
+        "attack_cat": "Fuzzers",
+        "share": 0.0,
+        "count": 5
+      },
+      {
+        "cluster": "c0",
+        "attack_cat": "DoS",
+        "share": 0.003,
+        "count": 79
+      },
+      {
+        "cluster": "c0",
+        "attack_cat": "Reconnaissance",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c0",
+        "attack_cat": "Analysis",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c0",
+        "attack_cat": "Backdoor",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c0",
+        "attack_cat": "Shellcode",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c0",
+        "attack_cat": "Worms",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c1",
+        "attack_cat": "Normal",
+        "share": 0.067,
+        "count": 2718
+      },
+      {
+        "cluster": "c1",
+        "attack_cat": "Generic",
+        "share": 0.035,
+        "count": 1406
+      },
+      {
+        "cluster": "c1",
+        "attack_cat": "Exploits",
+        "share": 0.313,
+        "count": 12598
+      },
+      {
+        "cluster": "c1",
+        "attack_cat": "Fuzzers",
+        "share": 0.141,
+        "count": 5691
+      },
+      {
+        "cluster": "c1",
+        "attack_cat": "DoS",
+        "share": 0.231,
+        "count": 9325
+      },
+      {
+        "cluster": "c1",
+        "attack_cat": "Reconnaissance",
+        "share": 0.13,
+        "count": 5252
+      },
+      {
+        "cluster": "c1",
+        "attack_cat": "Analysis",
+        "share": 0.034,
+        "count": 1370
+      },
+      {
+        "cluster": "c1",
+        "attack_cat": "Backdoor",
+        "share": 0.034,
+        "count": 1356
+      },
+      {
+        "cluster": "c1",
+        "attack_cat": "Shellcode",
+        "share": 0.014,
+        "count": 576
+      },
+      {
+        "cluster": "c1",
+        "attack_cat": "Worms",
+        "share": 0.0,
+        "count": 15
+      },
+      {
+        "cluster": "c2",
+        "attack_cat": "Normal",
+        "share": 0.29,
+        "count": 5138
+      },
+      {
+        "cluster": "c2",
+        "attack_cat": "Generic",
+        "share": 0.017,
+        "count": 294
+      },
+      {
+        "cluster": "c2",
+        "attack_cat": "Exploits",
+        "share": 0.45,
+        "count": 7966
+      },
+      {
+        "cluster": "c2",
+        "attack_cat": "Fuzzers",
+        "share": 0.055,
+        "count": 977
+      },
+      {
+        "cluster": "c2",
+        "attack_cat": "DoS",
+        "share": 0.064,
+        "count": 1138
+      },
+      {
+        "cluster": "c2",
+        "attack_cat": "Reconnaissance",
+        "share": 0.082,
+        "count": 1451
+      },
+      {
+        "cluster": "c2",
+        "attack_cat": "Analysis",
+        "share": 0.031,
+        "count": 556
+      },
+      {
+        "cluster": "c2",
+        "attack_cat": "Backdoor",
+        "share": 0.004,
+        "count": 73
+      },
+      {
+        "cluster": "c2",
+        "attack_cat": "Shellcode",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c2",
+        "attack_cat": "Worms",
+        "share": 0.006,
+        "count": 102
+      },
+      {
+        "cluster": "c3",
+        "attack_cat": "Normal",
+        "share": 1.0,
+        "count": 2762
+      },
+      {
+        "cluster": "c3",
+        "attack_cat": "Generic",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c3",
+        "attack_cat": "Exploits",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c3",
+        "attack_cat": "Fuzzers",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c3",
+        "attack_cat": "DoS",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c3",
+        "attack_cat": "Reconnaissance",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c3",
+        "attack_cat": "Analysis",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c3",
+        "attack_cat": "Backdoor",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c3",
+        "attack_cat": "Shellcode",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c3",
+        "attack_cat": "Worms",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c4",
+        "attack_cat": "Normal",
+        "share": 0.253,
+        "count": 8726
+      },
+      {
+        "cluster": "c4",
+        "attack_cat": "Generic",
+        "share": 0.005,
+        "count": 188
+      },
+      {
+        "cluster": "c4",
+        "attack_cat": "Exploits",
+        "share": 0.273,
+        "count": 9420
+      },
+      {
+        "cluster": "c4",
+        "attack_cat": "Fuzzers",
+        "share": 0.308,
+        "count": 10655
+      },
+      {
+        "cluster": "c4",
+        "attack_cat": "DoS",
+        "share": 0.032,
+        "count": 1105
+      },
+      {
+        "cluster": "c4",
+        "attack_cat": "Reconnaissance",
+        "share": 0.106,
+        "count": 3659
+      },
+      {
+        "cluster": "c4",
+        "attack_cat": "Analysis",
+        "share": 0.0,
+        "count": 12
+      },
+      {
+        "cluster": "c4",
+        "attack_cat": "Backdoor",
+        "share": 0.006,
+        "count": 206
+      },
+      {
+        "cluster": "c4",
+        "attack_cat": "Shellcode",
+        "share": 0.016,
+        "count": 557
+      },
+      {
+        "cluster": "c4",
+        "attack_cat": "Worms",
+        "share": 0.0,
+        "count": 13
+      },
+      {
+        "cluster": "c5",
+        "attack_cat": "Normal",
+        "share": 0.026,
+        "count": 1079
+      },
+      {
+        "cluster": "c5",
+        "attack_cat": "Generic",
+        "share": 0.933,
+        "count": 38089
+      },
+      {
+        "cluster": "c5",
+        "attack_cat": "Exploits",
+        "share": 0.011,
+        "count": 431
+      },
+      {
+        "cluster": "c5",
+        "attack_cat": "Fuzzers",
+        "share": 0.017,
+        "count": 687
+      },
+      {
+        "cluster": "c5",
+        "attack_cat": "DoS",
+        "share": 0.008,
+        "count": 346
+      },
+      {
+        "cluster": "c5",
+        "attack_cat": "Reconnaissance",
+        "share": 0.002,
+        "count": 72
+      },
+      {
+        "cluster": "c5",
+        "attack_cat": "Analysis",
+        "share": 0.001,
+        "count": 55
+      },
+      {
+        "cluster": "c5",
+        "attack_cat": "Backdoor",
+        "share": 0.001,
+        "count": 46
+      },
+      {
+        "cluster": "c5",
+        "attack_cat": "Shellcode",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c5",
+        "attack_cat": "Worms",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c6",
+        "attack_cat": "Normal",
+        "share": 0.37,
+        "count": 949
+      },
+      {
+        "cluster": "c6",
+        "attack_cat": "Generic",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c6",
+        "attack_cat": "Exploits",
+        "share": 0.573,
+        "count": 1470
+      },
+      {
+        "cluster": "c6",
+        "attack_cat": "Fuzzers",
+        "share": 0.051,
+        "count": 131
+      },
+      {
+        "cluster": "c6",
+        "attack_cat": "DoS",
+        "share": 0.007,
+        "count": 17
+      },
+      {
+        "cluster": "c6",
+        "attack_cat": "Reconnaissance",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c6",
+        "attack_cat": "Analysis",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c6",
+        "attack_cat": "Backdoor",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c6",
+        "attack_cat": "Shellcode",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c6",
+        "attack_cat": "Worms",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c7",
+        "attack_cat": "Normal",
+        "share": 0.915,
+        "count": 11149
+      },
+      {
+        "cluster": "c7",
+        "attack_cat": "Generic",
+        "share": 0.001,
+        "count": 18
+      },
+      {
+        "cluster": "c7",
+        "attack_cat": "Exploits",
+        "share": 0.049,
+        "count": 602
+      },
+      {
+        "cluster": "c7",
+        "attack_cat": "Fuzzers",
+        "share": 0.003,
+        "count": 38
+      },
+      {
+        "cluster": "c7",
+        "attack_cat": "DoS",
+        "share": 0.021,
+        "count": 254
+      },
+      {
+        "cluster": "c7",
+        "attack_cat": "Reconnaissance",
+        "share": 0.005,
+        "count": 57
+      },
+      {
+        "cluster": "c7",
+        "attack_cat": "Analysis",
+        "share": 0.001,
+        "count": 7
+      },
+      {
+        "cluster": "c7",
+        "attack_cat": "Backdoor",
+        "share": 0.005,
+        "count": 65
+      },
+      {
+        "cluster": "c7",
+        "attack_cat": "Shellcode",
+        "share": 0.0,
+        "count": 0
+      },
+      {
+        "cluster": "c7",
+        "attack_cat": "Worms",
+        "share": 0.0,
+        "count": 0
+      }
+    ]
+  },
+  "mark": {
+    "type": "rect"
+  },
+  "encoding": {
+    "x": {
+      "field": "cluster",
+      "type": "nominal",
+      "title": "cluster (unsupervised)",
+      "sort": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7"
+      ]
+    },
+    "y": {
+      "field": "attack_cat",
+      "type": "nominal",
+      "title": "attack_cat (post-hoc)",
+      "sort": [
+        "Normal",
+        "Generic",
+        "Exploits",
+        "Fuzzers",
+        "DoS",
+        "Reconnaissance",
+        "Analysis",
+        "Backdoor",
+        "Shellcode",
+        "Worms"
+      ]
+    },
+    "color": {
+      "field": "share",
+      "type": "quantitative",
+      "title": "row-normalized share",
+      "scale": {
+        "scheme": "blues",
+        "domain": [
+          0,
+          1
+        ]
+      },
+      "legend": {
+        "orient": "right"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "cluster",
+        "type": "nominal"
+      },
+      {
+        "field": "attack_cat",
+        "type": "nominal"
+      },
+      {
+        "field": "share",
+        "type": "quantitative",
+        "format": ".2f"
+      },
+      {
+        "field": "count",
+        "type": "quantitative"
+      }
+    ]
+  }
+}

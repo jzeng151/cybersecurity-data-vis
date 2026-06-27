@@ -1,0 +1,52 @@
+[
+  {
+    "addYear": 2021,
+    "tier": "backlog (>=180d)",
+    "count": 200
+  },
+  {
+    "addYear": 2021,
+    "tier": "standard (<=21d)",
+    "count": 111
+  },
+  {
+    "addYear": 2022,
+    "tier": "backlog (>=180d)",
+    "count": 57
+  },
+  {
+    "addYear": 2022,
+    "tier": "other",
+    "count": 6
+  },
+  {
+    "addYear": 2022,
+    "tier": "standard (<=21d)",
+    "count": 492
+  },
+  {
+    "addYear": 2023,
+    "tier": "other",
+    "count": 1
+  },
+  {
+    "addYear": 2023,
+    "tier": "standard (<=21d)",
+    "count": 186
+  },
+  {
+    "addYear": 2024,
+    "tier": "standard (<=21d)",
+    "count": 186
+  },
+  {
+    "addYear": 2025,
+    "tier": "standard (<=21d)",
+    "count": 245
+  },
+  {
+    "addYear": 2026,
+    "tier": "standard (<=21d)",
+    "count": 143
+  }
+]

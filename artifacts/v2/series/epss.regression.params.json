@@ -1,0 +1,11 @@
+{
+  "window": [
+    2013,
+    2026
+  ],
+  "slope_log_per_year": -0.14322,
+  "pct_change_per_year": -13.344,
+  "r2": 0.8308,
+  "per_cve_slope": -0.17805,
+  "per_cve_pct_per_year": -16.31
+}

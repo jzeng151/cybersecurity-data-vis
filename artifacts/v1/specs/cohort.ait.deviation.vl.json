@@ -1,0 +1,313 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {
+        "host": "fox/10.35.35.206",
+        "day": "2022-01-15",
+        "count": 46,
+        "baseline": 1,
+        "z": 30.4,
+        "severity": "benign"
+      },
+      {
+        "host": "fox/10.35.35.206",
+        "day": "2022-01-16",
+        "count": 1,
+        "baseline": 1,
+        "z": 0.0,
+        "severity": "benign"
+      },
+      {
+        "host": "fox/10.35.35.206",
+        "day": "2022-01-17",
+        "count": 1,
+        "baseline": 1,
+        "z": 0.0,
+        "severity": "benign"
+      },
+      {
+        "host": "fox/10.35.35.206",
+        "day": "2022-01-18",
+        "count": 9274,
+        "baseline": 1,
+        "z": 6254.6,
+        "severity": "malicious"
+      },
+      {
+        "host": "fox/10.35.35.206",
+        "day": "2022-01-19",
+        "count": 1,
+        "baseline": 1,
+        "z": 0.0,
+        "severity": "benign"
+      },
+      {
+        "host": "fox/wazuh-client",
+        "day": "2022-01-15",
+        "count": 10069,
+        "baseline": 11114,
+        "z": -0.7,
+        "severity": "benign"
+      },
+      {
+        "host": "fox/wazuh-client",
+        "day": "2022-01-16",
+        "count": 11631,
+        "baseline": 11114,
+        "z": 0.3,
+        "severity": "benign"
+      },
+      {
+        "host": "fox/wazuh-client",
+        "day": "2022-01-17",
+        "count": 9634,
+        "baseline": 11114,
+        "z": -1.0,
+        "severity": "malicious"
+      },
+      {
+        "host": "fox/wazuh-client",
+        "day": "2022-01-18",
+        "count": 420075,
+        "baseline": 11114,
+        "z": 264.0,
+        "severity": "malicious"
+      },
+      {
+        "host": "fox/wazuh-client",
+        "day": "2022-01-19",
+        "count": 11114,
+        "baseline": 11114,
+        "z": 0.0,
+        "severity": "benign"
+      },
+      {
+        "host": "harrison/192.168.131.215",
+        "day": "2022-02-04",
+        "count": 5,
+        "baseline": 4,
+        "z": 0.4,
+        "severity": "benign"
+      },
+      {
+        "host": "harrison/192.168.131.215",
+        "day": "2022-02-05",
+        "count": 2,
+        "baseline": 4,
+        "z": -0.9,
+        "severity": "benign"
+      },
+      {
+        "host": "harrison/192.168.131.215",
+        "day": "2022-02-07",
+        "count": 3,
+        "baseline": 4,
+        "z": -0.4,
+        "severity": "benign"
+      },
+      {
+        "host": "harrison/192.168.131.215",
+        "day": "2022-02-08",
+        "count": 9445,
+        "baseline": 4,
+        "z": 4245.3,
+        "severity": "malicious"
+      },
+      {
+        "host": "santos/192.168.104.155",
+        "day": "2022-01-14",
+        "count": 7,
+        "baseline": 7,
+        "z": 0.0,
+        "severity": "benign"
+      },
+      {
+        "host": "santos/192.168.104.155",
+        "day": "2022-01-15",
+        "count": 2,
+        "baseline": 7,
+        "z": -0.7,
+        "severity": "benign"
+      },
+      {
+        "host": "santos/192.168.104.155",
+        "day": "2022-01-17",
+        "count": 3400,
+        "baseline": 7,
+        "z": 457.7,
+        "severity": "malicious"
+      },
+      {
+        "host": "wheeler/wazuh-client",
+        "day": "2022-01-26",
+        "count": 34468,
+        "baseline": 37931,
+        "z": -2.8,
+        "severity": "benign"
+      },
+      {
+        "host": "wheeler/wazuh-client",
+        "day": "2022-01-27",
+        "count": 37931,
+        "baseline": 37931,
+        "z": 0.0,
+        "severity": "benign"
+      },
+      {
+        "host": "wheeler/wazuh-client",
+        "day": "2022-01-28",
+        "count": 37092,
+        "baseline": 37931,
+        "z": -0.7,
+        "severity": "benign"
+      },
+      {
+        "host": "wheeler/wazuh-client",
+        "day": "2022-01-29",
+        "count": 38340,
+        "baseline": 37931,
+        "z": 0.3,
+        "severity": "malicious"
+      },
+      {
+        "host": "wheeler/wazuh-client",
+        "day": "2022-01-30",
+        "count": 456108,
+        "baseline": 37931,
+        "z": 336.2,
+        "severity": "malicious"
+      },
+      {
+        "host": "wilson/wazuh-client",
+        "day": "2022-02-03",
+        "count": 36820,
+        "baseline": 35487,
+        "z": 0.8,
+        "severity": "benign"
+      },
+      {
+        "host": "wilson/wazuh-client",
+        "day": "2022-02-04",
+        "count": 36041,
+        "baseline": 35487,
+        "z": 0.3,
+        "severity": "benign"
+      },
+      {
+        "host": "wilson/wazuh-client",
+        "day": "2022-02-05",
+        "count": 34933,
+        "baseline": 35487,
+        "z": -0.3,
+        "severity": "benign"
+      },
+      {
+        "host": "wilson/wazuh-client",
+        "day": "2022-02-06",
+        "count": 34570,
+        "baseline": 35487,
+        "z": -0.5,
+        "severity": "malicious"
+      },
+      {
+        "host": "wilson/wazuh-client",
+        "day": "2022-02-07",
+        "count": 452780,
+        "baseline": 35487,
+        "z": 250.2,
+        "severity": "malicious"
+      },
+      {
+        "host": "wilson/wazuh-client",
+        "day": "2022-02-08",
+        "count": 30159,
+        "baseline": 35487,
+        "z": -3.2,
+        "severity": "benign"
+      }
+    ]
+  },
+  "facet": {
+    "field": "host",
+    "type": "nominal",
+    "columns": 3,
+    "title": null
+  },
+  "spec": {
+    "width": 150,
+    "height": 110,
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "color": "#8a94a6",
+          "strokeWidth": 1
+        },
+        "encoding": {
+          "x": {
+            "field": "day",
+            "type": "ordinal",
+            "title": null,
+            "axis": {
+              "labels": false
+            }
+          },
+          "y": {
+            "field": "count",
+            "type": "quantitative",
+            "title": "alerts"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "point",
+          "filled": true,
+          "size": 50
+        },
+        "encoding": {
+          "x": {
+            "field": "day",
+            "type": "ordinal"
+          },
+          "y": {
+            "field": "count",
+            "type": "quantitative"
+          },
+          "color": {
+            "field": "severity",
+            "type": "nominal",
+            "legend": null,
+            "scale": {
+              "domain": [
+                "benign",
+                "malicious"
+              ],
+              "range": [
+                "#5b6b7a",
+                "#d2483f"
+              ]
+            }
+          },
+          "tooltip": [
+            {
+              "field": "day"
+            },
+            {
+              "field": "count"
+            },
+            {
+              "field": "z"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  }
+}

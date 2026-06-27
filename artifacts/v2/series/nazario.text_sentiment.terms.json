@@ -1,0 +1,108 @@
+{
+  "n_messages": 158,
+  "n_urgent_subjects": 55,
+  "urgency_pct": 34.8,
+  "urgency_counts": {
+    "verif": 7,
+    "locked": 7,
+    "confirm": 5,
+    "pending": 10,
+    "expir": 1,
+    "urgent": 1,
+    "deactiv": 1,
+    "unusual": 2,
+    "restrict": 1,
+    "24hr": 1,
+    "blocked": 5,
+    "alert": 8,
+    "update your": 1,
+    "required": 3,
+    "secur": 8,
+    "password": 3,
+    "quarantin": 1,
+    "undeliver": 6,
+    "notification": 10
+  },
+  "brand_counts": {
+    "paypal": 4,
+    "wells": 7,
+    "fargo": 6,
+    "microsoft": 3,
+    "chase": 2,
+    "netflix": 4,
+    "dhl": 3,
+    "amazon": 3,
+    "bank": 10,
+    "google": 1,
+    "outlook": 3,
+    "wetransfer": 3,
+    "linkedin": 1
+  },
+  "topics": [
+    {
+      "topic": 0,
+      "size": 58,
+      "top_terms": [
+        "account",
+        "verify",
+        "confirm",
+        "paypal",
+        "team",
+        "incoming",
+        "dear",
+        "security",
+        "address",
+        "continue"
+      ]
+    },
+    {
+      "topic": 1,
+      "size": 64,
+      "top_terms": [
+        "messages",
+        "message",
+        "release",
+        "pending",
+        "quarantine",
+        "notification",
+        "incoming",
+        "order",
+        "quarantined",
+        "mails"
+      ]
+    },
+    {
+      "topic": 2,
+      "size": 14,
+      "top_terms": [
+        "upgrade",
+        "storage",
+        "limits",
+        "avoid",
+        "quota",
+        "mail",
+        "data",
+        "mailbox",
+        "reached",
+        "attention"
+      ]
+    },
+    {
+      "topic": 3,
+      "size": 22,
+      "top_terms": [
+        "update",
+        "security",
+        "domain",
+        "database",
+        "suspended",
+        "strongly",
+        "advised",
+        "today",
+        "american",
+        "click"
+      ]
+    }
+  ],
+  "n_nonlatin": 9
+}

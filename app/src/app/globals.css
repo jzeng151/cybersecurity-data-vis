@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Severity tokens — MIRRORED in src/lib/tokens.ts and analysis/src/cyberviz/colors.py.
+   One visual language across every chart and badge. */
+@theme {
+  --color-benign: #5b6b7a;
+  --color-suspicious: #e0a341;
+  --color-malicious: #d2483f;
+  --color-noise: #8a94a6;
+  --color-accent: #3b82f6;
+  --color-ink: #1a1f2b;
+  --color-muted: #5a6473;
+  --color-paper: #fbfbf9;
+  --color-card: #ffffff;
+  --color-line: #e7e6e1;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Readable measure for the narrative prose. */
+.prose-measure {
+  max-width: 68ch;
+}

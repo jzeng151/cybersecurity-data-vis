@@ -1,0 +1,221 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Each top reporter is really one attack, and they split sharply on dead-or-alive",
+    "subtitle": "Each top reporter is an automatic scanner that watches mostly one thing; the dead share runs from 28% to 95%"
+  },
+  "width": "container",
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "reporter": "anonymous",
+        "url_status": "online",
+        "share": 0.7244,
+        "n": 6955,
+        "offline_pct": 0.276,
+        "dominant_tag": "SmartLoader",
+        "dominant_tag_share": 0.728,
+        "ip_pct": 0.006
+      },
+      {
+        "reporter": "anonymous",
+        "url_status": "offline",
+        "share": 0.2756,
+        "n": 6955,
+        "offline_pct": 0.276,
+        "dominant_tag": "SmartLoader",
+        "dominant_tag_share": 0.728,
+        "ip_pct": 0.006
+      },
+      {
+        "reporter": "geenensp",
+        "url_status": "online",
+        "share": 0.048,
+        "n": 6015,
+        "offline_pct": 0.952,
+        "dominant_tag": "elf",
+        "dominant_tag_share": 0.998,
+        "ip_pct": 1.0
+      },
+      {
+        "reporter": "geenensp",
+        "url_status": "offline",
+        "share": 0.952,
+        "n": 6015,
+        "offline_pct": 0.952,
+        "dominant_tag": "elf",
+        "dominant_tag_share": 0.998,
+        "ip_pct": 1.0
+      },
+      {
+        "reporter": "abuse_ch",
+        "url_status": "online",
+        "share": 0.0618,
+        "n": 2507,
+        "offline_pct": 0.938,
+        "dominant_tag": "ua-wget",
+        "dominant_tag_share": 0.657,
+        "ip_pct": 0.735
+      },
+      {
+        "reporter": "abuse_ch",
+        "url_status": "offline",
+        "share": 0.9382,
+        "n": 2507,
+        "offline_pct": 0.938,
+        "dominant_tag": "ua-wget",
+        "dominant_tag_share": 0.657,
+        "ip_pct": 0.735
+      },
+      {
+        "reporter": "BlinkzSec",
+        "url_status": "online",
+        "share": 0.1207,
+        "n": 1524,
+        "offline_pct": 0.879,
+        "dominant_tag": "elf",
+        "dominant_tag_share": 0.692,
+        "ip_pct": 0.965
+      },
+      {
+        "reporter": "BlinkzSec",
+        "url_status": "offline",
+        "share": 0.8793,
+        "n": 1524,
+        "offline_pct": 0.879,
+        "dominant_tag": "elf",
+        "dominant_tag_share": 0.692,
+        "ip_pct": 0.965
+      },
+      {
+        "reporter": "botnetkiller",
+        "url_status": "online",
+        "share": 0.0837,
+        "n": 1374,
+        "offline_pct": 0.916,
+        "dominant_tag": "ua-wget",
+        "dominant_tag_share": 0.991,
+        "ip_pct": 0.908
+      },
+      {
+        "reporter": "botnetkiller",
+        "url_status": "offline",
+        "share": 0.9163,
+        "n": 1374,
+        "offline_pct": 0.916,
+        "dominant_tag": "ua-wget",
+        "dominant_tag_share": 0.991,
+        "ip_pct": 0.908
+      },
+      {
+        "reporter": "GAYINT_DOT_ORG",
+        "url_status": "online",
+        "share": 0.0777,
+        "n": 1222,
+        "offline_pct": 0.922,
+        "dominant_tag": "Mozi",
+        "dominant_tag_share": 0.63,
+        "ip_pct": 1.0
+      },
+      {
+        "reporter": "GAYINT_DOT_ORG",
+        "url_status": "offline",
+        "share": 0.9223,
+        "n": 1222,
+        "offline_pct": 0.922,
+        "dominant_tag": "Mozi",
+        "dominant_tag_share": 0.63,
+        "ip_pct": 1.0
+      },
+      {
+        "reporter": "JAMESWT_WT",
+        "url_status": "online",
+        "share": 0.0425,
+        "n": 424,
+        "offline_pct": 0.958,
+        "dominant_tag": "PDQConnect",
+        "dominant_tag_share": 0.007,
+        "ip_pct": 0.198
+      },
+      {
+        "reporter": "JAMESWT_WT",
+        "url_status": "offline",
+        "share": 0.9575,
+        "n": 424,
+        "offline_pct": 0.958,
+        "dominant_tag": "PDQConnect",
+        "dominant_tag_share": 0.007,
+        "ip_pct": 0.198
+      },
+      {
+        "reporter": "SaturdayNight",
+        "url_status": "online",
+        "share": 0.1424,
+        "n": 288,
+        "offline_pct": 0.858,
+        "dominant_tag": "botnet",
+        "dominant_tag_share": 1.0,
+        "ip_pct": 0.993
+      },
+      {
+        "reporter": "SaturdayNight",
+        "url_status": "offline",
+        "share": 0.8576,
+        "n": 288,
+        "offline_pct": 0.858,
+        "dominant_tag": "botnet",
+        "dominant_tag_share": 1.0,
+        "ip_pct": 0.993
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "tooltip": true
+  },
+  "encoding": {
+    "y": {
+      "field": "reporter",
+      "type": "nominal",
+      "title": "reporter (cohort)",
+      "sort": [
+        "anonymous",
+        "geenensp",
+        "abuse_ch",
+        "BlinkzSec",
+        "botnetkiller",
+        "GAYINT_DOT_ORG",
+        "JAMESWT_WT",
+        "SaturdayNight"
+      ]
+    },
+    "x": {
+      "field": "share",
+      "type": "quantitative",
+      "stack": "normalize",
+      "title": "share of cohort's URLs",
+      "axis": {
+        "format": "%"
+      }
+    },
+    "color": {
+      "field": "url_status",
+      "type": "nominal",
+      "title": "URL status",
+      "scale": {
+        "domain": [
+          "online",
+          "offline"
+        ],
+        "range": [
+          "#d2483f",
+          "#5b6b7a"
+        ]
+      }
+    },
+    "order": {
+      "field": "url_status"
+    }
+  }
+}

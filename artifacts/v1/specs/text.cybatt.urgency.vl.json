@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 340,
+  "data": {
+    "values": [
+      {
+        "term": "warns",
+        "weight": 17.161
+      },
+      {
+        "term": "warning",
+        "weight": 6.646
+      },
+      {
+        "term": "confirms",
+        "weight": 5.391
+      },
+      {
+        "term": "targeting",
+        "weight": 5.096
+      },
+      {
+        "term": "new",
+        "weight": 5.012
+      },
+      {
+        "term": "opensea",
+        "weight": 4.683
+      },
+      {
+        "term": "users",
+        "weight": 4.643
+      },
+      {
+        "term": "north",
+        "weight": 4.537
+      },
+      {
+        "term": "warned",
+        "weight": 4.505
+      },
+      {
+        "term": "confirmed",
+        "weight": 4.21
+      },
+      {
+        "term": "compromised",
+        "weight": 3.889
+      },
+      {
+        "term": "fbi",
+        "weight": 3.886
+      },
+      {
+        "term": "devices",
+        "weight": 3.847
+      },
+      {
+        "term": "update",
+        "weight": 3.821
+      },
+      {
+        "term": "attack",
+        "weight": 3.568
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "color": "#e0a341"
+  },
+  "encoding": {
+    "y": {
+      "field": "term",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null
+    },
+    "x": {
+      "field": "weight",
+      "type": "quantitative",
+      "title": "urgency weight (log-odds)"
+    },
+    "tooltip": [
+      {
+        "field": "term"
+      },
+      {
+        "field": "weight"
+      }
+    ]
+  }
+}

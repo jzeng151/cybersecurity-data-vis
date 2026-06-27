@@ -1,0 +1,310 @@
+{
+  "id": "cluster.ait.incident_summary",
+  "total_alerts": 2655821,
+  "n_groups": 1151,
+  "n_archetypes": 22,
+  "noise_groups": 165,
+  "reduction_ratio": 0.999567,
+  "attack_volume": 1764581,
+  "benign_volume_share": 0.3356,
+  "dominant_signature": "Web server 400 error code.",
+  "dominant_signature_share": 0.5916,
+  "severity_mix": {
+    "benign": 698,
+    "malicious": 258,
+    "suspicious": 195
+  },
+  "volume_by_severity": {
+    "benign": 35661,
+    "malicious": 1745793,
+    "suspicious": 874367
+  },
+  "top_groups": [
+    {
+      "signature": "Web server 400 error code.",
+      "host": "wazuh-client",
+      "scenario": "wilson",
+      "ids": "wazuh",
+      "count": 395133,
+      "share": 0.1488,
+      "severity": "malicious"
+    },
+    {
+      "signature": "Web server 400 error code.",
+      "host": "wazuh-client",
+      "scenario": "wheeler",
+      "ids": "wazuh",
+      "count": 387550,
+      "share": 0.1459,
+      "severity": "malicious"
+    },
+    {
+      "signature": "Web server 400 error code.",
+      "host": "wazuh-client",
+      "scenario": "harrison",
+      "ids": "wazuh",
+      "count": 384489,
+      "share": 0.1448,
+      "severity": "malicious"
+    },
+    {
+      "signature": "Web server 400 error code.",
+      "host": "wazuh-client",
+      "scenario": "fox",
+      "ids": "wazuh",
+      "count": 380062,
+      "share": 0.1431,
+      "severity": "malicious"
+    },
+    {
+      "signature": "IDS event.",
+      "host": "wazuh-client",
+      "scenario": "wheeler",
+      "ids": "wazuh",
+      "count": 66566,
+      "share": 0.0251,
+      "severity": "suspicious"
+    },
+    {
+      "signature": "Dovecot Authentication Success.",
+      "host": "wazuh-client",
+      "scenario": "wilson",
+      "ids": "wazuh",
+      "count": 66468,
+      "share": 0.025,
+      "severity": "suspicious"
+    },
+    {
+      "signature": "IDS event.",
+      "host": "wazuh-client",
+      "scenario": "harrison",
+      "ids": "wazuh",
+      "count": 63862,
+      "share": 0.024,
+      "severity": "suspicious"
+    },
+    {
+      "signature": "IDS event.",
+      "host": "wazuh-client",
+      "scenario": "wilson",
+      "ids": "wazuh",
+      "count": 62718,
+      "share": 0.0236,
+      "severity": "suspicious"
+    },
+    {
+      "signature": "Suricata: Alert - ET INFO Observed DNS Query to .biz TLD",
+      "host": "wazuh-client",
+      "scenario": "harrison",
+      "ids": "wazuh",
+      "count": 47183,
+      "share": 0.0178,
+      "severity": "suspicious"
+    },
+    {
+      "signature": "Dovecot Authentication Success.",
+      "host": "wazuh-client",
+      "scenario": "wheeler",
+      "ids": "wazuh",
+      "count": 45711,
+      "share": 0.0172,
+      "severity": "suspicious"
+    },
+    {
+      "signature": "IDS event.",
+      "host": "wazuh-client",
+      "scenario": "santos",
+      "ids": "wazuh",
+      "count": 42007,
+      "share": 0.0158,
+      "severity": "suspicious"
+    },
+    {
+      "signature": "Dovecot Authentication Success.",
+      "host": "wazuh-client",
+      "scenario": "wardbeck",
+      "ids": "wazuh",
+      "count": 32433,
+      "share": 0.0122,
+      "severity": "suspicious"
+    }
+  ],
+  "archetypes": [
+    {
+      "cluster": 12,
+      "n_groups": 27,
+      "total_alerts": 578652,
+      "dominant_signature": "Dovecot Authentication Success.",
+      "severity": "suspicious",
+      "mean_attack_fraction": 0.024
+    },
+    {
+      "cluster": 0,
+      "n_groups": 16,
+      "total_alerts": 30145,
+      "dominant_signature": "AMiner: New request method in Apache Access log.",
+      "severity": "malicious",
+      "mean_attack_fraction": 0.997
+    },
+    {
+      "cluster": 11,
+      "n_groups": 68,
+      "total_alerts": 13132,
+      "dominant_signature": "ClamAV database update",
+      "severity": "benign",
+      "mean_attack_fraction": 0.08
+    },
+    {
+      "cluster": 1,
+      "n_groups": 29,
+      "total_alerts": 10835,
+      "dominant_signature": "Multiple IDS alerts for same id.",
+      "severity": "suspicious",
+      "mean_attack_fraction": 0.047
+    },
+    {
+      "cluster": 9,
+      "n_groups": 16,
+      "total_alerts": 5191,
+      "dominant_signature": "Apache: Attempt to access forbidden file or directory.",
+      "severity": "malicious",
+      "mean_attack_fraction": 1.0
+    },
+    {
+      "cluster": 15,
+      "n_groups": 194,
+      "total_alerts": 2818,
+      "dominant_signature": "AMiner: Unusual occurrence frequencies of DNS log events.",
+      "severity": "benign",
+      "mean_attack_fraction": 0.019
+    },
+    {
+      "cluster": 3,
+      "n_groups": 26,
+      "total_alerts": 2219,
+      "dominant_signature": "Dovecot Invalid User Login Attempt.",
+      "severity": "benign",
+      "mean_attack_fraction": 0.021
+    },
+    {
+      "cluster": 7,
+      "n_groups": 32,
+      "total_alerts": 1289,
+      "dominant_signature": "AMiner: New event type.",
+      "severity": "malicious",
+      "mean_attack_fraction": 0.828
+    },
+    {
+      "cluster": 18,
+      "n_groups": 43,
+      "total_alerts": 411,
+      "dominant_signature": "AMiner: New ip address in DNS logs.",
+      "severity": "benign",
+      "mean_attack_fraction": 0.0
+    },
+    {
+      "cluster": 2,
+      "n_groups": 19,
+      "total_alerts": 309,
+      "dominant_signature": "Multiple IDS events from same source ip (ignoring now this srcip and id).",
+      "severity": "benign",
+      "mean_attack_fraction": 0.002
+    },
+    {
+      "cluster": 6,
+      "n_groups": 53,
+      "total_alerts": 234,
+      "dominant_signature": "Suricata: Alert - ET SCAN Possible Nmap User-Agent Observed",
+      "severity": "malicious",
+      "mean_attack_fraction": 1.0
+    },
+    {
+      "cluster": 14,
+      "n_groups": 205,
+      "total_alerts": 205,
+      "dominant_signature": "AMiner: New event type.",
+      "severity": "benign",
+      "mean_attack_fraction": 0.0
+    },
+    {
+      "cluster": 10,
+      "n_groups": 40,
+      "total_alerts": 195,
+      "dominant_signature": "Auditd: SELinux permission check.",
+      "severity": "benign",
+      "mean_attack_fraction": 0.0
+    },
+    {
+      "cluster": 8,
+      "n_groups": 30,
+      "total_alerts": 183,
+      "dominant_signature": "Apache: Attempt to access forbidden file or directory.",
+      "severity": "malicious",
+      "mean_attack_fraction": 1.0
+    },
+    {
+      "cluster": 17,
+      "n_groups": 31,
+      "total_alerts": 103,
+      "dominant_signature": "AMiner: New event type.",
+      "severity": "benign",
+      "mean_attack_fraction": 0.0
+    },
+    {
+      "cluster": 4,
+      "n_groups": 24,
+      "total_alerts": 58,
+      "dominant_signature": "AMiner: New user_start parameter combination in Audit logs.",
+      "severity": "malicious",
+      "mean_attack_fraction": 1.0
+    },
+    {
+      "cluster": 20,
+      "n_groups": 29,
+      "total_alerts": 58,
+      "dominant_signature": "AMiner: High entropy in Apache Access referer.",
+      "severity": "benign",
+      "mean_attack_fraction": 0.0
+    },
+    {
+      "cluster": 19,
+      "n_groups": 20,
+      "total_alerts": 54,
+      "dominant_signature": "AMiner: New request method in Apache Access log.",
+      "severity": "benign",
+      "mean_attack_fraction": 0.0
+    },
+    {
+      "cluster": 13,
+      "n_groups": 19,
+      "total_alerts": 53,
+      "dominant_signature": "AMiner: High entropy in Apache Access request.",
+      "severity": "malicious",
+      "mean_attack_fraction": 0.504
+    },
+    {
+      "cluster": 21,
+      "n_groups": 26,
+      "total_alerts": 52,
+      "dominant_signature": "AMiner: New user_acct parameter combination in Audit logs.",
+      "severity": "benign",
+      "mean_attack_fraction": 0.0
+    },
+    {
+      "cluster": 16,
+      "n_groups": 16,
+      "total_alerts": 33,
+      "dominant_signature": "AMiner: New characters in DNS domain.",
+      "severity": "benign",
+      "mean_attack_fraction": 0.0
+    },
+    {
+      "cluster": 5,
+      "n_groups": 23,
+      "total_alerts": 23,
+      "dominant_signature": "AMiner: New service_start parameter combination in Audit logs.",
+      "severity": "malicious",
+      "mean_attack_fraction": 1.0
+    }
+  ]
+}

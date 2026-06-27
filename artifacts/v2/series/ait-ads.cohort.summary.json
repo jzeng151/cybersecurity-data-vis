@@ -1,0 +1,57 @@
+{
+  "n_ips": 86,
+  "n_ips_firing_inwindow": 61,
+  "n_ips_training_only": 9,
+  "total_inwindow_events": 47044,
+  "recon_events": 45789,
+  "recon_share": 0.9733,
+  "post_exploitation_events": 389,
+  "post_exploitation_share": 0.0083,
+  "top5_ip_share": 0.8734,
+  "events_by_stage": {
+    "network_scans": 54,
+    "service_scans": 812,
+    "dirb": 18201,
+    "wpscan": 27588,
+    "webshell": 18,
+    "cracking": 120,
+    "reverse_shell": 21,
+    "privilege_escalation": 194,
+    "service_stop": 15,
+    "dnsteal": 21
+  },
+  "top_ips": [
+    {
+      "ip": "192.168.2.114",
+      "inwindow": 11217
+    },
+    {
+      "ip": "192.168.131.215",
+      "inwindow": 9444
+    },
+    {
+      "ip": "10.35.35.206",
+      "inwindow": 9272
+    },
+    {
+      "ip": "172.26.243.167",
+      "inwindow": 7756
+    },
+    {
+      "ip": "192.168.104.155",
+      "inwindow": 3397
+    },
+    {
+      "ip": "10.143.2.4",
+      "inwindow": 3275
+    },
+    {
+      "ip": "172.21.241.88",
+      "inwindow": 855
+    },
+    {
+      "ip": "192.168.188.179",
+      "inwindow": 851
+    }
+  ]
+}

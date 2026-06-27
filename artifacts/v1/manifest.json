@@ -1,0 +1,199 @@
+{
+  "schema_version": "1",
+  "bundle_version": "v1",
+  "generated_at": "2026-06-25T04:36:31.325244+00:00",
+  "git_rev": "uninitialized",
+  "thesis": "Alert fatigue is a triage problem, not a detection problem.",
+  "artifacts": [
+    {
+      "id": "timeseries.ait",
+      "technique": "timeseries",
+      "dataset": "ait-ads",
+      "act": 2,
+      "title": "Daily seasonality + attack overlay (wheeler)",
+      "insight": "Alert volume swings on a strong daily cycle; a seasonally-aware detector flags the off-rhythm spikes and catches 50% of attack-hours \u2014 but precision stays at 8%, because one noisy signature dominates the residual. Seasonality is necessary, not sufficient: the signal has to move from volume to behavior.",
+      "storage": [
+        "series/timeseries.ait.hourly.json"
+      ],
+      "spec": "specs/timeseries.ait.hourly.vl.json",
+      "params": {
+        "scenario": "wheeler",
+        "decomp": "STL",
+        "period": 24,
+        "z_thresh": 3.0
+      },
+      "row_counts": {
+        "hours": 120,
+        "attack_hours": 4,
+        "anomaly_hours": 24
+      },
+      "fit": "strong",
+      "data_quality_note": "Intended source LANL auth logs is now form-gated; this uses the AIT-ADS alert stream with attack windows as ground truth (attack windows are coarse, not dispositions).",
+      "fit_warning": null
+    },
+    {
+      "id": "cohort.ait",
+      "technique": "cohort",
+      "dataset": "ait-ads",
+      "act": 2,
+      "title": "Per-entity baselining: real signal, too little history",
+      "insight": "The biggest per-host deviations are attack-linked (mean z 136 vs 1.8 on normal days), but baselining barely out-ranks raw volume (AUC 0.61 vs 0.61). With ~5 days of history the per-entity baseline is too short to trust \u2014 the data, not the method, is the bottleneck.",
+      "storage": [
+        "series/cohort.ait.summary.json",
+        "tables/cohort.ait.host_days.parquet"
+      ],
+      "spec": "specs/cohort.ait.deviation.vl.json",
+      "params": {
+        "baseline": "per-host median+MAD",
+        "z_thresh": 3.0,
+        "cohorts": "volume tertiles"
+      },
+      "row_counts": {
+        "hosts": 101,
+        "host_days": 370,
+        "attack_days": 92
+      },
+      "fit": "moderate",
+      "data_quality_note": "LANL auth logs (the ideal source) are now form-gated; AIT-ADS host-days substitute.",
+      "fit_warning": "Baseline AUC (~0.61) barely beats raw volume because the testbed gives only ~5 days of per-host history and labels are coarse attack-windows, not analyst dispositions. Behavioral baselining is promising but unprovable on public data \u2014 the case for a labeled-disposition dataset."
+    },
+    {
+      "id": "cluster.ait",
+      "technique": "cluster",
+      "dataset": "ait-ads",
+      "act": 2,
+      "title": "2,655,821 alerts \u2192 1,151 patterns \u2192 22 archetypes",
+      "insight": "2,655,821 raw alerts are really 1,151 recurring (signature, host) patterns \u2014 a 99.96% collapse. One pattern alone (\u201cWeb server 400 error code.\u201d) is 59% of all alerts. Deduplication is the highest-leverage triage lever, before any model runs.",
+      "storage": [
+        "series/cluster.ait.incident_summary.json",
+        "tables/cluster.ait.incident_clusters.parquet"
+      ],
+      "spec": "specs/cluster.ait.scatter.vl.json",
+      "params": {
+        "algo": "HDBSCAN",
+        "min_cluster_size": 15,
+        "group_key": [
+          "scenario",
+          "ids",
+          "signature",
+          "host"
+        ]
+      },
+      "row_counts": {
+        "input_alerts": 2655821,
+        "groups": 1151,
+        "archetypes": 22,
+        "noise_groups": 165
+      },
+      "fit": "strong",
+      "data_quality_note": "Labels are scenario attack-time windows, not analyst dispositions: a benign alert inside an attack window still counts as attack-time. Severity here is a proxy.",
+      "fit_warning": null
+    },
+    {
+      "id": "pca.unsw",
+      "technique": "pca",
+      "dataset": "unsw-nb15",
+      "act": 2,
+      "title": "39 features \u2192 11 components (90% variance)",
+      "insight": "39 flow features collapse into 11 orthogonal components capturing 90% of the variance \u2014 the alert space is far lower-dimensional than it looks.",
+      "storage": [
+        "series/pca.unsw.loadings.json",
+        "tables/pca.unsw.scores.parquet"
+      ],
+      "spec": "specs/pca.unsw.scatter.vl.json",
+      "params": {
+        "n_components": 10,
+        "scaler": "standard",
+        "sample_n": 1500
+      },
+      "row_counts": {
+        "rows": 175341,
+        "features": 39,
+        "sampled_points": 1500
+      },
+      "fit": "supporting",
+      "data_quality_note": "PCA, not classical latent-factor analysis; a preprocessing/structure view that feeds clustering and regression rather than a standalone insight.",
+      "fit_warning": null
+    },
+    {
+      "id": "regression.unsw",
+      "technique": "regression",
+      "dataset": "unsw-nb15",
+      "act": 2,
+      "title": "15 features carry 90% of the signal (AUC 0.983)",
+      "insight": "A handful of features \u2014 led by sttl and smean \u2014 carry the weight: 15 of 39 features explain 90% of the model's discrimination (AUC 0.983). The model is accurate AND can say why \u2014 but that accuracy is partly an artifact, and it predicts an attack label, not an analyst's verdict.",
+      "storage": [
+        "series/regression.unsw.feature_importance.json",
+        "tables/regression.unsw.scored.parquet"
+      ],
+      "spec": "specs/regression.unsw.importance.vl.json",
+      "params": {
+        "algo": "HistGradientBoostingClassifier",
+        "max_iter": 200,
+        "importance": "permutation"
+      },
+      "row_counts": {
+        "train": 175341,
+        "test": 82332,
+        "features": 39
+      },
+      "fit": "strong",
+      "data_quality_note": null,
+      "fit_warning": "AUC this high is partly a UNSW-NB15 separability artifact (e.g. near-separable sttl) and will not transfer to production triage. The target is an attack label, a PROXY for the analyst disposition that no public dataset provides."
+    },
+    {
+      "id": "montecarlo.epss",
+      "technique": "monte_carlo",
+      "dataset": "epss+kev",
+      "act": 2,
+      "title": "Breach risk is concentrated: 5 patches halve it",
+      "insight": "This 60-CVE asset expects 7.6 CVEs to be exploited in 30 days, and the risk is concentrated: patching the 5 KEV/EPSS-flagged CVEs first halves that exposure, while random patching barely moves it. Prioritization, not patch volume, is the lever.",
+      "storage": [
+        "series/montecarlo.epss.summary.json",
+        "tables/montecarlo.epss.patch_curves.parquet"
+      ],
+      "spec": "specs/montecarlo.epss.patch_curves.vl.json",
+      "params": {
+        "portfolio_size": 60,
+        "n_kev": 6,
+        "n_sims": 50000,
+        "horizon_days": 30
+      },
+      "row_counts": {
+        "epss_cves": 342575,
+        "kev_cves": 1627,
+        "portfolio": 60
+      },
+      "fit": "moderate",
+      "data_quality_note": null,
+      "fit_warning": "Monte Carlo is a forced fit on telemetry; it is honest only on this EPSS/CVE risk layer. The asset portfolio is constructed (no public asset-inventory data), so this demonstrates the prioritization method, not a measured breach rate."
+    },
+    {
+      "id": "text.cybatt",
+      "technique": "text",
+      "dataset": "cybatt",
+      "act": 2,
+      "title": "Urgency in the language (AUC 0.99)",
+      "insight": "Only 2.5% of cyber-news tweets are genuinely high-risk, yet a simple urgency classifier finds them at AUC 0.99. The words that fire \u2014 warns, warning, confirms \u2014 are the same urgency cues that wear analysts down: the human cost is real and it is in the language.",
+      "storage": [
+        "series/text.cybatt.urgency.json"
+      ],
+      "spec": "specs/text.cybatt.urgency.vl.json",
+      "params": {
+        "model": "TF-IDF + LogisticRegression",
+        "ngram": [
+          1,
+          2
+        ],
+        "positive": "High_Risk_News"
+      },
+      "row_counts": {
+        "tweets": 36071,
+        "high_risk": 892
+      },
+      "fit": "forced",
+      "data_quality_note": null,
+      "fit_warning": "Emotional-tone sentiment is the wrong frame; this is urgency/risk text CLASSIFICATION, which is legitimate. It runs on tweets, not SOC alerts, so it corroborates the human cost of alert fatigue rather than carrying the triage argument."
+    }
+  ]
+}

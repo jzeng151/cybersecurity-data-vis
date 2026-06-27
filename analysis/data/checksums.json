@@ -1,0 +1,47 @@
+{
+  "ait_ads.labels": {
+    "bytes": 3703,
+    "sha256": "633e09b42772eabbbe5b48598220860eead60b7352efb01973fc45a5034290c0",
+    "url": "https://zenodo.org/api/records/8263181/files/labels.csv/content"
+  },
+  "ait_ads.zip": {
+    "bytes": 96202946,
+    "sha256": "9f0595c4ebe56ac9223763881f55369dd4f249a8108064e4ae108eb3309aeeb9",
+    "url": "https://zenodo.org/api/records/8263181/files/ait_ads.zip/content"
+  },
+  "cisa.kev": {
+    "bytes": 1518912,
+    "sha256": "843a85c0e3d9784c2e552d0785e9d0978357ba7af3cb5e560e9bb108a713662e",
+    "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+  },
+  "ctu13.botnet52": {
+    "bytes": 26305153,
+    "sha256": "a78e3a297fd07fe4b9a076a93c94b06732679947d96179ebe662cec4339374fc",
+    "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-52/capture20110818-2.binetflow.2format"
+  },
+  "epss.current": {
+    "bytes": 2428741,
+    "sha256": "0fff23c86b9890477f2ee8ffc3a393e2012198738adf5f30a8094e8201534587",
+    "url": "https://epss.cyentia.com/epss_scores-current.csv.gz"
+  },
+  "nazario.2020": {
+    "bytes": 5826445,
+    "sha256": "99e20bf25f5e8556d37103f2c8140cd75181a62d3df91df8acf9d9aece9f08bb",
+    "url": "https://monkey.org/~jose/phishing/phishing-2020"
+  },
+  "unsw_nb15.test": {
+    "bytes": 15380800,
+    "sha256": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+    "url": "https://raw.githubusercontent.com/Nir-J/ML-Projects/master/UNSW-Network_Packet_Classification/UNSW_NB15_testing-set.csv"
+  },
+  "unsw_nb15.train": {
+    "bytes": 32293018,
+    "sha256": "bec7dd5ec88dc2a0ccc7a07879d338395ed7421750f675fd0339e07dfe0648fa",
+    "url": "https://raw.githubusercontent.com/Nir-J/ML-Projects/master/UNSW-Network_Packet_Classification/UNSW_NB15_training-set.csv"
+  },
+  "urlhaus.recent": {
+    "bytes": 4833047,
+    "sha256": "b7d741c7acbee7bcad502662d712c581b630e96955c6244234a34e6291553e1e",
+    "url": "https://urlhaus.abuse.ch/downloads/csv_recent/"
+  }
+}

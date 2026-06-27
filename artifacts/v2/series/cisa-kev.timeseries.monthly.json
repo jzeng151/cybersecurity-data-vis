@@ -1,0 +1,282 @@
+[
+  {
+    "month": "2021-11",
+    "count": 291,
+    "rolling3": 291.0
+  },
+  {
+    "month": "2021-12",
+    "count": 20,
+    "rolling3": 155.5
+  },
+  {
+    "month": "2022-01",
+    "count": 40,
+    "rolling3": 117.0
+  },
+  {
+    "month": "2022-02",
+    "count": 32,
+    "rolling3": 30.67
+  },
+  {
+    "month": "2022-03",
+    "count": 226,
+    "rolling3": 99.33
+  },
+  {
+    "month": "2022-04",
+    "count": 45,
+    "rolling3": 101.0
+  },
+  {
+    "month": "2022-05",
+    "count": 83,
+    "rolling3": 118.0
+  },
+  {
+    "month": "2022-06",
+    "count": 48,
+    "rolling3": 58.67
+  },
+  {
+    "month": "2022-07",
+    "count": 3,
+    "rolling3": 44.67
+  },
+  {
+    "month": "2022-08",
+    "count": 23,
+    "rolling3": 24.67
+  },
+  {
+    "month": "2022-09",
+    "count": 24,
+    "rolling3": 16.67
+  },
+  {
+    "month": "2022-10",
+    "count": 12,
+    "rolling3": 19.67
+  },
+  {
+    "month": "2022-11",
+    "count": 10,
+    "rolling3": 15.33
+  },
+  {
+    "month": "2022-12",
+    "count": 9,
+    "rolling3": 10.33
+  },
+  {
+    "month": "2023-01",
+    "count": 5,
+    "rolling3": 8.0
+  },
+  {
+    "month": "2023-02",
+    "count": 14,
+    "rolling3": 9.33
+  },
+  {
+    "month": "2023-03",
+    "count": 18,
+    "rolling3": 12.33
+  },
+  {
+    "month": "2023-04",
+    "count": 17,
+    "rolling3": 16.33
+  },
+  {
+    "month": "2023-05",
+    "count": 19,
+    "rolling3": 18.0
+  },
+  {
+    "month": "2023-06",
+    "count": 24,
+    "rolling3": 20.0
+  },
+  {
+    "month": "2023-07",
+    "count": 16,
+    "rolling3": 19.67
+  },
+  {
+    "month": "2023-08",
+    "count": 8,
+    "rolling3": 16.0
+  },
+  {
+    "month": "2023-09",
+    "count": 19,
+    "rolling3": 14.33
+  },
+  {
+    "month": "2023-10",
+    "count": 18,
+    "rolling3": 15.0
+  },
+  {
+    "month": "2023-11",
+    "count": 18,
+    "rolling3": 18.33
+  },
+  {
+    "month": "2023-12",
+    "count": 11,
+    "rolling3": 15.67
+  },
+  {
+    "month": "2024-01",
+    "count": 21,
+    "rolling3": 16.67
+  },
+  {
+    "month": "2024-02",
+    "count": 9,
+    "rolling3": 13.67
+  },
+  {
+    "month": "2024-03",
+    "count": 10,
+    "rolling3": 13.33
+  },
+  {
+    "month": "2024-04",
+    "count": 10,
+    "rolling3": 9.67
+  },
+  {
+    "month": "2024-05",
+    "count": 14,
+    "rolling3": 11.33
+  },
+  {
+    "month": "2024-06",
+    "count": 9,
+    "rolling3": 11.0
+  },
+  {
+    "month": "2024-07",
+    "count": 14,
+    "rolling3": 12.33
+  },
+  {
+    "month": "2024-08",
+    "count": 19,
+    "rolling3": 14.0
+  },
+  {
+    "month": "2024-09",
+    "count": 25,
+    "rolling3": 19.33
+  },
+  {
+    "month": "2024-10",
+    "count": 17,
+    "rolling3": 20.33
+  },
+  {
+    "month": "2024-11",
+    "count": 22,
+    "rolling3": 21.33
+  },
+  {
+    "month": "2024-12",
+    "count": 16,
+    "rolling3": 18.33
+  },
+  {
+    "month": "2025-01",
+    "count": 14,
+    "rolling3": 17.33
+  },
+  {
+    "month": "2025-02",
+    "count": 27,
+    "rolling3": 19.0
+  },
+  {
+    "month": "2025-03",
+    "count": 32,
+    "rolling3": 24.33
+  },
+  {
+    "month": "2025-04",
+    "count": 15,
+    "rolling3": 24.67
+  },
+  {
+    "month": "2025-05",
+    "count": 24,
+    "rolling3": 23.67
+  },
+  {
+    "month": "2025-06",
+    "count": 20,
+    "rolling3": 19.67
+  },
+  {
+    "month": "2025-07",
+    "count": 20,
+    "rolling3": 21.33
+  },
+  {
+    "month": "2025-08",
+    "count": 15,
+    "rolling3": 18.33
+  },
+  {
+    "month": "2025-09",
+    "count": 16,
+    "rolling3": 17.0
+  },
+  {
+    "month": "2025-10",
+    "count": 31,
+    "rolling3": 20.67
+  },
+  {
+    "month": "2025-11",
+    "count": 11,
+    "rolling3": 19.33
+  },
+  {
+    "month": "2025-12",
+    "count": 20,
+    "rolling3": 20.67
+  },
+  {
+    "month": "2026-01",
+    "count": 17,
+    "rolling3": 16.0
+  },
+  {
+    "month": "2026-02",
+    "count": 28,
+    "rolling3": 21.67
+  },
+  {
+    "month": "2026-03",
+    "count": 26,
+    "rolling3": 23.67
+  },
+  {
+    "month": "2026-04",
+    "count": 31,
+    "rolling3": 28.33
+  },
+  {
+    "month": "2026-05",
+    "count": 21,
+    "rolling3": 26.0
+  },
+  {
+    "month": "2026-06",
+    "count": 20,
+    "rolling3": 24.0
+  }
+]
