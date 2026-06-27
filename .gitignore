@@ -1,0 +1,23 @@
+# Python
+analysis/.venv/
+__pycache__/
+*.pyc
+
+# Raw + intermediate data (large; reproducible via acquire scripts + committed checksums.json)
+analysis/data/raw/
+analysis/data/interim/
+
+# Node / Next.js
+app/node_modules/
+app/.next/
+app/next-env.d.ts
+
+# OS
+.DS_Store
+.gstack/
+
+# Local editor / tooling state
+.claude/
+.understand-anything/
+*.tsbuildinfo
+.pytest_cache/
