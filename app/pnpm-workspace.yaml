@@ -1,0 +1,5 @@
+# pnpm 11 build-script gate. This app doesn't use next/image, so sharp's native binary
+# isn't needed — declining its build clears the pending-build gate so `pnpm install`
+# (which `next build` runs internally) exits 0.
+allowBuilds:
+  sharp: false

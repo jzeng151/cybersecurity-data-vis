@@ -1,0 +1,1038 @@
+{
+  "expected_total": 10028.8,
+  "sd": 82.0,
+  "ci95": [
+    9868.0,
+    10189.5
+  ],
+  "mc_seed0_mean": 10026.1,
+  "mc_seed0_sd": 81.8,
+  "gini": 0.7663,
+  "share_of_mass": {
+    "top_1pct": 0.2695,
+    "top_5pct": 0.5931,
+    "top_10pct": 0.7029
+  },
+  "frac_epss_ge": {
+    "0.05": 8.88,
+    "0.5": 1.247,
+    "0.9": 0.223
+  },
+  "curve": [
+    {
+      "cve_share": 0.0,
+      "mass_share": 0.0,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.00503,
+      "mass_share": 0.15309,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.01,
+      "mass_share": 0.26956,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.01005,
+      "mass_share": 0.27057,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.01508,
+      "mass_share": 0.35593,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.0201,
+      "mass_share": 0.41688,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.02513,
+      "mass_share": 0.4624,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.03015,
+      "mass_share": 0.49865,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.03518,
+      "mass_share": 0.5287,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.0402,
+      "mass_share": 0.55401,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.04523,
+      "mass_share": 0.57561,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.05,
+      "mass_share": 0.5931,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.05025,
+      "mass_share": 0.59395,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.05528,
+      "mass_share": 0.60992,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.0603,
+      "mass_share": 0.62421,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.06533,
+      "mass_share": 0.63713,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.07035,
+      "mass_share": 0.64892,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.07538,
+      "mass_share": 0.65977,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.0804,
+      "mass_share": 0.66981,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.08543,
+      "mass_share": 0.67916,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.09045,
+      "mass_share": 0.68785,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.09548,
+      "mass_share": 0.69599,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.1,
+      "mass_share": 0.70291,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.1005,
+      "mass_share": 0.70366,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.10553,
+      "mass_share": 0.7109,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.11055,
+      "mass_share": 0.71776,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.11558,
+      "mass_share": 0.72433,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.1206,
+      "mass_share": 0.73062,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.12563,
+      "mass_share": 0.73664,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.13065,
+      "mass_share": 0.74243,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.13568,
+      "mass_share": 0.74799,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.1407,
+      "mass_share": 0.75336,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.14573,
+      "mass_share": 0.75853,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.15075,
+      "mass_share": 0.76352,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.15578,
+      "mass_share": 0.76834,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.1608,
+      "mass_share": 0.77302,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.16583,
+      "mass_share": 0.77757,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.17085,
+      "mass_share": 0.78199,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.17588,
+      "mass_share": 0.78628,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.1809,
+      "mass_share": 0.79046,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.18593,
+      "mass_share": 0.79453,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.19095,
+      "mass_share": 0.7985,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.19598,
+      "mass_share": 0.80236,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.20101,
+      "mass_share": 0.80613,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.20603,
+      "mass_share": 0.8098,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.21106,
+      "mass_share": 0.81338,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.21608,
+      "mass_share": 0.81688,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.22111,
+      "mass_share": 0.8203,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.22613,
+      "mass_share": 0.82365,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.23116,
+      "mass_share": 0.82693,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.23618,
+      "mass_share": 0.83014,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.24121,
+      "mass_share": 0.83329,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.24623,
+      "mass_share": 0.83637,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.25126,
+      "mass_share": 0.83939,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.25628,
+      "mass_share": 0.84236,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.26131,
+      "mass_share": 0.84526,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.26633,
+      "mass_share": 0.84811,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.27136,
+      "mass_share": 0.85091,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.27638,
+      "mass_share": 0.85365,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.28141,
+      "mass_share": 0.85633,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.28643,
+      "mass_share": 0.85897,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.29146,
+      "mass_share": 0.86156,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.29648,
+      "mass_share": 0.8641,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.30151,
+      "mass_share": 0.8666,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.30653,
+      "mass_share": 0.86905,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.31156,
+      "mass_share": 0.87147,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.31658,
+      "mass_share": 0.87383,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.32161,
+      "mass_share": 0.87616,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.32663,
+      "mass_share": 0.87846,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.33166,
+      "mass_share": 0.88072,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.33668,
+      "mass_share": 0.88294,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.34171,
+      "mass_share": 0.88512,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.34673,
+      "mass_share": 0.88726,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.35176,
+      "mass_share": 0.88938,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.35678,
+      "mass_share": 0.89146,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.36181,
+      "mass_share": 0.89351,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.36683,
+      "mass_share": 0.89553,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.37186,
+      "mass_share": 0.89752,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.37688,
+      "mass_share": 0.89948,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.38191,
+      "mass_share": 0.90141,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.38693,
+      "mass_share": 0.90331,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.39196,
+      "mass_share": 0.90518,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.39698,
+      "mass_share": 0.90702,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.40201,
+      "mass_share": 0.90883,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.40704,
+      "mass_share": 0.91061,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.41206,
+      "mass_share": 0.91237,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.41709,
+      "mass_share": 0.9141,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.42211,
+      "mass_share": 0.9158,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.42714,
+      "mass_share": 0.91747,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.43216,
+      "mass_share": 0.91912,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.43719,
+      "mass_share": 0.92075,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.44221,
+      "mass_share": 0.92235,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.44724,
+      "mass_share": 0.92392,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.45226,
+      "mass_share": 0.92547,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.45729,
+      "mass_share": 0.92698,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.46231,
+      "mass_share": 0.92847,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.46734,
+      "mass_share": 0.92994,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.47236,
+      "mass_share": 0.93137,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.47739,
+      "mass_share": 0.93278,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.48241,
+      "mass_share": 0.93416,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.48744,
+      "mass_share": 0.93552,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.49246,
+      "mass_share": 0.93685,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.49749,
+      "mass_share": 0.93816,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.50251,
+      "mass_share": 0.93943,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.50754,
+      "mass_share": 0.94069,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.51256,
+      "mass_share": 0.94192,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.51759,
+      "mass_share": 0.94313,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.52261,
+      "mass_share": 0.94431,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.52764,
+      "mass_share": 0.94548,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.53266,
+      "mass_share": 0.94662,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.53769,
+      "mass_share": 0.94774,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.54271,
+      "mass_share": 0.94884,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.54774,
+      "mass_share": 0.94992,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.55276,
+      "mass_share": 0.95098,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.55779,
+      "mass_share": 0.95202,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.56281,
+      "mass_share": 0.95305,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.56784,
+      "mass_share": 0.95406,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.57286,
+      "mass_share": 0.95504,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.57789,
+      "mass_share": 0.95601,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.58291,
+      "mass_share": 0.95696,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.58794,
+      "mass_share": 0.9579,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.59296,
+      "mass_share": 0.95882,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.59799,
+      "mass_share": 0.95972,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.60302,
+      "mass_share": 0.96061,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.60804,
+      "mass_share": 0.96149,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.61307,
+      "mass_share": 0.96235,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.61809,
+      "mass_share": 0.96319,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.62312,
+      "mass_share": 0.96403,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.62814,
+      "mass_share": 0.96484,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.63317,
+      "mass_share": 0.96565,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.63819,
+      "mass_share": 0.96644,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.64322,
+      "mass_share": 0.96721,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.64824,
+      "mass_share": 0.96798,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.65327,
+      "mass_share": 0.96873,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.65829,
+      "mass_share": 0.96947,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.66332,
+      "mass_share": 0.9702,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.66834,
+      "mass_share": 0.97092,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.67337,
+      "mass_share": 0.97163,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.67839,
+      "mass_share": 0.97233,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.68342,
+      "mass_share": 0.97302,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.68844,
+      "mass_share": 0.9737,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.69347,
+      "mass_share": 0.97437,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.69849,
+      "mass_share": 0.97503,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.70352,
+      "mass_share": 0.97569,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.70854,
+      "mass_share": 0.97634,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.71357,
+      "mass_share": 0.97697,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.71859,
+      "mass_share": 0.9776,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.72362,
+      "mass_share": 0.97822,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.72864,
+      "mass_share": 0.97883,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.73367,
+      "mass_share": 0.97944,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.73869,
+      "mass_share": 0.98003,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.74372,
+      "mass_share": 0.98062,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.74874,
+      "mass_share": 0.98119,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.75377,
+      "mass_share": 0.98176,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.75879,
+      "mass_share": 0.98233,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.76382,
+      "mass_share": 0.98288,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.76884,
+      "mass_share": 0.98342,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.77387,
+      "mass_share": 0.98396,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.77889,
+      "mass_share": 0.98449,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.78392,
+      "mass_share": 0.98501,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.78894,
+      "mass_share": 0.98552,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.79397,
+      "mass_share": 0.98603,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.79899,
+      "mass_share": 0.98652,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.80402,
+      "mass_share": 0.98701,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.80905,
+      "mass_share": 0.98748,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.81407,
+      "mass_share": 0.98795,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.8191,
+      "mass_share": 0.98841,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.82412,
+      "mass_share": 0.98887,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.82915,
+      "mass_share": 0.98932,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.83417,
+      "mass_share": 0.98976,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.8392,
+      "mass_share": 0.99019,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.84422,
+      "mass_share": 0.99062,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.84925,
+      "mass_share": 0.99104,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.85427,
+      "mass_share": 0.99145,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.8593,
+      "mass_share": 0.99185,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.86432,
+      "mass_share": 0.99225,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.86935,
+      "mass_share": 0.99264,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.87437,
+      "mass_share": 0.99303,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.8794,
+      "mass_share": 0.9934,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.88442,
+      "mass_share": 0.99377,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.88945,
+      "mass_share": 0.99414,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.89447,
+      "mass_share": 0.99449,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.8995,
+      "mass_share": 0.99484,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.90452,
+      "mass_share": 0.99519,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.90955,
+      "mass_share": 0.99552,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.91457,
+      "mass_share": 0.99585,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.9196,
+      "mass_share": 0.99617,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.92462,
+      "mass_share": 0.99648,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.92965,
+      "mass_share": 0.99678,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.93467,
+      "mass_share": 0.99708,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.9397,
+      "mass_share": 0.99736,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.94472,
+      "mass_share": 0.99764,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.94975,
+      "mass_share": 0.99791,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.95477,
+      "mass_share": 0.99818,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.9598,
+      "mass_share": 0.99843,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.96482,
+      "mass_share": 0.99867,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.96985,
+      "mass_share": 0.9989,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.97487,
+      "mass_share": 0.99912,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.9799,
+      "mass_share": 0.99933,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.98492,
+      "mass_share": 0.99953,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.98995,
+      "mass_share": 0.9997,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 0.99497,
+      "mass_share": 0.99986,
+      "series": "expected-exploit mass"
+    },
+    {
+      "cve_share": 1.0,
+      "mass_share": 1.0,
+      "series": "expected-exploit mass"
+    }
+  ]
+}

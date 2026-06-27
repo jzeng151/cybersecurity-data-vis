@@ -1,0 +1,375 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Links arrive in bursts, and the big burst is one attack",
+    "subtitle": "Links added each day, split by attack family; the 2026-06-22 spike is one loader dump"
+  },
+  "width": "container",
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "day": "2026-05-28",
+        "family": "A",
+        "count": 527
+      },
+      {
+        "day": "2026-05-28",
+        "family": "other",
+        "count": 142
+      },
+      {
+        "day": "2026-05-29",
+        "family": "A",
+        "count": 339
+      },
+      {
+        "day": "2026-05-29",
+        "family": "other",
+        "count": 236
+      },
+      {
+        "day": "2026-05-30",
+        "family": "A",
+        "count": 452
+      },
+      {
+        "day": "2026-05-30",
+        "family": "other",
+        "count": 113
+      },
+      {
+        "day": "2026-05-31",
+        "family": "A",
+        "count": 378
+      },
+      {
+        "day": "2026-05-31",
+        "family": "other",
+        "count": 173
+      },
+      {
+        "day": "2026-06-01",
+        "family": "A",
+        "count": 524
+      },
+      {
+        "day": "2026-06-01",
+        "family": "other",
+        "count": 83
+      },
+      {
+        "day": "2026-06-02",
+        "family": "A",
+        "count": 531
+      },
+      {
+        "day": "2026-06-02",
+        "family": "other",
+        "count": 72
+      },
+      {
+        "day": "2026-06-03",
+        "family": "A",
+        "count": 260
+      },
+      {
+        "day": "2026-06-03",
+        "family": "other",
+        "count": 77
+      },
+      {
+        "day": "2026-06-04",
+        "family": "A",
+        "count": 449
+      },
+      {
+        "day": "2026-06-04",
+        "family": "other",
+        "count": 231
+      },
+      {
+        "day": "2026-06-05",
+        "family": "A",
+        "count": 457
+      },
+      {
+        "day": "2026-06-05",
+        "family": "other",
+        "count": 137
+      },
+      {
+        "day": "2026-06-06",
+        "family": "A",
+        "count": 386
+      },
+      {
+        "day": "2026-06-06",
+        "family": "other",
+        "count": 82
+      },
+      {
+        "day": "2026-06-07",
+        "family": "A",
+        "count": 560
+      },
+      {
+        "day": "2026-06-07",
+        "family": "other",
+        "count": 150
+      },
+      {
+        "day": "2026-06-08",
+        "family": "A",
+        "count": 533
+      },
+      {
+        "day": "2026-06-08",
+        "family": "other",
+        "count": 183
+      },
+      {
+        "day": "2026-06-09",
+        "family": "A",
+        "count": 425
+      },
+      {
+        "day": "2026-06-09",
+        "family": "other",
+        "count": 162
+      },
+      {
+        "day": "2026-06-10",
+        "family": "A",
+        "count": 583
+      },
+      {
+        "day": "2026-06-10",
+        "family": "other",
+        "count": 260
+      },
+      {
+        "day": "2026-06-11",
+        "family": "A",
+        "count": 460
+      },
+      {
+        "day": "2026-06-11",
+        "family": "other",
+        "count": 148
+      },
+      {
+        "day": "2026-06-12",
+        "family": "A",
+        "count": 321
+      },
+      {
+        "day": "2026-06-12",
+        "family": "other",
+        "count": 129
+      },
+      {
+        "day": "2026-06-13",
+        "family": "A",
+        "count": 291
+      },
+      {
+        "day": "2026-06-13",
+        "family": "other",
+        "count": 103
+      },
+      {
+        "day": "2026-06-14",
+        "family": "A",
+        "count": 274
+      },
+      {
+        "day": "2026-06-14",
+        "family": "other",
+        "count": 132
+      },
+      {
+        "day": "2026-06-15",
+        "family": "A",
+        "count": 374
+      },
+      {
+        "day": "2026-06-15",
+        "family": "B",
+        "count": 2
+      },
+      {
+        "day": "2026-06-15",
+        "family": "other",
+        "count": 209
+      },
+      {
+        "day": "2026-06-16",
+        "family": "A",
+        "count": 361
+      },
+      {
+        "day": "2026-06-16",
+        "family": "other",
+        "count": 254
+      },
+      {
+        "day": "2026-06-17",
+        "family": "A",
+        "count": 323
+      },
+      {
+        "day": "2026-06-17",
+        "family": "other",
+        "count": 235
+      },
+      {
+        "day": "2026-06-18",
+        "family": "A",
+        "count": 544
+      },
+      {
+        "day": "2026-06-18",
+        "family": "B",
+        "count": 1
+      },
+      {
+        "day": "2026-06-18",
+        "family": "other",
+        "count": 162
+      },
+      {
+        "day": "2026-06-19",
+        "family": "A",
+        "count": 568
+      },
+      {
+        "day": "2026-06-19",
+        "family": "other",
+        "count": 169
+      },
+      {
+        "day": "2026-06-20",
+        "family": "A",
+        "count": 418
+      },
+      {
+        "day": "2026-06-20",
+        "family": "other",
+        "count": 100
+      },
+      {
+        "day": "2026-06-21",
+        "family": "A",
+        "count": 446
+      },
+      {
+        "day": "2026-06-21",
+        "family": "other",
+        "count": 104
+      },
+      {
+        "day": "2026-06-22",
+        "family": "A",
+        "count": 372
+      },
+      {
+        "day": "2026-06-22",
+        "family": "B",
+        "count": 5063
+      },
+      {
+        "day": "2026-06-22",
+        "family": "other",
+        "count": 246
+      },
+      {
+        "day": "2026-06-23",
+        "family": "A",
+        "count": 321
+      },
+      {
+        "day": "2026-06-23",
+        "family": "other",
+        "count": 159
+      },
+      {
+        "day": "2026-06-24",
+        "family": "A",
+        "count": 461
+      },
+      {
+        "day": "2026-06-24",
+        "family": "other",
+        "count": 84
+      },
+      {
+        "day": "2026-06-25",
+        "family": "A",
+        "count": 301
+      },
+      {
+        "day": "2026-06-25",
+        "family": "other",
+        "count": 104
+      },
+      {
+        "day": "2026-06-26",
+        "family": "A",
+        "count": 476
+      },
+      {
+        "day": "2026-06-26",
+        "family": "other",
+        "count": 108
+      },
+      {
+        "day": "2026-06-27",
+        "family": "A",
+        "count": 65
+      },
+      {
+        "day": "2026-06-27",
+        "family": "other",
+        "count": 12
+      }
+    ]
+  },
+  "mark": {
+    "type": "area",
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "day",
+      "type": "temporal",
+      "title": "date added (UTC)"
+    },
+    "y": {
+      "field": "count",
+      "type": "quantitative",
+      "stack": "zero",
+      "title": "URLs submitted"
+    },
+    "color": {
+      "field": "family",
+      "type": "nominal",
+      "title": "campaign family",
+      "scale": {
+        "domain": [
+          "A",
+          "B",
+          "other"
+        ],
+        "range": [
+          "#3b82f6",
+          "#e0a341",
+          "#8a94a6"
+        ]
+      },
+      "legend": {
+        "labelExpr": "datum.label == 'A' ? 'A \u00b7 IoT botnet' : datum.label == 'B' ? 'B \u00b7 loader-as-a-service' : 'other'"
+      }
+    }
+  }
+}

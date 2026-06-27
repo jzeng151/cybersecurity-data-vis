@@ -1,0 +1,132 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Attack family predicts survival better than the link's age",
+    "subtitle": "Share dead by link age and family; at the same 3-7 day age, loader links survive (0.5% dead) while smart-device links are dead (92%)"
+  },
+  "width": "container",
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "agebin": "<1d",
+        "family": "A",
+        "offline_rate": 0.64,
+        "n": 489
+      },
+      {
+        "agebin": "<1d",
+        "family": "other",
+        "offline_rate": 0.804,
+        "n": 102
+      },
+      {
+        "agebin": "1-3d",
+        "family": "A",
+        "offline_rate": 0.852,
+        "n": 761
+      },
+      {
+        "agebin": "1-3d",
+        "family": "other",
+        "offline_rate": 0.888,
+        "n": 197
+      },
+      {
+        "agebin": "3-7d",
+        "family": "A",
+        "offline_rate": 0.921,
+        "n": 1548
+      },
+      {
+        "agebin": "3-7d",
+        "family": "B",
+        "offline_rate": 0.005,
+        "n": 5063
+      },
+      {
+        "agebin": "3-7d",
+        "family": "other",
+        "offline_rate": 0.89,
+        "n": 610
+      },
+      {
+        "agebin": "7-14d",
+        "family": "A",
+        "offline_rate": 0.919,
+        "n": 2733
+      },
+      {
+        "agebin": "7-14d",
+        "family": "other",
+        "offline_rate": 0.943,
+        "n": 1254
+      },
+      {
+        "agebin": ">14d",
+        "family": "A",
+        "offline_rate": 0.97,
+        "n": 7248
+      },
+      {
+        "agebin": ">14d",
+        "family": "other",
+        "offline_rate": 0.967,
+        "n": 2396
+      }
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": true,
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "agebin",
+      "type": "ordinal",
+      "sort": [
+        "<1d",
+        "1-3d",
+        "3-7d",
+        "7-14d",
+        ">14d"
+      ],
+      "title": "URL age at snapshot (since dateadded)"
+    },
+    "y": {
+      "field": "offline_rate",
+      "type": "quantitative",
+      "title": "offline rate",
+      "axis": {
+        "format": "%"
+      },
+      "scale": {
+        "domain": [
+          0,
+          1
+        ]
+      }
+    },
+    "color": {
+      "field": "family",
+      "type": "nominal",
+      "title": "campaign family",
+      "scale": {
+        "domain": [
+          "A",
+          "B",
+          "other"
+        ],
+        "range": [
+          "#3b82f6",
+          "#e0a341",
+          "#8a94a6"
+        ]
+      },
+      "legend": {
+        "labelExpr": "datum.label == 'A' ? 'A \u00b7 IoT botnet' : datum.label == 'B' ? 'B \u00b7 loader' : 'other'"
+      }
+    }
+  }
+}

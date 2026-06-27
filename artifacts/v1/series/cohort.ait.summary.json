@@ -1,0 +1,25 @@
+{
+  "id": "cohort.ait.summary",
+  "n_hosts": 101,
+  "n_host_days": 370,
+  "attack_days": 92,
+  "mean_z_attack": 135.87,
+  "mean_z_normal": 1.81,
+  "auc_deviation": 0.609,
+  "auc_raw_volume": 0.614,
+  "anomaly_precision": 0.339,
+  "anomaly_recall": 0.207,
+  "cohort_attack_rate": {
+    "low": 0.234,
+    "med": 0.211,
+    "high": 0.301
+  },
+  "illustrative_hosts": [
+    "fox/10.35.35.206",
+    "harrison/192.168.131.215",
+    "santos/192.168.104.155",
+    "wheeler/wazuh-client",
+    "fox/wazuh-client",
+    "wilson/wazuh-client"
+  ]
+}

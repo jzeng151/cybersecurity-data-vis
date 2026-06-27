@@ -1,0 +1,138 @@
+{
+  "id": "regression.unsw.feature_importance",
+  "target": "P(malicious)",
+  "model": {
+    "algo": "HistGradientBoostingClassifier",
+    "auc": 0.9831,
+    "split": "official train/test"
+  },
+  "n_features": 39,
+  "n_features_for_90pct": 15,
+  "global_importance": [
+    {
+      "feature": "sttl",
+      "importance": 0.20444,
+      "share": 0.3844
+    },
+    {
+      "feature": "smean",
+      "importance": 0.04337,
+      "share": 0.0816
+    },
+    {
+      "feature": "sbytes",
+      "importance": 0.04056,
+      "share": 0.0763
+    },
+    {
+      "feature": "ct_dst_src_ltm",
+      "importance": 0.03369,
+      "share": 0.0633
+    },
+    {
+      "feature": "ct_dst_sport_ltm",
+      "importance": 0.02175,
+      "share": 0.0409
+    },
+    {
+      "feature": "dur",
+      "importance": 0.01944,
+      "share": 0.0365
+    },
+    {
+      "feature": "dmean",
+      "importance": 0.01725,
+      "share": 0.0324
+    },
+    {
+      "feature": "synack",
+      "importance": 0.01613,
+      "share": 0.0303
+    },
+    {
+      "feature": "tcprtt",
+      "importance": 0.01456,
+      "share": 0.0274
+    },
+    {
+      "feature": "response_body_len",
+      "importance": 0.01206,
+      "share": 0.0227
+    },
+    {
+      "feature": "ct_src_dport_ltm",
+      "importance": 0.01181,
+      "share": 0.0222
+    },
+    {
+      "feature": "ct_srv_dst",
+      "importance": 0.01162,
+      "share": 0.0219
+    }
+  ],
+  "examples": [
+    {
+      "pred": 0.989,
+      "attack_cat": "Exploits",
+      "top_features": [
+        {
+          "feature": "sttl",
+          "value": 254.0,
+          "benign_mean": 75.45
+        },
+        {
+          "feature": "ct_state_ttl",
+          "value": 4.0,
+          "benign_mean": 0.5
+        },
+        {
+          "feature": "ct_dst_src_ltm",
+          "value": 1.0,
+          "benign_mean": 3.87
+        }
+      ]
+    },
+    {
+      "pred": 1.0,
+      "attack_cat": "Generic",
+      "top_features": [
+        {
+          "feature": "sttl",
+          "value": 254.0,
+          "benign_mean": 75.45
+        },
+        {
+          "feature": "ct_dst_sport_ltm",
+          "value": 4.0,
+          "benign_mean": 1.19
+        },
+        {
+          "feature": "smean",
+          "value": 57.0,
+          "benign_mean": 139.98
+        }
+      ]
+    },
+    {
+      "pred": 1.0,
+      "attack_cat": "Generic",
+      "top_features": [
+        {
+          "feature": "sttl",
+          "value": 254.0,
+          "benign_mean": 75.45
+        },
+        {
+          "feature": "ct_dst_src_ltm",
+          "value": 43.0,
+          "benign_mean": 3.87
+        },
+        {
+          "feature": "ct_dst_sport_ltm",
+          "value": 16.0,
+          "benign_mean": 1.19
+        }
+      ]
+    }
+  ]
+}

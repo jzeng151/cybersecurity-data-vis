@@ -1,0 +1,18 @@
+[
+  {
+    "family": "injection/input-validation",
+    "rows": 557
+  },
+  {
+    "family": "memory-safety",
+    "rows": 392
+  },
+  {
+    "family": "auth/access-control",
+    "rows": 208
+  },
+  {
+    "family": "other",
+    "rows": 359
+  }
+]

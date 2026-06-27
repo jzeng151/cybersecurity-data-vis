@@ -1,0 +1,98 @@
+{
+  "total_alerts": 2655821,
+  "n_groups": 817,
+  "reduction_pct": 99.9692,
+  "k": 9,
+  "silhouette": 0.201,
+  "pca_explained_2d": 0.159,
+  "dominant_signature": "Web server 400 error code.",
+  "dominant_signature_share": 0.5916,
+  "top3_signature_share": 0.807,
+  "engine_groups": {
+    "wazuh": 441,
+    "aminer": 376
+  },
+  "archetypes": [
+    {
+      "cluster": 2,
+      "n_groups": 293,
+      "total_alerts": 908230,
+      "engine": "wazuh",
+      "dominant_signature": "IDS event.",
+      "mean_level": 4.53,
+      "mean_attack_fraction": 0.155
+    },
+    {
+      "cluster": 0,
+      "n_groups": 70,
+      "total_alerts": 855688,
+      "engine": "aminer",
+      "dominant_signature": "Web server 400 error code.",
+      "mean_level": 2.63,
+      "mean_attack_fraction": 0.738
+    },
+    {
+      "cluster": 5,
+      "n_groups": 53,
+      "total_alerts": 445943,
+      "engine": "wazuh",
+      "dominant_signature": "Web server 400 error code.",
+      "mean_level": 3.81,
+      "mean_attack_fraction": 0.723
+    },
+    {
+      "cluster": 3,
+      "n_groups": 65,
+      "total_alerts": 426467,
+      "engine": "wazuh",
+      "dominant_signature": "Web server 400 error code.",
+      "mean_level": 3.58,
+      "mean_attack_fraction": 0.758
+    },
+    {
+      "cluster": 8,
+      "n_groups": 32,
+      "total_alerts": 11193,
+      "engine": "wazuh",
+      "dominant_signature": "Web server 400 error code.",
+      "mean_level": 3.31,
+      "mean_attack_fraction": 0.917
+    },
+    {
+      "cluster": 1,
+      "n_groups": 225,
+      "total_alerts": 7744,
+      "engine": "aminer",
+      "dominant_signature": "NewMatchPathValueDetector",
+      "mean_level": 0.19,
+      "mean_attack_fraction": 0.085
+    },
+    {
+      "cluster": 7,
+      "n_groups": 57,
+      "total_alerts": 348,
+      "engine": "aminer",
+      "dominant_signature": "EntropyDetector",
+      "mean_level": 0.05,
+      "mean_attack_fraction": 0.012
+    },
+    {
+      "cluster": 4,
+      "n_groups": 19,
+      "total_alerts": 205,
+      "engine": "wazuh",
+      "dominant_signature": "Suricata: Alert - SURICATA HTTP unable to match response to request",
+      "mean_level": 2.37,
+      "mean_attack_fraction": 0.004
+    },
+    {
+      "cluster": 6,
+      "n_groups": 3,
+      "total_alerts": 3,
+      "engine": "aminer",
+      "dominant_signature": "CharsetDetector",
+      "mean_level": 0.0,
+      "mean_attack_fraction": 0.0
+    }
+  ]
+}

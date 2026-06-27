@@ -1,0 +1,38 @@
+[
+  {
+    "addYear": 2021,
+    "share": 0.244,
+    "n": 311,
+    "censored": false
+  },
+  {
+    "addYear": 2022,
+    "share": 0.225,
+    "n": 555,
+    "censored": false
+  },
+  {
+    "addYear": 2023,
+    "share": 0.23,
+    "n": 187,
+    "censored": false
+  },
+  {
+    "addYear": 2024,
+    "share": 0.226,
+    "n": 186,
+    "censored": false
+  },
+  {
+    "addYear": 2025,
+    "share": 0.102,
+    "n": 245,
+    "censored": true
+  },
+  {
+    "addYear": 2026,
+    "share": 0.112,
+    "n": 143,
+    "censored": true
+  }
+]

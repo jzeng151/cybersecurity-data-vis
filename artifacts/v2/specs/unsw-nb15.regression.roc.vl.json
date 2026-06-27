@@ -1,0 +1,2160 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Spotting attacks is easy, but no single column does the work",
+    "subtitle": "trained on the official set, tested on the held-out set  \u2022  attack-vs-normal score (0.5=guessing, 1.0=perfect): all columns 0.9386, drop sttl 0.9384 (\u03940.0002), sttl alone 0.76"
+  },
+  "width": "container",
+  "height": 360,
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "fpr": 0,
+            "tpr": 0
+          },
+          {
+            "fpr": 1,
+            "tpr": 1
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#8a94a6",
+        "strokeDash": [
+          4,
+          4
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "fpr",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "tpr",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0002,
+            "tpr": 0.0193
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0002,
+            "tpr": 0.0474
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0002,
+            "tpr": 0.0731
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0002,
+            "tpr": 0.0989
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0002,
+            "tpr": 0.1199
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0003,
+            "tpr": 0.1405
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0003,
+            "tpr": 0.1622
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0004,
+            "tpr": 0.1779
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0006,
+            "tpr": 0.1937
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0009,
+            "tpr": 0.2068
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0011,
+            "tpr": 0.2181
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0013,
+            "tpr": 0.2317
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0014,
+            "tpr": 0.2434
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0019,
+            "tpr": 0.2538
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0021,
+            "tpr": 0.2656
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0025,
+            "tpr": 0.2774
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0025,
+            "tpr": 0.2911
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0029,
+            "tpr": 0.3057
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0033,
+            "tpr": 0.3169
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0035,
+            "tpr": 0.3342
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.004,
+            "tpr": 0.3438
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0045,
+            "tpr": 0.3539
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0055,
+            "tpr": 0.3677
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0058,
+            "tpr": 0.3816
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0066,
+            "tpr": 0.3906
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0076,
+            "tpr": 0.4002
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0083,
+            "tpr": 0.4153
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0091,
+            "tpr": 0.4288
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0099,
+            "tpr": 0.4381
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0109,
+            "tpr": 0.4465
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0114,
+            "tpr": 0.4575
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0123,
+            "tpr": 0.4646
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0132,
+            "tpr": 0.4745
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0138,
+            "tpr": 0.4859
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0146,
+            "tpr": 0.4947
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0157,
+            "tpr": 0.5028
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0167,
+            "tpr": 0.5143
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0177,
+            "tpr": 0.5243
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0187,
+            "tpr": 0.5321
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0198,
+            "tpr": 0.5394
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0207,
+            "tpr": 0.548
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0215,
+            "tpr": 0.5577
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0222,
+            "tpr": 0.5658
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0229,
+            "tpr": 0.5748
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0243,
+            "tpr": 0.5821
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0253,
+            "tpr": 0.5906
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0264,
+            "tpr": 0.597
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0277,
+            "tpr": 0.6033
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0286,
+            "tpr": 0.612
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.03,
+            "tpr": 0.6174
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0318,
+            "tpr": 0.6239
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.033,
+            "tpr": 0.632
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0342,
+            "tpr": 0.6378
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0357,
+            "tpr": 0.645
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0372,
+            "tpr": 0.651
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0384,
+            "tpr": 0.6564
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0396,
+            "tpr": 0.6609
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0411,
+            "tpr": 0.6657
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0428,
+            "tpr": 0.6707
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0444,
+            "tpr": 0.6754
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0459,
+            "tpr": 0.6804
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0474,
+            "tpr": 0.6855
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0488,
+            "tpr": 0.6911
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0504,
+            "tpr": 0.6953
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0522,
+            "tpr": 0.6996
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.054,
+            "tpr": 0.7032
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0557,
+            "tpr": 0.7068
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0576,
+            "tpr": 0.7103
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0594,
+            "tpr": 0.714
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0608,
+            "tpr": 0.7187
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0629,
+            "tpr": 0.7239
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0645,
+            "tpr": 0.7285
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0663,
+            "tpr": 0.7322
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0683,
+            "tpr": 0.7356
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.07,
+            "tpr": 0.7394
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0717,
+            "tpr": 0.743
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0736,
+            "tpr": 0.7474
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0756,
+            "tpr": 0.7507
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0776,
+            "tpr": 0.754
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0796,
+            "tpr": 0.758
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.082,
+            "tpr": 0.7616
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0838,
+            "tpr": 0.7652
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0859,
+            "tpr": 0.7684
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0881,
+            "tpr": 0.7734
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0904,
+            "tpr": 0.7763
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0925,
+            "tpr": 0.7793
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0943,
+            "tpr": 0.7833
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0961,
+            "tpr": 0.7873
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.0981,
+            "tpr": 0.7913
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1,
+            "tpr": 0.7951
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1024,
+            "tpr": 0.7984
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1042,
+            "tpr": 0.803
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1061,
+            "tpr": 0.8071
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1079,
+            "tpr": 0.8106
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1099,
+            "tpr": 0.8141
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.112,
+            "tpr": 0.8173
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1142,
+            "tpr": 0.8212
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1161,
+            "tpr": 0.8258
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1184,
+            "tpr": 0.8292
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1204,
+            "tpr": 0.8329
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1227,
+            "tpr": 0.8363
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1252,
+            "tpr": 0.8402
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1269,
+            "tpr": 0.8433
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1289,
+            "tpr": 0.8462
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1311,
+            "tpr": 0.8492
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1333,
+            "tpr": 0.8518
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1356,
+            "tpr": 0.8542
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1382,
+            "tpr": 0.8571
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1406,
+            "tpr": 0.8597
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.143,
+            "tpr": 0.8627
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1453,
+            "tpr": 0.8652
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1478,
+            "tpr": 0.8679
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1502,
+            "tpr": 0.8698
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1535,
+            "tpr": 0.8715
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1564,
+            "tpr": 0.874
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1592,
+            "tpr": 0.8766
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1624,
+            "tpr": 0.8787
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1652,
+            "tpr": 0.8807
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1679,
+            "tpr": 0.8828
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1712,
+            "tpr": 0.8849
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1744,
+            "tpr": 0.887
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1774,
+            "tpr": 0.89
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1805,
+            "tpr": 0.8918
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.184,
+            "tpr": 0.8939
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1872,
+            "tpr": 0.8961
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1904,
+            "tpr": 0.8982
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1938,
+            "tpr": 0.9001
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.1969,
+            "tpr": 0.9023
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2004,
+            "tpr": 0.9044
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2049,
+            "tpr": 0.906
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2084,
+            "tpr": 0.9077
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.212,
+            "tpr": 0.9095
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2157,
+            "tpr": 0.9111
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2191,
+            "tpr": 0.9133
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2229,
+            "tpr": 0.9153
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2265,
+            "tpr": 0.917
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.231,
+            "tpr": 0.9187
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2357,
+            "tpr": 0.9201
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2397,
+            "tpr": 0.9217
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.244,
+            "tpr": 0.9234
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2484,
+            "tpr": 0.9254
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.254,
+            "tpr": 0.927
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2581,
+            "tpr": 0.9285
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2621,
+            "tpr": 0.93
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2672,
+            "tpr": 0.9318
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2712,
+            "tpr": 0.9333
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2758,
+            "tpr": 0.9349
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2798,
+            "tpr": 0.9368
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2839,
+            "tpr": 0.9379
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2886,
+            "tpr": 0.9395
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2936,
+            "tpr": 0.9411
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.2985,
+            "tpr": 0.9426
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3035,
+            "tpr": 0.9441
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3076,
+            "tpr": 0.9458
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3119,
+            "tpr": 0.9472
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3159,
+            "tpr": 0.9492
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.32,
+            "tpr": 0.9505
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3247,
+            "tpr": 0.9521
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3289,
+            "tpr": 0.9537
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3334,
+            "tpr": 0.9552
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3377,
+            "tpr": 0.9567
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3441,
+            "tpr": 0.9582
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3484,
+            "tpr": 0.9597
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3528,
+            "tpr": 0.9611
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3562,
+            "tpr": 0.9629
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3618,
+            "tpr": 0.9644
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3667,
+            "tpr": 0.9658
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3717,
+            "tpr": 0.9674
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3767,
+            "tpr": 0.9691
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3829,
+            "tpr": 0.9707
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3877,
+            "tpr": 0.9725
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3925,
+            "tpr": 0.974
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.3971,
+            "tpr": 0.9755
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4018,
+            "tpr": 0.9769
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4071,
+            "tpr": 0.9786
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4113,
+            "tpr": 0.9798
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4165,
+            "tpr": 0.9813
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4205,
+            "tpr": 0.9828
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4247,
+            "tpr": 0.9843
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4294,
+            "tpr": 0.9858
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4341,
+            "tpr": 0.9875
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4381,
+            "tpr": 0.9891
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4424,
+            "tpr": 0.991
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4464,
+            "tpr": 0.9926
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4509,
+            "tpr": 0.9942
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4555,
+            "tpr": 0.9959
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.46,
+            "tpr": 0.9976
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4665,
+            "tpr": 0.999
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.4825,
+            "tpr": 0.9997
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.5199,
+            "tpr": 0.9999
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.7961,
+            "tpr": 1.0
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.8505,
+            "tpr": 1.0
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.8762,
+            "tpr": 1.0
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.8986,
+            "tpr": 1.0
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.9344,
+            "tpr": 1.0
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.9613,
+            "tpr": 1.0
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.97,
+            "tpr": 1.0
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 0.9819,
+            "tpr": 1.0
+          },
+          {
+            "model": "full model (39 features)",
+            "fpr": 1.0,
+            "tpr": 1.0
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0001,
+            "tpr": 0.0198
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0001,
+            "tpr": 0.0456
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0002,
+            "tpr": 0.0701
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0002,
+            "tpr": 0.0987
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0004,
+            "tpr": 0.1183
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0005,
+            "tpr": 0.1404
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0006,
+            "tpr": 0.1605
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0007,
+            "tpr": 0.1773
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0008,
+            "tpr": 0.1934
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0011,
+            "tpr": 0.2086
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0013,
+            "tpr": 0.2208
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0016,
+            "tpr": 0.2332
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0022,
+            "tpr": 0.2449
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0025,
+            "tpr": 0.258
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0026,
+            "tpr": 0.2691
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0031,
+            "tpr": 0.2812
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0034,
+            "tpr": 0.3001
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0035,
+            "tpr": 0.315
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0039,
+            "tpr": 0.3273
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0047,
+            "tpr": 0.3381
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0049,
+            "tpr": 0.3528
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0058,
+            "tpr": 0.3622
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0066,
+            "tpr": 0.3723
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0072,
+            "tpr": 0.3822
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.008,
+            "tpr": 0.3914
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0089,
+            "tpr": 0.4001
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0097,
+            "tpr": 0.406
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0103,
+            "tpr": 0.4154
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0108,
+            "tpr": 0.4271
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0114,
+            "tpr": 0.4366
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0119,
+            "tpr": 0.4471
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0129,
+            "tpr": 0.4552
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0136,
+            "tpr": 0.4651
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0144,
+            "tpr": 0.4725
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0154,
+            "tpr": 0.4821
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0166,
+            "tpr": 0.4886
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0174,
+            "tpr": 0.4959
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0182,
+            "tpr": 0.5068
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.019,
+            "tpr": 0.5142
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0195,
+            "tpr": 0.5241
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0206,
+            "tpr": 0.5333
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0214,
+            "tpr": 0.5436
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0226,
+            "tpr": 0.5502
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0236,
+            "tpr": 0.5574
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0247,
+            "tpr": 0.5689
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0258,
+            "tpr": 0.5764
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0271,
+            "tpr": 0.5839
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0281,
+            "tpr": 0.5903
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0295,
+            "tpr": 0.5954
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0306,
+            "tpr": 0.6019
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0317,
+            "tpr": 0.6084
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0327,
+            "tpr": 0.6157
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0338,
+            "tpr": 0.6227
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.035,
+            "tpr": 0.6311
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0362,
+            "tpr": 0.6378
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0372,
+            "tpr": 0.6457
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0384,
+            "tpr": 0.6524
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0398,
+            "tpr": 0.6581
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.041,
+            "tpr": 0.6649
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0419,
+            "tpr": 0.6706
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0434,
+            "tpr": 0.6754
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0448,
+            "tpr": 0.6801
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0461,
+            "tpr": 0.6852
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0472,
+            "tpr": 0.6905
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0485,
+            "tpr": 0.6969
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0501,
+            "tpr": 0.7018
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0516,
+            "tpr": 0.7067
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0531,
+            "tpr": 0.7123
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0547,
+            "tpr": 0.7195
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0562,
+            "tpr": 0.7239
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0579,
+            "tpr": 0.728
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0595,
+            "tpr": 0.7326
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0608,
+            "tpr": 0.7371
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0622,
+            "tpr": 0.7417
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0638,
+            "tpr": 0.7454
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0657,
+            "tpr": 0.7493
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0673,
+            "tpr": 0.7536
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0689,
+            "tpr": 0.7569
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0708,
+            "tpr": 0.7614
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0723,
+            "tpr": 0.7651
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0739,
+            "tpr": 0.7696
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0758,
+            "tpr": 0.7735
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0778,
+            "tpr": 0.7777
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0797,
+            "tpr": 0.7816
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0816,
+            "tpr": 0.7852
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0836,
+            "tpr": 0.789
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0855,
+            "tpr": 0.7929
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.087,
+            "tpr": 0.7973
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0888,
+            "tpr": 0.8001
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0911,
+            "tpr": 0.8033
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0935,
+            "tpr": 0.8068
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0953,
+            "tpr": 0.8114
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0975,
+            "tpr": 0.8142
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.0995,
+            "tpr": 0.8173
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1016,
+            "tpr": 0.8197
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1034,
+            "tpr": 0.8233
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1058,
+            "tpr": 0.8284
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1078,
+            "tpr": 0.8323
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1099,
+            "tpr": 0.8352
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1124,
+            "tpr": 0.8379
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1146,
+            "tpr": 0.8409
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.117,
+            "tpr": 0.8441
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1194,
+            "tpr": 0.8477
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1222,
+            "tpr": 0.8502
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1246,
+            "tpr": 0.8522
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1272,
+            "tpr": 0.8561
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.13,
+            "tpr": 0.8588
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1322,
+            "tpr": 0.8618
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1352,
+            "tpr": 0.8641
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1378,
+            "tpr": 0.866
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1405,
+            "tpr": 0.8683
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1435,
+            "tpr": 0.8712
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1464,
+            "tpr": 0.8734
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1491,
+            "tpr": 0.8753
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1521,
+            "tpr": 0.8771
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1551,
+            "tpr": 0.8794
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1583,
+            "tpr": 0.8814
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1615,
+            "tpr": 0.8831
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.165,
+            "tpr": 0.8851
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1687,
+            "tpr": 0.8877
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1718,
+            "tpr": 0.8903
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1748,
+            "tpr": 0.8927
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1791,
+            "tpr": 0.8952
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1823,
+            "tpr": 0.8967
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1857,
+            "tpr": 0.8982
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1896,
+            "tpr": 0.9
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1934,
+            "tpr": 0.9017
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.1976,
+            "tpr": 0.9034
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2014,
+            "tpr": 0.905
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2057,
+            "tpr": 0.9067
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2094,
+            "tpr": 0.9086
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2146,
+            "tpr": 0.9101
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2197,
+            "tpr": 0.912
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2241,
+            "tpr": 0.9135
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2285,
+            "tpr": 0.9152
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2342,
+            "tpr": 0.9165
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2387,
+            "tpr": 0.9181
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2439,
+            "tpr": 0.9194
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2483,
+            "tpr": 0.921
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2526,
+            "tpr": 0.9228
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2573,
+            "tpr": 0.9245
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2615,
+            "tpr": 0.9259
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2662,
+            "tpr": 0.9273
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2722,
+            "tpr": 0.9286
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2763,
+            "tpr": 0.9303
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2817,
+            "tpr": 0.9318
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2867,
+            "tpr": 0.9332
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2928,
+            "tpr": 0.935
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.2982,
+            "tpr": 0.9362
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3029,
+            "tpr": 0.9377
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3086,
+            "tpr": 0.9394
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.314,
+            "tpr": 0.9406
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3195,
+            "tpr": 0.9422
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3231,
+            "tpr": 0.9436
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3277,
+            "tpr": 0.9451
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3336,
+            "tpr": 0.9465
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3381,
+            "tpr": 0.948
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.342,
+            "tpr": 0.9492
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3466,
+            "tpr": 0.9509
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3507,
+            "tpr": 0.9527
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3558,
+            "tpr": 0.9544
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3611,
+            "tpr": 0.9559
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3659,
+            "tpr": 0.9575
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3709,
+            "tpr": 0.9592
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3745,
+            "tpr": 0.9608
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.379,
+            "tpr": 0.9623
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3833,
+            "tpr": 0.9638
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3879,
+            "tpr": 0.9652
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3928,
+            "tpr": 0.9669
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.3975,
+            "tpr": 0.9683
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4011,
+            "tpr": 0.9699
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4061,
+            "tpr": 0.9716
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4096,
+            "tpr": 0.9733
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4142,
+            "tpr": 0.9749
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4188,
+            "tpr": 0.9766
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.423,
+            "tpr": 0.9781
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.427,
+            "tpr": 0.9796
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4316,
+            "tpr": 0.981
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4359,
+            "tpr": 0.9826
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4399,
+            "tpr": 0.9839
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4443,
+            "tpr": 0.9856
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4479,
+            "tpr": 0.9871
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4518,
+            "tpr": 0.9887
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4555,
+            "tpr": 0.9906
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4589,
+            "tpr": 0.9926
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4625,
+            "tpr": 0.9943
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.466,
+            "tpr": 0.9961
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4699,
+            "tpr": 0.9976
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.4767,
+            "tpr": 0.9988
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.5007,
+            "tpr": 0.9994
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.5514,
+            "tpr": 0.9997
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.7951,
+            "tpr": 1.0
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.8842,
+            "tpr": 1.0
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.9152,
+            "tpr": 1.0
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.9408,
+            "tpr": 1.0
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.9599,
+            "tpr": 1.0
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.9782,
+            "tpr": 1.0
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 0.9902,
+            "tpr": 1.0
+          },
+          {
+            "model": "drop sttl (38 features)",
+            "fpr": 1.0,
+            "tpr": 1.0
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 0.0,
+            "tpr": 0.0006
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 0.4067,
+            "tpr": 0.8609
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 0.4067,
+            "tpr": 0.8609
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 0.5183,
+            "tpr": 0.9987
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 0.519,
+            "tpr": 0.9987
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 0.5195,
+            "tpr": 0.9987
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 0.9709,
+            "tpr": 0.9987
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 0.9709,
+            "tpr": 0.9987
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 0.9723,
+            "tpr": 0.9987
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 0.9733,
+            "tpr": 0.9987
+          },
+          {
+            "model": "sttl alone (1 feature)",
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "interpolate": "monotone"
+      },
+      "encoding": {
+        "x": {
+          "field": "fpr",
+          "type": "quantitative",
+          "title": "false positive rate",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          }
+        },
+        "y": {
+          "field": "tpr",
+          "type": "quantitative",
+          "title": "true positive rate",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          }
+        },
+        "color": {
+          "field": "model",
+          "type": "nominal",
+          "title": "model variant",
+          "scale": {
+            "domain": [
+              "full model (39 features)",
+              "drop sttl (38 features)",
+              "sttl alone (1 feature)"
+            ],
+            "range": [
+              "#3b82f6",
+              "#5b6b7a",
+              "#e0a341"
+            ]
+          },
+          "legend": {
+            "orient": "bottom-right"
+          }
+        },
+        "order": {
+          "field": "fpr"
+        }
+      }
+    }
+  ]
+}

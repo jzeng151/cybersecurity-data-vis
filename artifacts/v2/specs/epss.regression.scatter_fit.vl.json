@@ -1,0 +1,258 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 360,
+  "title": {
+    "text": "You can partly guess a bug's chance of attack from its age alone",
+    "subtitle": "average score vs ID year, 2013-2026: -13.3%/yr, R^2=0.83"
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "year": 1999,
+            "mean": 0.04623222077922078,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2000,
+            "mean": 0.05997851941747573,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2001,
+            "mean": 0.05401074821080026,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2002,
+            "mean": 0.05488519304200254,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2003,
+            "mean": 0.06561436835106384,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2004,
+            "mean": 0.058898006807866866,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2005,
+            "mean": 0.04316556516101146,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2006,
+            "mean": 0.04476197712651894,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2007,
+            "mean": 0.056122277794982973,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2008,
+            "mean": 0.04509849536045682,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2009,
+            "mean": 0.05364175980491769,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2010,
+            "mean": 0.05427470043358298,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2011,
+            "mean": 0.051779291711517766,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2012,
+            "mean": 0.0550660860058309,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2013,
+            "mean": 0.05279153512297058,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2014,
+            "mean": 0.04328642814762074,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2015,
+            "mean": 0.053262686475157195,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2016,
+            "mean": 0.04679395194874533,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2017,
+            "mean": 0.03903184552845529,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2018,
+            "mean": 0.04088943167778602,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2019,
+            "mean": 0.036429605418504936,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2020,
+            "mean": 0.03321116275470725,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2021,
+            "mean": 0.0316178232376904,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2022,
+            "mean": 0.023167925213836954,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2023,
+            "mean": 0.020826283258155193,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2024,
+            "mean": 0.015498442018601986,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2025,
+            "mean": 0.008865756731014937,
+            "series": "cohort mean (per vintage year)"
+          },
+          {
+            "year": 2026,
+            "mean": 0.006378032932799288,
+            "series": "cohort mean (per vintage year)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "title": "CVE vintage year",
+          "scale": {
+            "zero": false
+          },
+          "axis": {
+            "format": "d"
+          }
+        },
+        "y": {
+          "field": "mean",
+          "type": "quantitative",
+          "title": "mean EPSS (log scale)",
+          "scale": {
+            "type": "log"
+          }
+        },
+        "color": {
+          "field": "series",
+          "type": "nominal",
+          "title": "series",
+          "scale": {
+            "domain": [
+              "cohort mean (per vintage year)",
+              "log-linear fit 2013-2026"
+            ],
+            "range": [
+              "#3b82f6",
+              "#d2483f"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "quantitative",
+            "title": "year"
+          },
+          {
+            "field": "mean",
+            "type": "quantitative",
+            "title": "mean EPSS",
+            "format": ".4f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "year": 2013.0,
+            "fitted": 0.06995802260134185,
+            "series": "log-linear fit 2013-2026"
+          },
+          {
+            "year": 2026.0,
+            "fitted": 0.010869819605900118,
+            "series": "log-linear fit 2013-2026"
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "fitted",
+          "type": "quantitative",
+          "scale": {
+            "type": "log"
+          }
+        },
+        "color": {
+          "field": "series",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "cohort mean (per vintage year)",
+              "log-linear fit 2013-2026"
+            ],
+            "range": [
+              "#3b82f6",
+              "#d2483f"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Attacked flaws pile up under a few vendors (a few names hog most)",
+    "subtitle": "Top-5 vendors = ~44% of all 1,627 KEV entries; a long tail of 269 vendors."
+  },
+  "width": "container",
+  "height": 360,
+  "data": {
+    "values": [
+      {
+        "vendor": "Microsoft",
+        "count": 377,
+        "rank": 1,
+        "cum_share": 0.2317
+      },
+      {
+        "vendor": "Apple",
+        "count": 93,
+        "rank": 2,
+        "cum_share": 0.2889
+      },
+      {
+        "vendor": "Cisco",
+        "count": 92,
+        "rank": 3,
+        "cum_share": 0.3454
+      },
+      {
+        "vendor": "Adobe",
+        "count": 79,
+        "rank": 4,
+        "cum_share": 0.394
+      },
+      {
+        "vendor": "Google",
+        "count": 72,
+        "rank": 5,
+        "cum_share": 0.4382
+      },
+      {
+        "vendor": "Oracle",
+        "count": 44,
+        "rank": 6,
+        "cum_share": 0.4653
+      },
+      {
+        "vendor": "Apache",
+        "count": 39,
+        "rank": 7,
+        "cum_share": 0.4892
+      },
+      {
+        "vendor": "Ivanti",
+        "count": 35,
+        "rank": 8,
+        "cum_share": 0.5108
+      },
+      {
+        "vendor": "Linux",
+        "count": 26,
+        "rank": 9,
+        "cum_share": 0.5267
+      },
+      {
+        "vendor": "D-Link",
+        "count": 26,
+        "rank": 10,
+        "cum_share": 0.5427
+      },
+      {
+        "vendor": "Fortinet",
+        "count": 26,
+        "rank": 11,
+        "cum_share": 0.5587
+      },
+      {
+        "vendor": "VMware",
+        "count": 26,
+        "rank": 12,
+        "cum_share": 0.5747
+      },
+      {
+        "vendor": "Citrix",
+        "count": 22,
+        "rank": 13,
+        "cum_share": 0.5882
+      },
+      {
+        "vendor": "Synacor",
+        "count": 18,
+        "rank": 14,
+        "cum_share": 0.5993
+      },
+      {
+        "vendor": "Android",
+        "count": 17,
+        "rank": 15,
+        "cum_share": 0.6097
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "vendor",
+      "type": "nominal",
+      "sort": "-y",
+      "title": "Vendor / project (top 15)"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#3b82f6"
+      },
+      "encoding": {
+        "y": {
+          "field": "count",
+          "type": "quantitative",
+          "title": "KEV entries",
+          "axis": {
+            "titleColor": "#3b82f6"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "vendor",
+            "type": "nominal",
+            "title": "Vendor"
+          },
+          {
+            "field": "count",
+            "type": "quantitative",
+            "title": "KEV entries"
+          },
+          {
+            "field": "cum_share",
+            "type": "quantitative",
+            "format": ".1%",
+            "title": "Cumulative share"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#e0a341",
+        "strokeWidth": 2,
+        "point": {
+          "filled": true,
+          "color": "#e0a341"
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "cum_share",
+          "type": "quantitative",
+          "title": "Cumulative share",
+          "axis": {
+            "format": "%",
+            "titleColor": "#e0a341"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "vendor",
+            "type": "nominal",
+            "title": "Vendor"
+          },
+          {
+            "field": "cum_share",
+            "type": "quantitative",
+            "format": ".1%",
+            "title": "Cumulative share"
+          }
+        ]
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  }
+}

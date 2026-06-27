@@ -1,0 +1,1616 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The tags fall into two attack families",
+    "subtitle": "How often the 16 most common URLhaus tags show up together (this 30-day snapshot)"
+  },
+  "width": "container",
+  "height": 380,
+  "data": {
+    "values": [
+      {
+        "tag_x": "elf",
+        "tag_y": "elf",
+        "cooccur": 10025,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "Mozi",
+        "cooccur": 5997,
+        "jaccard": 0.55
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "32-bit",
+        "cooccur": 6001,
+        "jaccard": 0.599
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "mips",
+        "cooccur": 5191,
+        "jaccard": 0.518
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "ua-wget",
+        "cooccur": 3417,
+        "jaccard": 0.31
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "mirai",
+        "cooccur": 3095,
+        "jaccard": 0.279
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "arm",
+        "cooccur": 1059,
+        "jaccard": 0.106
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "opendir",
+        "cooccur": 315,
+        "jaccard": 0.03
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "botnet",
+        "cooccur": 3,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "elf",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "elf",
+        "cooccur": 5997,
+        "jaccard": 0.55
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "Mozi",
+        "cooccur": 6868,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "32-bit",
+        "cooccur": 5988,
+        "jaccard": 0.87
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "mips",
+        "cooccur": 5087,
+        "jaccard": 0.73
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "ua-wget",
+        "cooccur": 4,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "mirai",
+        "cooccur": 968,
+        "jaccard": 0.096
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "arm",
+        "cooccur": 904,
+        "jaccard": 0.129
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "opendir",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "botnet",
+        "cooccur": 54,
+        "jaccard": 0.008
+      },
+      {
+        "tag_x": "Mozi",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "elf",
+        "cooccur": 6001,
+        "jaccard": 0.599
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "Mozi",
+        "cooccur": 5988,
+        "jaccard": 0.87
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "32-bit",
+        "cooccur": 6002,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "mips",
+        "cooccur": 5092,
+        "jaccard": 0.834
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "ua-wget",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "mirai",
+        "cooccur": 898,
+        "jaccard": 0.097
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "arm",
+        "cooccur": 909,
+        "jaccard": 0.148
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "opendir",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "botnet",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "32-bit",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "elf",
+        "cooccur": 5191,
+        "jaccard": 0.518
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "Mozi",
+        "cooccur": 5087,
+        "jaccard": 0.73
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "32-bit",
+        "cooccur": 5092,
+        "jaccard": 0.834
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "mips",
+        "cooccur": 5192,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "ua-wget",
+        "cooccur": 99,
+        "jaccard": 0.01
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "mirai",
+        "cooccur": 87,
+        "jaccard": 0.009
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "arm",
+        "cooccur": 2,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "opendir",
+        "cooccur": 33,
+        "jaccard": 0.006
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "botnet",
+        "cooccur": 1,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mips",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "elf",
+        "cooccur": 3417,
+        "jaccard": 0.31
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "Mozi",
+        "cooccur": 4,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "32-bit",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "mips",
+        "cooccur": 99,
+        "jaccard": 0.01
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "ua-wget",
+        "cooccur": 4424,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "mirai",
+        "cooccur": 1881,
+        "jaccard": 0.28
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "arm",
+        "cooccur": 150,
+        "jaccard": 0.028
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "opendir",
+        "cooccur": 374,
+        "jaccard": 0.078
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "exe",
+        "cooccur": 208,
+        "jaccard": 0.044
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "botnet",
+        "cooccur": 3,
+        "jaccard": 0.001
+      },
+      {
+        "tag_x": "ua-wget",
+        "tag_y": "connectwise",
+        "cooccur": 171,
+        "jaccard": 0.038
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "elf",
+        "cooccur": 3095,
+        "jaccard": 0.279
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "Mozi",
+        "cooccur": 968,
+        "jaccard": 0.096
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "32-bit",
+        "cooccur": 898,
+        "jaccard": 0.097
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "mips",
+        "cooccur": 87,
+        "jaccard": 0.009
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "ua-wget",
+        "cooccur": 1881,
+        "jaccard": 0.28
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "mirai",
+        "cooccur": 4172,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "arm",
+        "cooccur": 1023,
+        "jaccard": 0.243
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "opendir",
+        "cooccur": 468,
+        "jaccard": 0.105
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "botnet",
+        "cooccur": 318,
+        "jaccard": 0.076
+      },
+      {
+        "tag_x": "mirai",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "elf",
+        "cooccur": 1059,
+        "jaccard": 0.106
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "Mozi",
+        "cooccur": 904,
+        "jaccard": 0.129
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "32-bit",
+        "cooccur": 909,
+        "jaccard": 0.148
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "mips",
+        "cooccur": 2,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "ua-wget",
+        "cooccur": 150,
+        "jaccard": 0.028
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "mirai",
+        "cooccur": 1023,
+        "jaccard": 0.243
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "arm",
+        "cooccur": 1060,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "opendir",
+        "cooccur": 59,
+        "jaccard": 0.034
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "botnet",
+        "cooccur": 1,
+        "jaccard": 0.001
+      },
+      {
+        "tag_x": "arm",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "elf",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "Mozi",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "32-bit",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "mips",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "ua-wget",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "mirai",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "arm",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "SmartLoader",
+        "cooccur": 5066,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 5061,
+        "jaccard": 0.999
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 5059,
+        "jaccard": 0.999
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "opendir",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "botnet",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "elf",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "Mozi",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "32-bit",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "mips",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "ua-wget",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "mirai",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "arm",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "SmartLoader",
+        "cooccur": 5061,
+        "jaccard": 0.999
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 5061,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 5059,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "opendir",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "botnet",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "SmartLoader-MaaS",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "elf",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "Mozi",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "32-bit",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "mips",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "ua-wget",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "mirai",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "arm",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "SmartLoader",
+        "cooccur": 5059,
+        "jaccard": 0.999
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 5059,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 5059,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "opendir",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "botnet",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "LuaJIT-loader",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "elf",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "Mozi",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "32-bit",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "mips",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "ua-wget",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "mirai",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "arm",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "ClearFake",
+        "cooccur": 1833,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "opendir",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "botnet",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "ClearFake",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "elf",
+        "cooccur": 315,
+        "jaccard": 0.03
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "Mozi",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "32-bit",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "mips",
+        "cooccur": 33,
+        "jaccard": 0.006
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "ua-wget",
+        "cooccur": 374,
+        "jaccard": 0.078
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "mirai",
+        "cooccur": 468,
+        "jaccard": 0.105
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "arm",
+        "cooccur": 59,
+        "jaccard": 0.034
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "opendir",
+        "cooccur": 751,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "exe",
+        "cooccur": 96,
+        "jaccard": 0.083
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "botnet",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "opendir",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "elf",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "Mozi",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "32-bit",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "mips",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "ua-wget",
+        "cooccur": 208,
+        "jaccard": 0.044
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "mirai",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "arm",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "opendir",
+        "cooccur": 96,
+        "jaccard": 0.083
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "exe",
+        "cooccur": 505,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "botnet",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "exe",
+        "tag_y": "connectwise",
+        "cooccur": 291,
+        "jaccard": 0.563
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "elf",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "Mozi",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "32-bit",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "mips",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "ua-wget",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "mirai",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "arm",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "opendir",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 385,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "botnet",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "dropped-by-amadey",
+        "tag_y": "connectwise",
+        "cooccur": 3,
+        "jaccard": 0.004
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "elf",
+        "cooccur": 3,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "Mozi",
+        "cooccur": 54,
+        "jaccard": 0.008
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "32-bit",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "mips",
+        "cooccur": 1,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "ua-wget",
+        "cooccur": 3,
+        "jaccard": 0.001
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "mirai",
+        "cooccur": 318,
+        "jaccard": 0.076
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "arm",
+        "cooccur": 1,
+        "jaccard": 0.001
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "opendir",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "exe",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "botnet",
+        "cooccur": 318,
+        "jaccard": 1.0
+      },
+      {
+        "tag_x": "botnet",
+        "tag_y": "connectwise",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "elf",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "Mozi",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "32-bit",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "mips",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "ua-wget",
+        "cooccur": 171,
+        "jaccard": 0.038
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "mirai",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "arm",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "SmartLoader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "SmartLoader-MaaS",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "LuaJIT-loader",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "ClearFake",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "opendir",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "exe",
+        "cooccur": 291,
+        "jaccard": 0.563
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "dropped-by-amadey",
+        "cooccur": 3,
+        "jaccard": 0.004
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "botnet",
+        "cooccur": 0,
+        "jaccard": 0.0
+      },
+      {
+        "tag_x": "connectwise",
+        "tag_y": "connectwise",
+        "cooccur": 303,
+        "jaccard": 1.0
+      }
+    ]
+  },
+  "mark": {
+    "type": "rect",
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "tag_x",
+      "type": "nominal",
+      "sort": [
+        "elf",
+        "Mozi",
+        "32-bit",
+        "mips",
+        "ua-wget",
+        "mirai",
+        "arm",
+        "SmartLoader",
+        "SmartLoader-MaaS",
+        "LuaJIT-loader",
+        "ClearFake",
+        "opendir",
+        "exe",
+        "dropped-by-amadey",
+        "botnet",
+        "connectwise"
+      ],
+      "title": "tag",
+      "axis": {
+        "labelAngle": -45
+      }
+    },
+    "y": {
+      "field": "tag_y",
+      "type": "nominal",
+      "sort": [
+        "elf",
+        "Mozi",
+        "32-bit",
+        "mips",
+        "ua-wget",
+        "mirai",
+        "arm",
+        "SmartLoader",
+        "SmartLoader-MaaS",
+        "LuaJIT-loader",
+        "ClearFake",
+        "opendir",
+        "exe",
+        "dropped-by-amadey",
+        "botnet",
+        "connectwise"
+      ],
+      "title": "tag"
+    },
+    "color": {
+      "field": "jaccard",
+      "type": "quantitative",
+      "title": "Jaccard similarity",
+      "scale": {
+        "scheme": "blues",
+        "domain": [
+          0,
+          1
+        ]
+      }
+    }
+  }
+}

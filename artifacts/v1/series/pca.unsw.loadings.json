@@ -1,0 +1,121 @@
+{
+  "id": "pca.unsw.loadings",
+  "n_features": 39,
+  "explained_variance_ratio": [
+    0.2545,
+    0.0984,
+    0.0914,
+    0.0771,
+    0.0615,
+    0.0542,
+    0.0508,
+    0.0474,
+    0.0304,
+    0.0296
+  ],
+  "cumulative": [
+    0.2545,
+    0.3528,
+    0.4442,
+    0.5213,
+    0.5828,
+    0.637,
+    0.6879,
+    0.7353,
+    0.7658,
+    0.7954
+  ],
+  "n_components_90pct": 11,
+  "components": [
+    {
+      "pc": 1,
+      "evr": 0.2545,
+      "top_features": [
+        {
+          "feature": "dwin",
+          "loading": 0.2676
+        },
+        {
+          "feature": "swin",
+          "loading": 0.265
+        },
+        {
+          "feature": "ct_dst_src_ltm",
+          "loading": -0.2625
+        },
+        {
+          "feature": "ct_srv_dst",
+          "loading": -0.2585
+        },
+        {
+          "feature": "ct_srv_src",
+          "loading": -0.2556
+        },
+        {
+          "feature": "ct_dst_sport_ltm",
+          "loading": -0.2539
+        }
+      ]
+    },
+    {
+      "pc": 2,
+      "evr": 0.0984,
+      "top_features": [
+        {
+          "feature": "dpkts",
+          "loading": 0.4436
+        },
+        {
+          "feature": "dloss",
+          "loading": 0.4145
+        },
+        {
+          "feature": "dbytes",
+          "loading": 0.4134
+        },
+        {
+          "feature": "spkts",
+          "loading": 0.2783
+        },
+        {
+          "feature": "dmean",
+          "loading": 0.2659
+        },
+        {
+          "feature": "response_body_len",
+          "loading": 0.2347
+        }
+      ]
+    },
+    {
+      "pc": 3,
+      "evr": 0.0914,
+      "top_features": [
+        {
+          "feature": "tcprtt",
+          "loading": 0.322
+        },
+        {
+          "feature": "synack",
+          "loading": 0.3048
+        },
+        {
+          "feature": "ackdat",
+          "loading": 0.3041
+        },
+        {
+          "feature": "dttl",
+          "loading": 0.277
+        },
+        {
+          "feature": "ct_src_dport_ltm",
+          "loading": 0.2487
+        },
+        {
+          "feature": "ct_dst_ltm",
+          "loading": 0.239
+        }
+      ]
+    }
+  ]
+}

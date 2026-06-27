@@ -1,0 +1,90 @@
+{
+  "id": "text.cybatt.urgency",
+  "task": "High_Risk_News vs rest",
+  "metrics": {
+    "auc": 0.994,
+    "average_precision": 0.8757,
+    "f1": 0.7295
+  },
+  "class_balance": {
+    "high_risk": 892,
+    "total": 36071,
+    "positive_rate": 0.0247
+  },
+  "top_terms": [
+    {
+      "term": "warns",
+      "weight": 17.161
+    },
+    {
+      "term": "warning",
+      "weight": 6.646
+    },
+    {
+      "term": "confirms",
+      "weight": 5.391
+    },
+    {
+      "term": "targeting",
+      "weight": 5.096
+    },
+    {
+      "term": "new",
+      "weight": 5.012
+    },
+    {
+      "term": "opensea",
+      "weight": 4.683
+    },
+    {
+      "term": "users",
+      "weight": 4.643
+    },
+    {
+      "term": "north",
+      "weight": 4.537
+    },
+    {
+      "term": "warned",
+      "weight": 4.505
+    },
+    {
+      "term": "confirmed",
+      "weight": 4.21
+    },
+    {
+      "term": "compromised",
+      "weight": 3.889
+    },
+    {
+      "term": "fbi",
+      "weight": 3.886
+    },
+    {
+      "term": "devices",
+      "weight": 3.847
+    },
+    {
+      "term": "update",
+      "weight": 3.821
+    },
+    {
+      "term": "attack",
+      "weight": 3.568
+    }
+  ],
+  "examples": [
+    {
+      "score": 1.0,
+      "text": "#cybersecurity https://t.co/lLi5lGgC3z Google Warns of New Spyware Targeting iOS and Android Users"
+    },
+    {
+      "score": 1.0,
+      "text": "Google Warns of New Spyware Targeting iOS and Android Users - https://t.co/9Og7j1PvGb"
+    },
+    {
+      "score": 1.0,
+      "text": "Google Warns of New Spyware Targeting iOS and Android Users https://t.co/bYan4IqIYT https://t.co/DDBxO1CY9a"
+    }
+  ]
+}

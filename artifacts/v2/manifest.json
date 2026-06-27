@@ -1,0 +1,1018 @@
+{
+  "schema_version": "2",
+  "bundle_version": "v2",
+  "generated_at": "2026-06-27T06:46:23.657029+00:00",
+  "git_rev": "uninitialized",
+  "method": {
+    "principle": "We study each dataset on its own. We never force them into one big shared story \u2014 each dataset gets its own takeaway and its own idea for something you could build.",
+    "techniques_source": "https://hex.tech/blog/data-analysis-techniques/"
+  },
+  "datasets": [
+    {
+      "id": "unsw-nb15",
+      "display_name": "UNSW-NB15 Network-Flow Intrusion Dataset (official train/test partition)",
+      "doc_category": "network-flow",
+      "what_it_is": "A practice dataset for catching network attacks. Each row is one back-and-forth conversation between two computers, with 39 number columns describing it, 3 word/category columns, a yes/no attack label, and an attack-type label with 10 types.",
+      "source": {
+        "name": "UNSW-NB15 (ACCS), official train/test CSV partition",
+        "url": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+        "license": "Academic/research use (ACCS); cite Moustafa & Slay 2015."
+      },
+      "isolated_insight": "On the official UNSW-NB15 split, telling attacks from normal traffic is both easy and very repetitive. A simple formula scores 0.939 for attack-vs-normal (0.5 is guessing, 1.0 is perfect), but that score does not lean on any single column \u2014 taking away the column people cite most (sttl) changes it by only 0.0002, and squeezing the 39 columns down shows that just 10 squeezed columns hold 94% of the pattern. The clue that separates attacks from normal traffic is repeated across overlapping groups of columns \u2014 about bytes, packets, load, and connection counts \u2014 so stories that pin it on one 'most important' column are not trustworthy, and the number columns squash down to about a quarter of their size with no loss in accuracy.",
+      "solution_idea": "A tool that finds the smallest set of columns a network-attack detector really needs, and points out when columns just repeat each other. Given a labeled dataset it (1) squeezes the columns down to count how many truly different pieces of information exist, and (2) drops one group of columns at a time and re-checks the attack-vs-normal score to see how much each group actually adds, then reports the smallest set of columns that keeps detection nearly as good. On UNSW-NB15 it would say to collect about a third of the number columns instead of all 39 \u2014 cheaper to gather at the sensor, with no measurable drop in catching attacks \u2014 and it would warn when a reported score is only high because of repeated columns.",
+      "honesty_notes": "(1) The mix of attacks and normal traffic was set up by hand (68.1% attack, while real networks see about ~13%), so the score and any cost numbers describe this made-up split only, not real traffic. (2) The common claim that sttl almost separates attacks by itself is overblown: sttl alone scores only 0.76 and dropping it barely matters \u2014 we report this as a correction. (3) The data was made by a machine (IXIA), so some of what looks easy to separate is really a fingerprint of that machine (the rate column is hard-capped at 1e6, a made-up ceiling). (4) This split has no timestamp, so we cannot do anything that needs time order here. (5) The attack types are very lopsided (Worms n=130), so anything about the rare types is shaky. (6) The score is measured on the one fixed published split, not re-checked across several different splits.",
+      "analyses": [
+        {
+          "technique": "regression",
+          "title": "Easy to catch attacks, but no single column gets the credit",
+          "finding": "We trained a simple formula (it learns to predict the answer from the columns) on the official UNSW-NB15 training set, after first squashing the big numbers and putting every column on the same scale. On the official test set it gets a 0.9386 score for telling attacks from normal traffic (0.5 is just guessing, 1.0 is perfect). The important part is how steady this is: taking away sttl \u2014 the one column people most often say does the work \u2014 changes the score by only 0.0002 (0.9386\u21920.9384), and sttl by itself scores just 0.76. So spotting attacks here is easy, but no single column carries it. The clue that separates attacks from normal traffic is repeated across many columns that move together \u2014 about bytes, packets, load, and connection counts. The formula's weights look big and jumpy (the biggest by size: dbytes, swin, dwin), but that is because those columns overlap so much, not because one column is secretly leaking the answer.",
+          "fit": "strong",
+          "storage": [
+            "series/unsw-nb15.regression.roc.json",
+            "tables/unsw-nb15.regression.coef.parquet"
+          ],
+          "spec": "specs/unsw-nb15.regression.roc.vl.json",
+          "metrics": [
+            {
+              "label": "Attack-vs-normal score, all columns (0.5=guess, 1.0=perfect)",
+              "value": "0.939"
+            },
+            {
+              "label": "Score drop when the sttl column is removed",
+              "value": "0.0002"
+            },
+            {
+              "label": "Score using only the sttl column",
+              "value": "0.76"
+            }
+          ],
+          "params": {
+            "model": "LogisticRegression(max_iter=2000, random_state=0)",
+            "features": "39 numeric, log1p(clip>=0) + StandardScaler",
+            "eval": "official train->test, metric=ROC AUC",
+            "ablations": [
+              "full",
+              "no_sttl",
+              "sttl_only"
+            ]
+          },
+          "row_counts": {
+            "train": 175341,
+            "test": 82332
+          },
+          "data_quality_note": "The mix of attacks and normal traffic was set up by hand (68.1% attack, while real networks see about ~13%), so this score describes this made-up split, not real traffic.",
+          "fit_warning": null
+        },
+        {
+          "technique": "pca_factor",
+          "title": "Only about a quarter of the number columns really matter",
+          "finding": "We squeezed the 39 number columns down to a few new columns that still hold most of the pattern (after squashing big numbers and putting them on the same scale). A few columns hold almost everything: 5 squeezed columns hold 80% of the pattern, 8 hold 90%, and 10 hold 94% \u2014 so about 29 of the 39 columns barely add anything new. Looking at which original columns make up each squeezed column tells us what they stand for: the first one is built mostly from the TCP connection-state columns (dwin, dtcpb \u2014 the destination TCP window and starting sequence numbers), while later ones separate the ct_* connection-count columns and the rate/load columns. This explains the earlier result: because the clue lives in just a handful of overlapping groups, taking away any one raw column barely changes how well attacks are caught.",
+          "fit": "strong",
+          "storage": [
+            "tables/unsw-nb15.pca_factor.scree.parquet",
+            "series/unsw-nb15.pca_factor.loadings.json"
+          ],
+          "spec": "specs/unsw-nb15.pca_factor.scree.vl.json",
+          "metrics": [
+            {
+              "label": "Squeezed columns to hold 80% of the pattern",
+              "value": "5 of 39"
+            },
+            {
+              "label": "Squeezed columns to hold 90% of the pattern",
+              "value": "8 of 39"
+            },
+            {
+              "label": "Squeezed columns to hold 94% of the pattern",
+              "value": "10 of 39"
+            }
+          ],
+          "params": {
+            "inputs": "log1p(clip>=0) + StandardScaler on 39 numeric features",
+            "fit": "PCA(random_state=0) on training rows",
+            "thresholds": [
+              0.8,
+              0.9,
+              0.94
+            ]
+          },
+          "row_counts": {
+            "train": 175341
+          },
+          "data_quality_note": null,
+          "fit_warning": null
+        },
+        {
+          "technique": "cluster",
+          "title": "Which attack types have their own recognizable shape",
+          "finding": "We sorted the rows into 8 groups by how alike they are, using the top 10 squeezed columns, and we did NOT show it the attack labels while sorting. The groups match the real attack types only so-so (a 'do the groups match the labels' score of 0.35, where higher is better, and a 'how cleanly the groups separate' score of 0.53). The result is honest about which types have their own shape: Generic piles into one group that is 93% one type, and Normal splits across three groups that are each almost all one type, while the rare types blend in \u2014 Worms (n=130), Shellcode, and Backdoor scatter across the mixed Exploits/Fuzzers/DoS groups and never get a group of their own. So the shape of the traffic tells apart the common Generic and Normal traffic cleanly, but cannot see the rare attack types \u2014 and it figured this out without ever seeing the labels.",
+          "fit": "moderate",
+          "storage": [
+            "tables/unsw-nb15.cluster.crosstab.parquet",
+            "series/unsw-nb15.cluster.summary.json"
+          ],
+          "spec": "specs/unsw-nb15.cluster.heatmap.vl.json",
+          "metrics": [
+            {
+              "label": "Number of groups",
+              "value": "8"
+            },
+            {
+              "label": "Group-vs-label match score",
+              "value": "0.35"
+            },
+            {
+              "label": "How much the Generic group is one type",
+              "value": "93%"
+            }
+          ],
+          "params": {
+            "model": "KMeans(n_clusters=8, n_init=10, random_state=0)",
+            "inputs": "top 10 PCs of log1p+standardized numerics",
+            "label_use": "post-hoc crosstab only; never used during fit"
+          },
+          "row_counts": {
+            "train": 175341
+          },
+          "data_quality_note": null,
+          "fit_warning": "The attack types are very lopsided (Worms has just n=130 rows, about ~300x fewer than Generic), so anything we say about the rare types is shaky; the clean split only holds for the common Generic and Normal traffic."
+        }
+      ]
+    },
+    {
+      "id": "ctu-13",
+      "display_name": "CTU-13 Botnet NetFlow \u2014 Scenario 11 (Botnet-52)",
+      "doc_category": "network-flow",
+      "what_it_is": "One ~15-minute recording of network traffic (~107k connections). Each row sums up one connection between two computers, and comes with a label saying whether it is attack (Botnet), normal, or background (unlabeled) traffic.",
+      "source": {
+        "name": "CTU-13 / Stratosphere IPS (CTU University) \u2014 capture Botnet-52",
+        "url": "https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-52/",
+        "license": "Public research dataset (Stratosphere IPS); free for research use."
+      },
+      "isolated_insight": "In this recording you cannot spot the attack by looking at any single connection. Every attack connection is just one ~1066-byte ping (one packet) that looks exactly like an ordinary harmless ping. It even goes to the same place (147.32.96.69) as 2,089 perfectly normal connections from a safe computer. When we let the computer group the traffic on its own, it dumps the attack into the same ping group as that safe traffic (68% of the group is really attack). The only way to see the attack is to step back and watch the bigger pattern: two computers inside the network stay almost silent for ~13 minutes, then all at once fire off thousands of connections in a single 30s window, all aimed at one victim. The giveaway is how many connections one computer makes in a short stretch of time \u2014 not what any single connection looks like, and not where it is going.",
+      "solution_idea": "Build an alarm that watches each computer's burst of connections instead of judging one connection at a time. Keep counting how many connections each computer sends to each destination every 30s, and raise an alarm when one computer's count suddenly jumps far above its own usual level (say >5x its recent normal) while those connections are mostly tiny one-packet messages. This catches a flood from a hijacked computer inside the network \u2014 the kind that rules based on one connection's looks, or on whether the destination is 'known bad,' simply cannot see. And because each computer is compared to its own normal, you don't need to pick one cutoff for everyone.",
+      "honesty_notes": "This is just one 15-min recording from 2011. This loud-flood behavior is how this one case acts; it does NOT tell you about quieter attacks that send a little traffic over and over. The labels are a rough guide, not a perfect answer: the researchers marked 3 whole computers as infected and called everything from them 'attack' rather than checking each message, and 'background' is just a leftover bin nobody labeled, so measuring how 'pure' a group is against it doesn't mean much. We left out building a simple formula that learns to guess attack-or-not (regression), on purpose: the answer here comes down to two obvious things (it's a ping AND it's headed to the victim), so that formula would just be that rule written out \u2014 it would look impressive but prove nothing. We also skipped squeezing the columns down to a few (because there isn't much to squeeze), rolling the dice many times to see a range of outcomes (nothing random to model), splitting by sign-up groups (no such groups in a 15-min window), and reading text for mood (there's no written text here) \u2014 each would have been a forced fit.",
+      "analyses": [
+        {
+          "technique": "cluster",
+          "title": "One connection alone never gives the botnet away",
+          "finding": "We let the computer sort the connections into 7 groups on its own (a method called KMeans), using only how each connection looks: how many packets and bytes it sent, how long it lasted, what share came from the sender, two network-distance numbers, and its protocol. We did NOT tell it which ones were attacks. It made one tight group of ICMP pings (a ping is a tiny 'are you there?' network message) with 11,977 connections (a typical one is 1 packet / 1,066 bytes). This group is supposed to be 'the botnet' (a set of hijacked computers run by an attacker) \u2014 but it holds 8,133 attack connections mixed in with 2,089 normal, safe ones (all from computer 147.32.84.164) and 1,755 background ones. So only 68% of the group is really attack traffic. The attack pings are blended in with harmless pings, not off in their own group: looking at one connection at a time, you can't tell them apart, and they even go to the same place (147.32.96.69) as the safe computer does. The other background traffic (web and other connections) split off into the remaining groups.",
+          "fit": "strong",
+          "storage": [
+            "tables/ctu-13.cluster.summary.parquet",
+            "series/ctu-13.cluster.points.json"
+          ],
+          "spec": "specs/ctu-13.cluster.scatter.vl.json",
+          "metrics": [
+            {
+              "label": "Connections in the ICMP ping group",
+              "value": "11,977"
+            },
+            {
+              "label": "Share of that group that is really attack",
+              "value": "68%"
+            },
+            {
+              "label": "Safe connections mixed into it",
+              "value": "2,089"
+            }
+          ],
+          "params": {
+            "algo": "KMeans",
+            "k": 7,
+            "random_state": 0,
+            "features": [
+              "log10(TotPkts+1)",
+              "log10(TotBytes+1)",
+              "log10(Dur+1e-3)",
+              "SrcPkts/TotPkts",
+              "sTtl",
+              "sHops",
+              "proto_udp",
+              "proto_tcp",
+              "proto_icmp"
+            ],
+            "label_used": false,
+            "dstaddr_used": false,
+            "scatter_sample": "stratified (Botnet<=500, Normal<=400, Background<=500), jittered"
+          },
+          "row_counts": {
+            "total_flows": 107251,
+            "botnet_cluster_size": 11977,
+            "scatter_points": 1400
+          },
+          "data_quality_note": "A few connections are huge (up to 4.3 MB) while most are tiny, so we squish the byte and packet numbers onto a log scale to keep them readable. 'Background' is just a leftover bin for connections nobody labeled, so saying how 'pure' a group is against it doesn't really mean anything. In the dot chart we kept a fair number of each group (not the real proportions) so the small groups can still be seen inside the big clump.",
+          "fit_warning": null
+        },
+        {
+          "technique": "timeseries",
+          "title": "The attack is a sudden burst from the hijacked computers, all at once",
+          "finding": "Instead of looking at one connection at a time, we count how many connections each computer makes every 30 seconds. That shows what the one-at-a-time view misses: the two hijacked computers (147.32.84.165, .191) stay almost silent for the first ~13 minutes (no more than 5 connections per 30 seconds), then blow up together at the same moment \u2014 computer 147.32.84.165 jumps to 3,643 connections in a single 30-second window (around minute 15), and .191 does almost the same thing (3,069 in one window). The safe computer we compare against, 147.32.84.138, stays flat the whole time (about 456 per window). The attack is a sudden jump from one source near the end of the recording \u2014 a flip from quiet to loud, not a slow steady trickle. The giveaway is how many connections one computer makes in a short window, not what any single connection looks like.",
+          "fit": "strong",
+          "storage": [
+            "tables/ctu-13.timeseries.perhost.parquet",
+            "series/ctu-13.timeseries.perhost.json"
+          ],
+          "spec": "specs/ctu-13.timeseries.burst.vl.json",
+          "metrics": [
+            {
+              "label": "Most connections in 30s (hijacked computer)",
+              "value": "3,643"
+            },
+            {
+              "label": "Rate before the burst (first ~13 min)",
+              "value": "\u22645/bin"
+            },
+            {
+              "label": "Safe computer's steady rate",
+              "value": "~456/bin"
+            }
+          ],
+          "params": {
+            "bin_seconds": 30,
+            "infected_hosts": [
+              "147.32.84.165",
+              "147.32.84.191"
+            ],
+            "benign_host": "147.32.84.138",
+            "n_bins": 33
+          },
+          "row_counts": {
+            "series_points": 99,
+            "n_bins": 33
+          },
+          "data_quality_note": "The labels are a rough guide, not a perfect answer: the researchers marked 3 whole computers as infected and called everything from them 'attack,' rather than checking each message one by one. This loud burst is just how this one recording's attack behaves; a quieter attack that sends a little traffic over and over would look totally different (this recording has only about 6 of those quiet kind).",
+          "fit_warning": null
+        }
+      ]
+    },
+    {
+      "id": "ait-ads",
+      "display_name": "AIT-ADS \u2014 AIT Alert Data Set",
+      "doc_category": "host-log",
+      "what_it_is": "2.66M time-stamped alerts (warnings raised by intrusion-detection tools \u2014 software that watches for attacks) read straight from a 96MB zip file. They come from 8 practice setups (\"scenarios\") run through 2 different tools (engines): Wazuh, which matches known attack patterns, and AMiner, which flags anything it has never seen before. One row is one alert. A file called labels.csv lists, for each scenario, the time windows of a planted 10-step attack (the kill-chain).",
+      "source": {
+        "name": "AIT Alert Data Set (AIT-ADS), 2023",
+        "url": "https://zenodo.org/records/8263181",
+        "license": "CC-BY-4.0"
+      },
+      "isolated_insight": "In this practice setup, how loud and how serious the alerts are has almost nothing to do with how far the attack has gotten. About 66% of all 2.66M alerts go off inside the short attack windows (only a couple of hours per scenario), but that pile is really one big burst of automated web-scanning: a single hour can carry ~450x a normal hour's count, 59% of all alerts are one low-danger rule ('Web server 400 error code.', warning level 5), and the danger level never climbs \u2014 94.9% of Wazuh alerts stay at level 3-6 and only 5.1% reach level 10 or higher, even while the attacker is grabbing extra powers and stealing data. The detecting also clumps on the noisy scanning steps: AMiner's \"never seen this before\" detectors fire 97% in the dirb+wpscan scanning steps and under 1% across the whole later, more dangerous part. So the loud, huge, low-danger scanning is easy to catch but tells you nothing new, while the truly dangerous later steps are almost invisible to both tools \u2014 the pattern-matching tool never raises its danger level, and the new-thing tool sees nothing new.",
+      "solution_idea": "Build a coverage checker for the attack steps: place every alert \u2014 each Wazuh pattern-match and each AMiner new-thing alert \u2014 onto the attack timeline, count how well each step gets noticed, then point out the blind spots, the later steps where neither the danger level nor the new-thing detector ever fires. Instead of rewarding the scan burst it already catches, a detection team gets a map of which attack steps it currently cannot see (webshell / reverse-shell / privilege escalation / data theft) and where to add more watching, such as logs of what programs run and who logs in. The warm-up (learning-mode) rows are left out of the comparison.",
+      "honesty_notes": "The labels are rough time windows for the whole scenario, not a person's yes/no verdict on each alert \u2014 a harmless alert inside a window still gets counted \u2014 so a window is only a weak hint that something was an attack. About 66% of alerts fall inside one, which is why we do not try to fit a formula that predicts the label for each alert; it would not be fair, so we left it out. Fixes to the earlier design notes, checked against the full data on disk: (1) the attack windows are NOT '4-5 day bursts' \u2014 they are short (middle length ~0.7 min, longest 120 min), adding up to ~1.4-3.5 hours per scenario, while the alerts themselves span ~4-6 days; (2) warning level 3-6 is 94.9% of Wazuh rows, not ~99%; (3) most AMiner IPs (61 of 86) DO fire a new-thing alert during an attack \u2014 the notes guessed most fire only during warm-up; only 9 fire only during warm-up. The Wazuh data never says which machine an alert came from (the name is always the same), which is a built-in limit and keeps the \"which machine\" view stuck at AMiner's 86 IPs. Squeezing the columns down to two (PCA) is used only to draw the picture, not as a finding on its own. We skipped rolling-the-dice simulation, prediction formulas, and word/opinion analysis because they would be forced here: there is no random process to simulate, the labels are too rough for a prediction formula, and the log text is structured machine output, not anyone's opinion. This is a made-up practice setup with the same planted attack in every scenario, so the tidy daily rhythm and the \"danger and attack-progress are unlinked\" conclusion may not carry over to messier real-world data.",
+      "analyses": [
+        {
+          "technique": "cluster",
+          "title": "2,655,821 alerts \u2192 817 repeat groups \u2192 9 families",
+          "finding": "We read all 2,655,821 alerts (warnings the security tools raised) one at a time. Many are exact repeats, so we group together alerts that share the same scenario, engine (the tool that raised them), rule name, and location. That squeezes them down to just 817 repeating groups \u2014 a 99.97% drop. The alerts are very lopsided \u2014 a few things hog most of the total: one rule, \u201cWeb server 400 error code.\u201d, is 59.2% of all alerts, and the top 3 rules are 80.7%. We then sort the groups into families with KMeans (a tool that puts similar groups together; 9 families, and how cleanly they separate is 0.20). It only looks at plain facts about each group [how many alerts it holds, the average warning level, which engine, and the shape of the day across 24 hours] \u2014 it never sees which alerts fell inside an attack, so the grouping is honest. The groups split mostly by how big they are and what time of day they happen: the few giant Wazuh \u201cWeb server 400 error code.\u201d groups (each carrying hundreds of thousands of alerts) sit in their own dense corners, away from the broad everyday \u201cIDS event\u201d baseline and from a long tail of small groups from both engines (hundreds of alerts each). Only after grouping do we color them by how much they overlap the attack times \u2014 that is a separate check, not something baked in: the average overlap per family still ranges from 0.00\u20130.92, so the big scan families line up with the attack times even though the attack labels never went into the grouping. The rare, interesting groups are a tiny low-volume tail, not high-danger ones.",
+          "fit": "strong",
+          "storage": [
+            "series/ait-ads.cluster.summary.json",
+            "tables/ait-ads.cluster.groups.parquet"
+          ],
+          "spec": "specs/ait-ads.cluster.scatter.vl.json",
+          "metrics": [
+            {
+              "label": "All alerts",
+              "value": "2,655,821"
+            },
+            {
+              "label": "Repeat groups",
+              "value": "817"
+            },
+            {
+              "label": "Top rule's share",
+              "value": "59%"
+            },
+            {
+              "label": "Alert families",
+              "value": "9"
+            }
+          ],
+          "params": {
+            "dedup_key": [
+              "scenario",
+              "engine",
+              "signature",
+              "location"
+            ],
+            "algo": "KMeans",
+            "k_search": [
+              6,
+              10
+            ],
+            "k_selected": 9,
+            "features": [
+              "log_count",
+              "mean_level",
+              "engine",
+              "hour_profile_24"
+            ],
+            "pca_for_display_only": true
+          },
+          "row_counts": {
+            "input_alerts": 2655821,
+            "groups": 817
+          },
+          "data_quality_note": "The color shows how much each group overlaps the attack times \u2014 the share of its alerts that fall inside an attack window listed in labels.csv. This is a rough guide, not a perfect answer, because the window is just a time span for the whole scenario, not a verdict on each alert: a harmless alert that happens during a window still gets counted.",
+          "fit_warning": "The groups separate only so-so (0.20), and the 2-column picture (made by squeezing many columns down to the two that hold the most pattern) keeps only 16% of the pattern. The split is driven mostly by a few rules being huge and lopsided, not by neat, many-sided families."
+        },
+        {
+          "technique": "timeseries",
+          "title": "A normal daily rhythm vs one 431,476-alert scanning spike (wilson)",
+          "finding": "In scenario wilson, the number of alerts per hour follows a strong daily rhythm \u2014 the regular ups and downs of a workday (we split the hourly counts into that daily rhythm and leftover bumps; the daily-rhythm strength is 0.86). On a normal day there are about 941 alerts an hour. The attacks do not last for days \u2014 they add up to only a couple of hours \u2014 but they make one enormous scanning spike: a single hour reaches 431,476 alerts, about 459x a normal hour, almost all of them low-danger \u201cWeb server 400 error\u201d alerts from automated tools poking at web pages. If we flag any hour that sticks out far from the daily rhythm (more than 3 steps away from normal), we easily catch that giant spike. But across all 4 attack-hours we only catch 50% (the share of real attack-hours we flagged), and only 6% of our flags are real attacks \u2014 the smaller attack-hours hide inside the normal daily ups and downs, and the regular daily peaks set off false alarms. So by volume the attack is one deafening burst plus a quiet tail you cannot tell apart from a normal day.",
+          "fit": "strong",
+          "storage": [
+            "series/ait-ads.timeseries.hourly.json"
+          ],
+          "spec": "specs/ait-ads.timeseries.hourly.vl.json",
+          "metrics": [
+            {
+              "label": "Daily-rhythm strength",
+              "value": "0.86"
+            },
+            {
+              "label": "Peak attack hour",
+              "value": "431,476"
+            },
+            {
+              "label": "\u00d7 a normal hour",
+              "value": "459\u00d7"
+            },
+            {
+              "label": "Attack-hours caught",
+              "value": "50%"
+            }
+          ],
+          "params": {
+            "scenario": "wilson",
+            "decomp": "STL",
+            "period_h": 24,
+            "z_thresh": 3.0
+          },
+          "row_counts": {
+            "hours": 144,
+            "attack_hours": 4,
+            "anomaly_hours": 31
+          },
+          "data_quality_note": "The attack windows in labels.csv are rough time spans for the whole scenario (middle length ~0.7 min, longest 120 min), not a yes/no verdict on each alert. We show one typical scenario here; the daily rhythm and the one big spike show up in the other scenarios too (daily-rhythm strength 0.69-0.86 in 6 of 8).",
+          "fit_warning": null
+        },
+        {
+          "technique": "cohort",
+          "title": "AMiner spots scanning (97%) but misses the later attack steps",
+          "finding": "We split the 86 AMiner machine addresses (IPs \u2014 the only \u201cwhich machine\u201d clue in the data, since Wazuh always reports the same name) into groups by where their \u201cI've never seen this before\u201d alerts land along the attack's steps (the kill-chain: the ordered stages of an attack). We skip the warm-up rows from when AMiner was still learning what normal looks like. Two things stand out. First, these new-thing alerts pile up at certain steps: of 47,044 new-thing alerts inside the attack windows, 97% land in just the two web-scanning steps (dirb + wpscan), while the whole later, more dangerous part \u2014 webshell, cracking, reverse_shell, privilege_escalation, service_stop, dnsteal \u2014 adds up to only 389 alerts (0.8%). Second, they pile up on a few machines: the top 5 IPs make up 87% of all the in-window new-thing alerts. This corrects an earlier guess that most IPs only fire during warm-up: really, 61 of 86 IPs fire at least one new-thing alert during an attack, and only 9 fire only during warm-up. The honest limit is coverage: AMiner shouts about scanning but barely notices the dangerous later steps.",
+          "fit": "moderate",
+          "storage": [
+            "series/ait-ads.cohort.summary.json",
+            "tables/ait-ads.cohort.ip_stage.parquet"
+          ],
+          "spec": "specs/ait-ads.cohort.heatmap.vl.json",
+          "metrics": [
+            {
+              "label": "AMiner machine IPs",
+              "value": "86"
+            },
+            {
+              "label": "IPs firing during attacks",
+              "value": "61"
+            },
+            {
+              "label": "Scanning-step share",
+              "value": "97%"
+            },
+            {
+              "label": "Top-5 IP share",
+              "value": "87%"
+            }
+          ],
+          "params": {
+            "entity": "AMiner.ID",
+            "exclude_training_mode": true,
+            "cohort_key": "kill-chain stage",
+            "metric": "in-window novel-event count"
+          },
+          "row_counts": {
+            "ips": 86,
+            "ips_firing": 61,
+            "inwindow_events": 47044
+          },
+          "data_quality_note": "AMiner is only ~2.1% of all the rows, and the Wazuh data never says which machine an alert came from, so this \u201cwhich machine\u201d view is stuck at 86 IPs over a short stretch (only the few hours of each attack). Which step an alert belongs to comes from the labels.csv time windows.",
+          "fit_warning": "So-so fit: the \u201cwhich machine\u201d angle is real but thin. The point here is how much each attack step gets noticed, not learning each machine's normal behavior \u2014 there is too little history for that."
+        }
+      ]
+    },
+    {
+      "id": "epss",
+      "display_name": "EPSS (Exploit Prediction Scoring System) daily scores \u2014 single snapshot",
+      "doc_category": "threat-intel",
+      "what_it_is": "One row for each known software bug (called a CVE \u2014 a security flaw with its own ID number), all scored on one single day. The columns are the EPSS score (a guess at the chance the bug gets attacked in the next 30 days, from 0 to 1) and its percentile (its rank against all the others).",
+      "source": {
+        "name": "FIRST.org EPSS (Cyentia)",
+        "url": "https://epss.cyentia.com/epss_scores-current.csv.gz",
+        "license": "Free for public use (FIRST EPSS)"
+      },
+      "isolated_insight": "In this one-day snapshot of 342,575 bugs, the chance of attack is squeezed into a tiny number of bugs, and a bug's age alone tells you a lot. Lopsidedness: most bugs score very low and a few score very high (the middle bug scores 0.0075, the highest scores about 1.0; the lopsidedness score, called Gini, is 0.77, where 0 is perfectly even and 1 is one bug hogging everything). Adding up all the EPSS scores gives about 10,029 expected attacks, of which the riskiest 1% of bugs hold 27%, the top 5% 59%, and the top 10% 70% \u2014 yet only 1.25% of all bugs score 0.5 or higher. Age pattern: the average EPSS score drops about 13% for each newer year a bug got its ID (2013-2026), from about 0.053 (2015) to about 0.006 (2026), so older bugs are far more likely to be attacked one-by-one, even with no other details about them. So the risk is not spread evenly across all the bugs \u2014 it sits in a thin, easy-to-spot, older-leaning slice.",
+      "solution_idea": "A 'fix-the-most-with-the-least' tool. You give it the list of bugs your computers have. It sorts them by EPSS score and draws a curve showing how much of the total attack risk you remove as you fix more bugs \u2014 'fix these N bugs to wipe out X% of your expected attack risk.' Because ~10% of bugs carry ~70% of the expected attacks, it finds the smallest set of bugs that hits a target you pick (80/90/95%), tells you how many attacks you'd expect to remove (with a range to show the wiggle room), and lets you turn on extra weight for older bugs, since older bugs tend to score higher on EPSS. It uses nothing but this one file \u2014 no severity rating, no value of the computer, no outside feeds.",
+      "honesty_notes": "(1) This is ONE day's scores, not a history \u2014 every 'pattern' here compares bugs of different ages on the same day, NOT how a score changes over time; don't read it that way. (2) The percentile is just the EPSS score turned into a rank, so it tells you nothing new. (3) There is no record of which bugs were really attacked, no severity rating, and no maker/product columns \u2014 the only extra fact we can pull out is the year in the bug's ID, so there is only so much we can dig into. (4) The age pattern mixes up several causes (older bugs had more time for attacks to be built; famous old bugs that are known to be attacked pull the old groups up; the EPSS model may cover new bugs differently) \u2014 this file can't tell them apart. (5) The dice-rolling test assumes the EPSS scores are honest chances and that each bug's outcome doesn't affect the others, neither of which can be checked here, and it only covers the 30-day window. (6) Fixes to the earlier first-draft guesses: the formula's drop is -0.143/yr (about -13%/yr) and fits with a score of R^2=0.83 (this fit score runs 0 to 1, where 1 is perfect), not -0.16..-0.18 with R^2>0.9; the spread from the dice test is 82, not ~95; bugs scoring 0.05 or higher are 8.9% of the whole list. Grouping bugs into clusters, squeezing columns together, true sign-up-date groups, over-time charts, and reading text all don't fit a 3-column one-day number file, so they were left out.",
+      "analyses": [
+        {
+          "technique": "cohort",
+          "title": "Older bugs are much more likely to get attacked, one bug at a time",
+          "finding": "Splitting the 342,575 bugs into groups by the year in their ID gives 28 year-groups (1,236-43,047 bugs each). The average EPSS score gets smaller for newer years: 0.053 (2015) -> 0.041 (2018) -> 0.036 (2019) -> 0.023 (2022) -> 0.0155 (2024) -> 0.0089 (2025) -> 0.0064 (2026); the middle bug in each group follows the same path (0.0196 -> 0.0027). The 2015 group's average is 8.4x the 2026 group's, so older bugs really are much more likely to be attacked, one bug at a time. The groups before 2017 jump around (0.04-0.066, no clear pattern); the steady drop only kicks in after 2016. The catch goes the other way: the 2024-2026 years alone hold 108,394 of the 342,575 bugs, so the newest and most common bugs are the least risky each on their own. Remember, this compares bugs of different ages on one day \u2014 it is NOT a score changing over time.",
+          "fit": "strong",
+          "storage": [
+            "tables/epss.cohort.by_year.parquet"
+          ],
+          "spec": "specs/epss.cohort.bar_line.vl.json",
+          "metrics": [
+            {
+              "label": "Average score for 2015 bugs",
+              "value": "0.053"
+            },
+            {
+              "label": "Average score for 2026 bugs",
+              "value": "0.0064"
+            },
+            {
+              "label": "Times bigger: 2015 vs 2026",
+              "value": "8.4x"
+            },
+            {
+              "label": "Age groups (by ID year)",
+              "value": "28 (1999-2026)"
+            }
+          ],
+          "params": {
+            "vintage_key": "regexp CVE-(\\d{4})",
+            "aggregations": [
+              "count",
+              "mean",
+              "median"
+            ]
+          },
+          "row_counts": {
+            "cves": 342575,
+            "cohorts": 28
+          },
+          "data_quality_note": "The 'age' here is just the year in the bug's ID (the year it was filed), which is a rough stand-in for how old it really is. It blends together how long attacks had to be built, famous old bugs that are known to be attacked pulling old groups up, and the EPSS model covering new bugs differently. This file can't pull those apart.",
+          "fit_warning": null
+        },
+        {
+          "technique": "regression",
+          "title": "The average score drops about 13% for each newer year",
+          "finding": "We fit a simple formula (one that learns to predict the average score from the year alone) to the year-group averages from 2013-2026. It comes out to a slope of -0.143 per year, meaning the average chance of attack drops about 13.3% for each newer year, with a fit score of R^2=0.83 on the 14 year-group averages (this fit score runs from 0 to 1, where 1 is a perfect match). (This fixes an earlier first-draft guess of -0.16..-0.18/yr and R^2>0.9: the real drop is gentler and the fit is looser, because the 2015 group sits above the line and the early-2010s years are almost flat.) The pattern holds up when you don't group: on the 286,544 single-bug rows from the same 2013-2026 window the slope softens to -0.178/yr (16.3%/yr) but still points the same way. Bottom line: you can guess a bug's chance of attack pretty well from its age alone, with no other details at all.",
+          "fit": "moderate",
+          "storage": [
+            "tables/epss.regression.cohort_fit.parquet",
+            "series/epss.regression.params.json"
+          ],
+          "spec": "specs/epss.regression.scatter_fit.vl.json",
+          "metrics": [
+            {
+              "label": "Score change per year (log)",
+              "value": "-0.143"
+            },
+            {
+              "label": "Drop in score each year",
+              "value": "-13.3%"
+            },
+            {
+              "label": "Fit score 0-1 (groups 2013-26)",
+              "value": "0.83"
+            },
+            {
+              "label": "Same drop, per single bug (check)",
+              "value": "-0.178"
+            }
+          ],
+          "params": {
+            "model": "log(mean_epss) ~ year",
+            "window": [
+              2013,
+              2026
+            ]
+          },
+          "row_counts": {
+            "cohort_means": 14,
+            "raw_rows": 286544
+          },
+          "data_quality_note": null,
+          "fit_warning": "Just one line drawn through 14 grouped averages, using only one useful clue (age). So it's okay, not great \u2014 and the age pattern mixes several causes together (see the age-group note)."
+        },
+        {
+          "technique": "monte_carlo",
+          "title": "About 10,029 attacks expected, and 70% of them land on the riskiest 10% of bugs",
+          "finding": "Each EPSS score IS the chance that bug gets attacked in 30 days, so adding up each bug's own chance across all 342,575 bugs gives the expected number of attacks. That total is 10,029 attacks, with a spread of 82 either way (so the answer should land in about 9,868-10,190 95% of the time, a range about 3.2% wide). To double-check, we rolled the dice 2,000 times (using a fixed starting point, seed 0) and got the same thing (average 10,026, spread 82). (This fixes an earlier guess of about 95 for the spread, down to 82.) The risk is piled up in very few bugs: the lopsidedness score (Gini) is 0.766, with the riskiest 1% of bugs holding 27% of the expected attacks, the top 5% 59%, and the top 10% 70% \u2014 while only 1.25% of bugs score >=0.5 and 0.22% score >=0.9. Fixing the riskiest ~10% of bugs removes ~70% of the expected attacks.",
+          "fit": "moderate",
+          "storage": [
+            "series/epss.monte_carlo.coverage.json"
+          ],
+          "spec": "specs/epss.monte_carlo.lorenz.vl.json",
+          "metrics": [
+            {
+              "label": "Expected attacks (all scores added)",
+              "value": "~10,029"
+            },
+            {
+              "label": "Likely range (95%)",
+              "value": "9,868-10,190"
+            },
+            {
+              "label": "Share held by riskiest 10%",
+              "value": "70%"
+            },
+            {
+              "label": "Lopsidedness (Gini)",
+              "value": "0.77"
+            }
+          ],
+          "params": {
+            "trials": 2000,
+            "seed": 0,
+            "horizon_days": 30,
+            "method": "Poisson-binomial"
+          },
+          "row_counts": {
+            "cves": 342575
+          },
+          "data_quality_note": null,
+          "fit_warning": "It assumes the EPSS scores are honest chances and that each bug's outcome doesn't affect the others \u2014 neither can be checked from this file. And the counts only cover the 30-day window EPSS is built around."
+        }
+      ]
+    },
+    {
+      "id": "cisa-kev",
+      "display_name": "CISA Known Exploited Vulnerabilities (KEV) Catalog",
+      "doc_category": "threat-intel",
+      "what_it_is": "A hand-picked list from CISA of software flaws (each flaw has an ID called a CVE) that are confirmed to be under real attack. One row = one flaw, with the vendor/product it is in, the date CISA added it, a 'fix it by' date, a flag for whether ransomware (nasty software that locks your files for ransom) used it, and tags for the kind of bug (1,627 rows, zero missing values).",
+      "source": {
+        "name": "CISA Known Exploited Vulnerabilities Catalog",
+        "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+        "license": "CC0 1.0 (U.S. Government public domain)"
+      },
+      "isolated_insight": "In this list, the official 'fix it by' date is set by a simple two-step rule based on how old a flaw is \u2014 not by how risky it is. New flaws get a tight 14- or 21-day deadline (21 days shows up 1,025x, 14 days 255x), while the ~181-day (about 6-month) deadlines went almost entirely to the old backlog CISA loaded in at the 2021-2022 start (247 of 257 long-deadline entries are from before 2021, none newer than 2021, and these long deadlines stop after 2022). Meanwhile the attacked flaws pile up under a few names \u2014 Microsoft 23%, top-5 vendors ~44% \u2014 across two leading bug types (injection/input-validation and memory-safety). So to judge real attack risk, look at this lopsidedness, not the 'fix it by' date.",
+      "solution_idea": "A 'KEV Exposure Mapper': take a list of the software a company runs, and re-rank the attacked flaws by how lopsided the list really is, instead of by the official 'fix it by' date. Since about 44% of the attacked-software surface comes from five vendors, it scores each system by its exposure to the top vendors and top bug types, and produces a 'patch these five vendors first' plan. It also flags any item whose long (~180-day) deadline is just a leftover from the old backlog, so an old flaw that is actively under attack does not get pushed down the list only because its official deadline looks relaxed. The point is to separate real attack risk from the official deadline buckets.",
+      "honesty_notes": "(1) The ransomware flag arrives late and depends on someone confirming the link, so the apparent drop from ~23% (2021-24) to ~10% (2025-26) is most likely just missing late confirmations, not a real decline. (2) The 181-day deadline is NOT a new BOD 26-04 order; it is a one-time leftover from filling the list in 2021-22 (247/257 from before 2021, newest is 2021) \u2014 this fixes both an earlier 'new order' guess and the claim that 'every 181-day entry is from before 2021' (10 are actually 2021 flaws). (3) The grouping is honestly a moderate fit: the columns are categories, not numbers, so the work is about how lopsided the counts are, not real cluster shapes. (4) This list is CISA's hand-picked set of decisions, not a fair sample of every attacked flaw \u2014 the vendor lopsidedness reflects both where attackers really focus and what CISA (a US federal agency) tends to see. (5) One flaw can have more than one bug-type tag, so the bug-type counts overlap and must not be added up to 100%; 171 entries have no bug-type tag. (6) We skipped a few methods because they would be forced here: a predict-from-the-columns formula (the deadline already follows a fixed rule, so there is nothing left to explain), squeezing the columns down to a few (they are categories, not numbers), rolling the dice to simulate a range of outcomes (there is no random process to model), and reading the text (the text fields are filled from templates).",
+      "analyses": [
+        {
+          "technique": "timeseries",
+          "title": "New entries come in bursts: a 2022 pile-up, a 2023-24 quiet spell, a 2025 climb",
+          "finding": "The list does not grow at a steady pace. New flaws get added in clumps. The number added each year was 311 (2021, only part of a year \u2014 the list started in November), 555 (2022), 187 (2023), 186 (2024), 245 (2025), and 143 (2026, only up to Jun 23). The 2022 group is about 3x the typical 2023-24 size of ~186/yr. That big year was CISA loading in a pile of old flaws at the start, not a sudden jump in real attacks. The busiest single month is 2021-11 (291 adds). After that pile-up, in the quiet 2023-24 stretch, the normal pace is about ~3.6/week. Any month well above that line is a batch of flaws added at once (like the monthly 'Patch Tuesday' groups), not steady drift. 2026 is only a partial year, so we leave it out when measuring the pace.",
+          "fit": "strong",
+          "storage": [
+            "series/cisa-kev.timeseries.monthly.json",
+            "tables/cisa-kev.timeseries.yearly.parquet"
+          ],
+          "spec": "specs/cisa-kev.timeseries.monthly.vl.json",
+          "metrics": [
+            {
+              "label": "Busiest year (2022)",
+              "value": "555 adds"
+            },
+            {
+              "label": "Typical 2023-24 year",
+              "value": "~186 / yr"
+            },
+            {
+              "label": "Normal pace",
+              "value": "~3.6 / week"
+            },
+            {
+              "label": "Time covered",
+              "value": "Nov 2021 - Jun 2026"
+            }
+          ],
+          "params": {
+            "resample": "MS (calendar month)",
+            "rolling_window_months": 3,
+            "steady_state_cohorts": [
+              2023,
+              2024
+            ]
+          },
+          "row_counts": {
+            "total": 1627,
+            "months": 56
+          },
+          "data_quality_note": "2021 and 2026 are partial years (the list started Nov 2021; the data stops 2026-06-23), so don't measure a yearly pace from them.",
+          "fit_warning": null
+        },
+        {
+          "technique": "cohort",
+          "title": "The fix-by deadline is a set rule based on a flaw's age, not a sign of danger",
+          "finding": "Splitting the flaws into groups by the year they were added shows the 'fix it by' date follows a fixed rule, not how dangerous a flaw is. The ~181-day (about 6-month) deadline shows up almost only in the first two groups \u2014 200 of 311 (2021) and 57 of 555 (2022) have deadlines of 180 days or more \u2014 and then nearly disappears (0 in 2023-2025, 0 in 2026). Of the 257 long-deadline entries, 247 (96%) are flaws from before 2021, and none is newer than 2021. In other words, CISA gave 6-month deadlines to the old backlog it loaded in at the start, then put every new flaw on the tight 14/21-day deadline. This FIXES an earlier claim that 'every 181-day entry is from before 2021': 10 are actually 2021 flaws (added in the 2021-22 load-in), so it is 247/257 from before 2021, not all of them \u2014 but the long deadline is still a one-time leftover from filling the list at launch, not a new rule (it came before the BOD 26-04 order). Separately, the share of flaws tied to ransomware holds steady at ~22-24% for 2021-2024, then falls to ~10-11% for 2025-2026; that drop is most likely because the data is a rough guide here \u2014 it takes months to confirm a flaw was used in ransomware, so recent years look lower. Flag it; don't read it as a real decline.",
+          "fit": "strong",
+          "storage": [
+            "series/cisa-kev.cohort.deadline_tiers.json",
+            "series/cisa-kev.cohort.ransomware_share.json",
+            "tables/cisa-kev.cohort.backlog_vintage.parquet"
+          ],
+          "spec": "specs/cisa-kev.cohort.regime.vl.json",
+          "metrics": [
+            {
+              "label": "21-day deadlines",
+              "value": "1,025 CVEs"
+            },
+            {
+              "label": "14-day deadlines",
+              "value": "255 CVEs"
+            },
+            {
+              "label": "180-day or longer (old pile)",
+              "value": "257 CVEs"
+            },
+            {
+              "label": "Old-pile flaws from before 2021",
+              "value": "247/257"
+            }
+          ],
+          "params": {
+            "cohort_key": "year(dateAdded)",
+            "deadline_tiers": {
+              "standard": "<=21d",
+              "backlog": ">=180d",
+              "other": "22-179d"
+            }
+          },
+          "row_counts": {
+            "total": 1627,
+            "backlog_tier": 257
+          },
+          "data_quality_note": "The ransomware flag arrives late and depends on someone confirming the link, so the 2025-26 drop is just missing late confirmations, not a real trend.",
+          "fit_warning": null
+        },
+        {
+          "technique": "cluster",
+          "title": "Risk is lopsided: 5 vendors make up ~44%, and two bug types lead",
+          "finding": "This looks at how lopsided the list is \u2014 a few names hogging most of it \u2014 rather than finding true clusters, so the honest fit is moderate. The columns are categories, not numbers. The list leans hard toward a few vendors (the companies that make the software): Microsoft alone is 377/1627 (23%) and the top-5 vendors (Microsoft, Apple 93, Cisco 92, Adobe 79, Google 72) are 713/1627 (44%), with a long tail of 269 vendors behind them. By bug type (one flaw can have more than one type tag, so these counts overlap and must not be added up to 100%): injection/input-validation (tricking software with bad input) touches 557 CVEs and memory-safety (mishandling computer memory) 392 \u2014 the two biggest types; auth/access-control (getting in or doing things you should not be allowed to) adds 208. 171 entries have no bug-type tag. Because ~44% of the attacked-software surface comes from just five vendors' update streams, this lopsidedness \u2014 not the 'fix it by' date \u2014 is where it pays most to focus.",
+          "fit": "moderate",
+          "storage": [
+            "tables/cisa-kev.cluster.vendor_counts.parquet",
+            "series/cisa-kev.cluster.cwe_families.json"
+          ],
+          "spec": "specs/cisa-kev.cluster.pareto.vl.json",
+          "metrics": [
+            {
+              "label": "Microsoft",
+              "value": "377 (23%)"
+            },
+            {
+              "label": "Top-5 vendors",
+              "value": "44%"
+            },
+            {
+              "label": "Different vendors",
+              "value": "269"
+            },
+            {
+              "label": "Injection bug type",
+              "value": "557 CVEs"
+            }
+          ],
+          "params": {
+            "top_k_vendors_charted": 15,
+            "cwe_family_basis": "rows-touched (multi-label)"
+          },
+          "row_counts": {
+            "total": 1627,
+            "with_cwe": 1456,
+            "distinct_vendors": 269
+          },
+          "data_quality_note": "One flaw can have more than one type tag, so the type counts overlap and don't add up to the list size; 171 entries have no type tag.",
+          "fit_warning": "The columns are categories, not numbers, so this shows how lopsided the counts are, not real cluster shapes."
+        }
+      ]
+    },
+    {
+      "id": "urlhaus",
+      "display_name": "abuse.ch URLhaus malicious-URL feed (recent CSV)",
+      "doc_category": "threat-intel",
+      "what_it_is": "Each row is one web link reported as harmful (when it was added, the link, whether it still works or is dead, short attack labels called tags, and who reported it) from abuse.ch's rolling list of about the last 30 days.",
+      "source": {
+        "name": "abuse.ch URLhaus \u2014 recent CSV feed",
+        "url": "https://urlhaus.abuse.ch/downloads/csv_recent/",
+        "license": "CC0 (abuse.ch URLhaus, free for any use)"
+      },
+      "isolated_insight": "In this frozen 30-day window the URLhaus recent feed is not one even stream of 'bad links' \u2014 it is mostly two very different hosting setups that split cleanly by their tags, by who reported them, and by how they are hosted. (1) Short-lived links from hacked smart devices and Linux machines (tags like elf/Mozi/Mirai, served from a bare number address over plain http) cover 12,780 rows, are ~93% already dead, and the ones that worked typically lasted around 13 hours. (2) A rent-a-loader malware service (SmartLoader / SmartLoader-MaaS / LuaJIT-loader, all on named sites with https) covers 5,066 rows and is ~99% still working \u2014 it all arrived in one single-day dump and stays alive even compared at the same age. The attack family, which you can read right away from the tags and the hosting style, predicts whether a link will still work far better than the feed-wide 72.6%-dead average. (One separate 1,833-row ClearFake fake-update attack shows that using a named site does NOT by itself mean long life: it uses named sites yet is 100% dead.)",
+      "solution_idea": "A tool that guesses how long a reported bad link will keep working, for people who use free public block-lists. As each new link comes in, sort it into its hosting-setup family from how it's hosted (bare number address vs named site, http vs https) plus its tags, and give it an expected-lifetime score from how long that family's links usually last. The output splits the raw feed into 'still working, longer-lived setups worth blocking and looking into now' (the SmartLoader loader sites) versus 'probably already dead, useful only as a historical record' (the short-lived smart-device link addresses) \u2014 so a defender pulling the feed doesn't treat a 13-hour Mozi address and a long-lasting loader site as equally urgent. Built entirely from this feed's own tag, hosting, and survival patterns; nothing added from outside.",
+      "honesty_notes": "(1) The 'recent' CSV is a rolling window of about the last 30 days that is constantly remade, so you can't reproduce it \u2014 downloading again gives different rows, and every number here is a one-time snapshot of the 2026-05-28 -> 06-27 pull. (2) Whether a link is dead or alive is a single snapshot mixed up with the link's age (older links are naturally more likely dead); so liveness claims come from the age-adjusted formula and the same-age group, not the raw table. (3) 'How long a link lived' uses last_online minus dateadded as a rough stand-in; last_online is present for only 11,286 of 16,259 dead links, and a quarter being ~0h means many links were never checked again. (4) The 'threat' column is the same value for everything (100% malware_download) in this window, so it tells us nothing here. (5) Reporter works as a stand-in for the attack group only because each reporter watches mostly one thing in this sample. (6) Fix to the earlier summary card: the card read the loader group as ~28% dead / ~72% working; that figure is actually the 'anonymous' REPORTER group, which mixes the ~99%-working SmartLoader loader trio with the 100%-dead ClearFake attack. The loader TAG-family itself is 99.4% working, and ClearFake is a separate named-site-but-dead attack rather than part of the long-lived loader group \u2014 so 'named site = long-lived' is too simple.",
+      "analyses": [
+        {
+          "technique": "cluster",
+          "title": "Two attack families hide in the tags: smart-device botnet vs rent-a-loader malware",
+          "finding": "We looked at which tags keep showing up together on the same links, then grouped the tags that travel together into families (this is the 'cluster' step). Over the 16 most common tags, two tight groups fall out instead of one big 'malware' blob, and the two biggest groups match families A and B exactly. Family A (links from hacked smart devices and Linux machines) is the elf/Mozi/32-bit/mips/ua-wget/mirai/arm group; these tags appear together 1,023-6,001 times (elf+32-bit 6,001; Mozi+elf 5,997) and overlap a lot (overlap score from 0 = never together to 1 = always together: 0.24-0.87). It covers 12,780 rows; 96.2% of them use a bare number address instead of a name (bare-IP) and 98.6% use plain http with no lock (no encryption). Family B (a rent-a-loader malware service) is the SmartLoader / SmartLoader-MaaS / LuaJIT-loader group; these tags appear together ~5,059-5,061 times and overlap almost completely (overlap score ~1.0), so it is basically one single attack. It covers 5,066 rows, with only 0.0% bare-IP and 0.0% plain-http (they all use named sites with the lock, https). The other 4,559 rows are a mix, including the 1,833-row ClearFake fake-update attack, which uses named sites yet acts nothing like family B (see the reporter and formula sections).",
+          "fit": "strong",
+          "storage": [
+            "tables/urlhaus.cluster.membership.parquet",
+            "series/urlhaus.cluster.jaccard.json"
+          ],
+          "spec": "specs/urlhaus.cluster.heatmap.vl.json",
+          "metrics": [
+            {
+              "label": "Smart-device family rows",
+              "value": "12,780"
+            },
+            {
+              "label": "Loader family rows",
+              "value": "5,066"
+            },
+            {
+              "label": "Loader tags' overlap",
+              "value": "Jaccard ~1.0"
+            },
+            {
+              "label": "Different tags seen",
+              "value": "639"
+            }
+          ],
+          "params": {
+            "top_tags": 16,
+            "method": "connected-components on Jaccard co-occurrence graph (edge >= 0.15)",
+            "jaccard_threshold": 0.15,
+            "derived_fam_A": [
+              "32-bit",
+              "Mozi",
+              "arm",
+              "elf",
+              "mips",
+              "mirai",
+              "ua-wget"
+            ],
+            "derived_fam_B": [
+              "LuaJIT-loader",
+              "SmartLoader",
+              "SmartLoader-MaaS"
+            ]
+          },
+          "row_counts": {
+            "rows": 22405,
+            "tags_kept": 16
+          },
+          "data_quality_note": "The families come from how tags pair up in this one snapshot, not from an official list. abuse.ch decides which tags exist, and that set can change over time.",
+          "fit_warning": null
+        },
+        {
+          "technique": "cohort",
+          "title": "Who reported a link predicts whether it still works, far better than the overall average",
+          "finding": "The top 3 reporters send in 69.1% of all rows (a few report most of the links, out of 65 reporters total). Each top reporter is an automatic scanner that watches mostly one kind of attack, so 'who reported it' is basically the attack group too. Across the whole feed, 72.6% of links are already dead (offline), but the reporter groups split far from that average: geenensp (n=6,015, smart-device Mozi/elf links) is 95.2% offline, abuse_ch 93.8%, GAYINT_DOT_ORG 92.2%, botnetkiller 91.6%, BlinkzSec 87.9% and SaturdayNight 85.8% \u2014 all smart-device/Linux scanners. The one odd one out is anonymous (n=6,955, mostly the SmartLoader loader trio), at only 27.6% offline. But that 27.6% is itself a mix, not one clean group: the SmartLoader loader links inside it are ~99% still working, while the 1,833 ClearFake links the same reporter sends are 100% dead. Which reporter a link comes through tells you if it still works; the overall average hides it.",
+          "fit": "strong",
+          "storage": [
+            "tables/urlhaus.cohort.reporters.parquet"
+          ],
+          "spec": "specs/urlhaus.cohort.reporters.vl.json",
+          "metrics": [
+            {
+              "label": "Share from top 3 reporters",
+              "value": "69.1%"
+            },
+            {
+              "label": "geenensp links dead",
+              "value": "95.2%"
+            },
+            {
+              "label": "anonymous links dead",
+              "value": "27.6%"
+            },
+            {
+              "label": "Different reporters",
+              "value": "65"
+            }
+          ],
+          "params": {
+            "cohort_key": "reporter",
+            "top_n": 8
+          },
+          "row_counts": {
+            "rows": 22405,
+            "reporters": 65
+          },
+          "data_quality_note": "Reporter works as a stand-in for the attack group only because each reporter watches mostly one thing in this sample; in another window that link could get weaker.",
+          "fit_warning": null
+        },
+        {
+          "technique": "timeseries",
+          "title": "New links arrive in sudden bursts, and the big spike is one single dump",
+          "finding": "Across the 31-day window, new links come in bursts, not at a steady pace: a typical day brings 584 URLs but 2026-06-22 brings 5,681 (about 9.7 times the typical day). That spike isn't normal growth \u2014 5,063 of its links are the SmartLoader loader trio sent by the 'anonymous' reporter. In other words, the whole family B attack shows up in one single-day dump instead of a steady trickle. Splitting by family shows it clearly: family A (smart devices) sends links almost every day across the window (which fits automatic trap-and-scan systems), while family B is one tall bar on a single day. The first day (669) and last day (77, only part of a day) are cut off at the edges of the rolling window, so don't read them as a trend.",
+          "fit": "moderate",
+          "storage": [
+            "series/urlhaus.timeseries.daily.json"
+          ],
+          "spec": "specs/urlhaus.timeseries.daily.vl.json",
+          "metrics": [
+            {
+              "label": "Days in window",
+              "value": "31"
+            },
+            {
+              "label": "Links on a typical day",
+              "value": "584"
+            },
+            {
+              "label": "Biggest day",
+              "value": "Jun 22 \u00b7 5,681"
+            },
+            {
+              "label": "Spike that is the loader dump",
+              "value": "5,063 / 5,681"
+            }
+          ],
+          "params": {
+            "bin": "day",
+            "split_by": "family"
+          },
+          "row_counts": {
+            "rows": 22405,
+            "days": 31
+          },
+          "data_quality_note": "This is a rolling window you can't recreate later, and the first and last days are only partly covered. So we don't claim links are going up or down over time \u2014 only that they come in bursts.",
+          "fit_warning": "The 'recent' feed is always being remade, so this is a frozen one-time copy, not a steady record over time."
+        },
+        {
+          "technique": "regression",
+          "title": "A predict-dead formula: family B links survive even after we account for age",
+          "finding": "We trained a simple formula that predicts whether a link is dead from its family, whether it uses a bare number address (is_ip), whether it uses plain http (is_http), and its age. Age was rescaled into 'steps away from normal' (a z-score) so it doesn't get confused with the snapshot timing. The formula backs up what the reporter table hinted at, and separates it from age. Age matters the way you'd expect (ageZ +0.90: older links are naturally more likely dead), but the attack family matters far more: family B (loader) scores -6.8 (a big negative number means much less likely to be dead) compared with family A. And this isn't just age: family B sits almost entirely in the 3-7-day age group (the 06-22 dump), and inside that same age group family A is 92.1% dead while family B is 0.5% dead \u2014 a fair same-age comparison, not a trick. Whether a link uses a bare number address or plain http barely matters once family is in the formula (scores ~0.12, and the uncertainty range crosses zero, so we can't be sure they matter) because the address style mostly travels with the family anyway. For how long links lived (last_online minus dateadded, available for 11,286 of 16,259 dead links): the middle value is 12.8h, 64% under 24h, and a quarter at ~0h.",
+          "fit": "moderate",
+          "storage": [
+            "tables/urlhaus.regression.survival.parquet"
+          ],
+          "spec": "specs/urlhaus.regression.survival.vl.json",
+          "metrics": [
+            {
+              "label": "Loader family score (vs A)",
+              "value": "-6.8"
+            },
+            {
+              "label": "Age effect (in steps)",
+              "value": "+0.90"
+            },
+            {
+              "label": "Same age 3-7d: A vs B dead",
+              "value": "92.1% vs 0.5%"
+            },
+            {
+              "label": "Typical lifespan of dead links",
+              "value": "12.8h"
+            }
+          ],
+          "params": {
+            "model": "logit",
+            "formula": "offline ~ C(family) + is_ip + is_http + ageZ",
+            "coefs": {
+              "Intercept": 2.469,
+              "C(family, Treatment(\"A\"))[T.B]": -6.772,
+              "C(family, Treatment(\"A\"))[T.other]": 0.332,
+              "is_ip": 0.123,
+              "is_http": 0.125,
+              "ageZ": 0.905
+            },
+            "pseudo_r2": 0.699
+          },
+          "row_counts": {
+            "rows": 22405,
+            "offline_with_lastonline": 11286
+          },
+          "data_quality_note": "Whether a link is dead or alive is just one snapshot, and it gets mixed up with the link's age (older links are naturally more likely dead). We handle that with the rescaled age term and the same-age 3-7d comparison. The 'how long it lived' value (last_online) is missing for 4,973 dead links, and a quarter being ~0h means many links were never checked again after being added.",
+          "fit_warning": "Family B sits in basically one age group (it all came in one day), so the formula can't fully tell apart 'family B' from 'added 2026-06-22'; the same-age comparison inside that group is the cleaner proof."
+        }
+      ]
+    },
+    {
+      "id": "nazario",
+      "display_name": "Nazario Phishing Email Corpus (2020 sample)",
+      "doc_category": "phishing-email",
+      "what_it_is": "158 real fake-bait emails (the kind that try to trick you into giving up passwords or money), saved in a standard mailbox file from the year 2020. Each row is one email, with its header info (who sent it, when, and the subject) and its body text with the web-page formatting taken out.",
+      "source": {
+        "name": "Jose Nazario phishing corpus (phishing-2020)",
+        "url": "https://monkey.org/~jose/phishing/",
+        "license": "Public research archive; non-anonymized \u2014 aggregate only, no PII re-exposure."
+      },
+      "isolated_insight": "In this inbox where every email is fake, the emails that show up are built from a small, repeated set of word and shape tricks \u2014 not from when they are sent. About 35% of subject lines use words meant to rush or scare you; the sender pretends to be a brand (16 carry file attachments, and 14 even fake the victim's own email address as the sender); and the email is almost always a web-page (HTML) body. The number sent each month only wobbles weakly with no pattern (average 13.1 per month, bumpiness CV 0.39). What gives a fake email away here is its words and its build, not its timing.",
+      "solution_idea": "A small, easy-to-read tool that looks at one email and adds a few plain tags taken straight from this set of emails: how many rush/scare words it uses; whether the name it shows does not match the real email address it was sent from (including faking your own address); its shape (just a web page, has a file, or built from several parts); and a trick-type label (password-check / file-delivery / held-up-message / full-mailbox / non-Latin). Because every email here is fake, the tool is not a guesser that says fake-or-real. It just labels the clues and explains WHY an email looks like a known trick.",
+      "honesty_notes": "Every email here is fake, so we cannot build anything that tells fake from real, and we cannot give an accuracy score, without a separate pile of normal emails to compare against \u2014 every finding just describes how fake emails are built. n=158 (one year) is small, so the group sizes and the June/October ups and downs are hints, not proven facts. The labels are a rough guide, not a perfect answer: this is one person's own inbox, sorted by hand, so it is a sample, not the whole picture. The rush-word list and the themes are English-only; non-Latin (Chinese, Japanese, Korean) emails are counted on the side. The web-page formatting is removed before the words are read. The 2020 file still has real names in it, so no raw sender, subject, or address is ever written out \u2014 every result is a total or a summary, never one person's details.",
+      "analyses": [
+        {
+          "technique": "text_sentiment",
+          "title": "Fake emails use a small set of scary words and copy a few famous brand names over and over",
+          "finding": "Out of all 158 fake-email subject lines, 55 (34.8%) use a word meant to rush you or scare you about your account. These come from a hand-picked list of 24 word-stems (a stem is the start of a word, so 'verif' catches both 'verify' and 'verification'). The most common are: pending 10, alert 8, locked 7, verif 7, confirm 5. The emails copy only a few famous names \u2014 generic 'bank' 10, Wells/Fargo 7/6, PayPal 4, Netflix 4, WeTransfer 3. Grouping the messages by which words show up together a lot gives four themes \u2014 account/password-check, held-up-message, full-mailbox/storage, and a 'your account is being shut off' push \u2014 and 9 messages are written in non-Latin letters (like Chinese, Japanese, or Korean) that an English word-list would miss. The clue here is the words used, not how many emails arrive.",
+          "fit": "strong",
+          "storage": [
+            "series/nazario.text_sentiment.terms.json"
+          ],
+          "spec": "specs/nazario.text_sentiment.bars.vl.json",
+          "metrics": [
+            {
+              "label": "Scary/rushing subject lines",
+              "value": "55/158 (34.8%)"
+            },
+            {
+              "label": "Different brands copied",
+              "value": "13"
+            },
+            {
+              "label": "Non-Latin-letter emails",
+              "value": "9"
+            },
+            {
+              "label": "Word-group themes",
+              "value": "4"
+            }
+          ],
+          "params": {
+            "urgency_lexicon_stems": 24,
+            "tfidf_min_df": 2,
+            "nmf_k": 4,
+            "random_state": 0
+          },
+          "row_counts": {
+            "messages": 158,
+            "urgent_subjects": 55
+          },
+          "data_quality_note": "The percentage depends on which words are on the list. This hand-picked list of 24 word-stems gives the number shown; adding more words (like plain 'account') would push it higher. The list is English-only, so non-Latin-letter emails are counted on the side instead of scored.",
+          "fit_warning": null
+        },
+        {
+          "technique": "cluster",
+          "title": "The fake emails fall into about 5 groups by their trick and their shape, including one clean file-attachment group",
+          "finding": "We sorted the emails into groups using the words in them plus three facts about their shape (does it have a file attached, is it just a web-page body, is it built from several parts). This makes five groups that each make sense: mailbox-quota (n=8); file-delivery (attachment) (n=16); brand/account (n=65); credential-verify (n=47); pending-message (n=22). The file-attachment group is the cleanest \u2014 16 messages, every single one with a file attached, exactly matching the 16 emails in the set that carry a file. The biggest group is 'brand/account' (n=65). A score for how cleanly the groups separate, tried for 3 up to 7 groups, is {3: 0.789, 4: 0.523, 5: 0.537, 6: 0.364, 7: 0.382}; 3 groups scores best (0.789) but just splits everything one way, so we show 5 groups because they are easier to make sense of. This only describes the shapes inside one pile of fake emails \u2014 it does not tell fake from real.",
+          "fit": "moderate",
+          "storage": [
+            "tables/nazario.cluster.summary.parquet",
+            "series/nazario.cluster.points.json"
+          ],
+          "spec": "specs/nazario.cluster.scatter.vl.json",
+          "metrics": [
+            {
+              "label": "Number of groups",
+              "value": "5"
+            },
+            {
+              "label": "Cleanest-separation score",
+              "value": "0.789 @ k=3"
+            },
+            {
+              "label": "File-attachment group",
+              "value": "16 msgs"
+            },
+            {
+              "label": "Biggest group",
+              "value": "brand/account (65)"
+            }
+          ],
+          "params": {
+            "kmeans_k": 5,
+            "k_swept": "3-7",
+            "tfidf_min_df": 3,
+            "svd_components": 10,
+            "random_state": 0
+          },
+          "row_counts": {
+            "messages": 158,
+            "clusters": 5,
+            "attachment_messages": 16
+          },
+          "data_quality_note": "158 emails is a small pile, so the group sizes are a hint, not a solid count you can trust.",
+          "fit_warning": "Every email here is fake, so the groups describe the differences among fake emails \u2014 they cannot tell a fake email from a real one."
+        },
+        {
+          "technique": "timeseries",
+          "title": "The count sent each month in 2020 has no pattern \u2014 when the emails arrive tells us nothing",
+          "finding": "Each email has a date stamp, but the usual date-reader gives up on 109/158 of them; reading them a different way gets all 158. That gives monthly counts for 2020 of [18, 17, 14, 10, 7, 22, 15, 18, 11, 4, 14, 7] (average 13.1 per month; how spread out the counts are is CV 0.39). The high month, June (22, +2.5\u03c3, meaning that many steps away from normal), and the low month, October (4, -2.5\u03c3) are only small wobbles, and the year never climbs or falls steadily and has no regular rhythm \u2014 so this is a real 'nothing here' result, and that is worth saying. One stray email from March 2021 is left out of this view. What sets these emails apart is what they say and how they are built, not when they show up.",
+          "fit": "moderate",
+          "storage": [
+            "series/nazario.timeseries.monthly.json"
+          ],
+          "spec": "specs/nazario.timeseries.line.vl.json",
+          "metrics": [
+            {
+              "label": "Months with data",
+              "value": "12/12"
+            },
+            {
+              "label": "Average per month",
+              "value": "13.1"
+            },
+            {
+              "label": "Bumpiness (spread)",
+              "value": "0.39"
+            },
+            {
+              "label": "Highest / lowest month",
+              "value": "22 Jun / 4 Oct"
+            }
+          ],
+          "params": {
+            "resample": "month",
+            "year": 2020,
+            "date_parser": "parsedate_to_datetime"
+          },
+          "row_counts": {
+            "dated_messages": 158,
+            "months": 12
+          },
+          "data_quality_note": "Just one year of emails, n=158: this only describes, it does not prove. You would need to join several years together before trusting any claim about timing.",
+          "fit_warning": "This is a 'nothing here' result \u2014 do not read a regular pattern into these small ups and downs."
+        }
+      ]
+    }
+  ]
+}

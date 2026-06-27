@@ -1,0 +1,27 @@
+[project]
+name = "cyberviz"
+version = "0.1.0"
+description = "Per-dataset cybersecurity analysis pipeline: each public dataset is analyzed in isolation and emitted to a versioned artifact bundle the dashboard reads."
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "pyarrow>=15",
+    "scikit-learn>=1.5",
+    "scipy>=1.13",
+    "statsmodels>=0.14",
+    "requests>=2.32",
+    "tqdm>=4.66",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cyberviz"]

@@ -1,0 +1,663 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The hijacked computers go quiet, then erupt all at once",
+    "subtitle": "Connections every 30 seconds, per computer. Two hijacked computers blow up after about 13 minutes; a safe computer stays flat the whole time."
+  },
+  "width": "container",
+  "height": 360,
+  "data": {
+    "values": [
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 0.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 0.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 1.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 1.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 2.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 2.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 3.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 3.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 4.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 4.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 5.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 5.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 6.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 6.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 7.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 7.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 8.0,
+        "flows": 5
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 8.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 9.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 9.5,
+        "flows": 2
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 10.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 10.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 11.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 11.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 12.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 12.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 13.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 13.5,
+        "flows": 362
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 14.0,
+        "flows": 14
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 14.5,
+        "flows": 125
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 15.0,
+        "flows": 3643
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 15.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.165",
+        "role": "infected",
+        "minute": 16.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 0.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 0.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 1.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 1.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 2.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 2.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 3.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 3.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 4.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 4.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 5.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 5.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 6.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 6.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 7.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 7.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 8.0,
+        "flows": 1
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 8.5,
+        "flows": 4
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 9.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 9.5,
+        "flows": 2
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 10.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 10.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 11.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 11.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 12.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 12.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 13.0,
+        "flows": 262
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 13.5,
+        "flows": 72
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 14.0,
+        "flows": 17
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 14.5,
+        "flows": 3069
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 15.0,
+        "flows": 579
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 15.5,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.191",
+        "role": "infected",
+        "minute": 16.0,
+        "flows": 0
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 0.0,
+        "flows": 475
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 0.5,
+        "flows": 480
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 1.0,
+        "flows": 474
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 1.5,
+        "flows": 440
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 2.0,
+        "flows": 418
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 2.5,
+        "flows": 440
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 3.0,
+        "flows": 488
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 3.5,
+        "flows": 476
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 4.0,
+        "flows": 463
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 4.5,
+        "flows": 464
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 5.0,
+        "flows": 486
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 5.5,
+        "flows": 463
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 6.0,
+        "flows": 439
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 6.5,
+        "flows": 398
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 7.0,
+        "flows": 441
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 7.5,
+        "flows": 462
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 8.0,
+        "flows": 440
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 8.5,
+        "flows": 460
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 9.0,
+        "flows": 441
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 9.5,
+        "flows": 436
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 10.0,
+        "flows": 456
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 10.5,
+        "flows": 456
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 11.0,
+        "flows": 435
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 11.5,
+        "flows": 524
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 12.0,
+        "flows": 464
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 12.5,
+        "flows": 464
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 13.0,
+        "flows": 460
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 13.5,
+        "flows": 428
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 14.0,
+        "flows": 370
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 14.5,
+        "flows": 454
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 15.0,
+        "flows": 448
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 15.5,
+        "flows": 497
+      },
+      {
+        "host": "147.32.84.138",
+        "role": "benign baseline",
+        "minute": 16.0,
+        "flows": 192
+      }
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": true,
+    "interpolate": "monotone"
+  },
+  "encoding": {
+    "x": {
+      "field": "minute",
+      "type": "quantitative",
+      "title": "Minutes into capture"
+    },
+    "y": {
+      "field": "flows",
+      "type": "quantitative",
+      "title": "Flows per 30s bin"
+    },
+    "color": {
+      "field": "host",
+      "type": "nominal",
+      "title": "Source host",
+      "scale": {
+        "domain": [
+          "147.32.84.165",
+          "147.32.84.191",
+          "147.32.84.138"
+        ],
+        "range": [
+          "#d2483f",
+          "#e0a341",
+          "#5b6b7a"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "host",
+        "type": "nominal",
+        "title": "Host"
+      },
+      {
+        "field": "role",
+        "type": "nominal",
+        "title": "Role"
+      },
+      {
+        "field": "minute",
+        "type": "quantitative",
+        "title": "Minute"
+      },
+      {
+        "field": "flows",
+        "type": "quantitative",
+        "title": "Flows"
+      }
+    ]
+  }
+}

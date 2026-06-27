@@ -1,0 +1,9050 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 440,
+  "data": {
+    "values": [
+      {
+        "pc1": 2.595,
+        "pc2": 2.171,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.372,
+        "pc2": -0.78,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.789,
+        "pc2": 0.017,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.539,
+        "pc2": 0.97,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.605,
+        "pc2": -0.421,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.848,
+        "pc2": -0.385,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.55,
+        "pc2": -1.367,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.714,
+        "pc2": -0.945,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -2.276,
+        "pc2": -0.261,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.796,
+        "pc2": -0.582,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 0.158,
+        "pc2": -0.133,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.159,
+        "pc2": -0.397,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -2.674,
+        "pc2": -0.405,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.297,
+        "pc2": -0.007,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.2,
+        "pc2": 2.048,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.201,
+        "pc2": -0.967,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.195,
+        "pc2": -0.838,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.788,
+        "pc2": -0.811,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.318,
+        "pc2": -0.813,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -0.893,
+        "pc2": -0.773,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.877,
+        "pc2": 0.699,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.428,
+        "pc2": -0.78,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.819,
+        "pc2": -1.317,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -2.325,
+        "pc2": -1.047,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.84,
+        "pc2": 1.403,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.158,
+        "pc2": -1.275,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -6.326,
+        "pc2": 1.115,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.504,
+        "pc2": -1.04,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 1.671,
+        "pc2": -0.586,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.511,
+        "pc2": -0.902,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -3.263,
+        "pc2": 0.108,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.055,
+        "pc2": -1.134,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -2.821,
+        "pc2": -0.396,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.512,
+        "pc2": -0.226,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.699,
+        "pc2": -0.892,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.874,
+        "pc2": -0.975,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.663,
+        "pc2": 0.564,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.625,
+        "pc2": 0.25,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.706,
+        "pc2": -0.83,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.612,
+        "pc2": -0.85,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.328,
+        "pc2": -1.247,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.728,
+        "pc2": 0.886,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.16,
+        "pc2": 1.99,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.938,
+        "pc2": 0.752,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 4.07,
+        "pc2": -1.384,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.839,
+        "pc2": -0.896,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 1.984,
+        "pc2": 0.786,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.649,
+        "pc2": -1.475,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.302,
+        "pc2": -1.124,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 1.902,
+        "pc2": -0.813,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 4.402,
+        "pc2": -0.191,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.828,
+        "pc2": 0.324,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.863,
+        "pc2": 0.219,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.479,
+        "pc2": 0.509,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -6.492,
+        "pc2": 1.358,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.236,
+        "pc2": -0.141,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.845,
+        "pc2": -1.291,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.263,
+        "pc2": -1.054,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.573,
+        "pc2": -1.004,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.256,
+        "pc2": -0.254,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.05,
+        "pc2": -1.216,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.421,
+        "pc2": 2.099,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.147,
+        "pc2": 0.426,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.816,
+        "pc2": -1.189,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.579,
+        "pc2": -0.127,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.047,
+        "pc2": -0.662,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.992,
+        "pc2": -0.73,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.829,
+        "pc2": 0.719,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.12,
+        "pc2": 0.245,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.543,
+        "pc2": -0.871,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.489,
+        "pc2": -0.774,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -5.672,
+        "pc2": 1.029,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.231,
+        "pc2": 0.466,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.109,
+        "pc2": 0.62,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.243,
+        "pc2": -0.974,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.647,
+        "pc2": 2.754,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.336,
+        "pc2": 2.108,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.096,
+        "pc2": -0.133,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.834,
+        "pc2": -1.06,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.687,
+        "pc2": -1.197,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.135,
+        "pc2": 0.423,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.95,
+        "pc2": 1.16,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.62,
+        "pc2": -0.911,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.171,
+        "pc2": -0.672,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": -0.824,
+        "pc2": -0.374,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.898,
+        "pc2": 0.183,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.048,
+        "pc2": 0.593,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.455,
+        "pc2": 0.708,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.244,
+        "pc2": -0.768,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.195,
+        "pc2": -0.749,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.446,
+        "pc2": 0.169,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.347,
+        "pc2": -0.236,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 0.179,
+        "pc2": -0.139,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.574,
+        "pc2": 0.794,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.328,
+        "pc2": -0.215,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.118,
+        "pc2": 0.038,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.554,
+        "pc2": 0.427,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.721,
+        "pc2": 1.264,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -2.172,
+        "pc2": -0.505,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.287,
+        "pc2": 0.142,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 5.2,
+        "pc2": 3.079,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.825,
+        "pc2": -0.433,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.217,
+        "pc2": 1.398,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.24,
+        "pc2": 2.904,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.194,
+        "pc2": -0.906,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.334,
+        "pc2": -0.205,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.386,
+        "pc2": -0.226,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.148,
+        "pc2": -0.673,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -2.536,
+        "pc2": -0.135,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.607,
+        "pc2": 0.454,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.801,
+        "pc2": -1.529,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.354,
+        "pc2": 0.533,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.362,
+        "pc2": 0.671,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.865,
+        "pc2": -0.785,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": -0.731,
+        "pc2": -0.835,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -3.594,
+        "pc2": 0.236,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.86,
+        "pc2": 0.694,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.341,
+        "pc2": 0.222,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.084,
+        "pc2": -1.109,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.56,
+        "pc2": -0.916,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 3.778,
+        "pc2": -1.473,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.078,
+        "pc2": 0.779,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.17,
+        "pc2": 0.067,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 4.402,
+        "pc2": -1.668,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.132,
+        "pc2": -0.604,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -6.193,
+        "pc2": 1.232,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.696,
+        "pc2": 7.268,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.999,
+        "pc2": -0.596,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.679,
+        "pc2": -1.437,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.859,
+        "pc2": -0.785,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -2.569,
+        "pc2": -0.346,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -5.058,
+        "pc2": 0.658,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.804,
+        "pc2": -1.231,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.763,
+        "pc2": 0.643,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.691,
+        "pc2": -1.536,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.175,
+        "pc2": -0.822,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.269,
+        "pc2": -0.628,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.688,
+        "pc2": -0.849,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.207,
+        "pc2": -0.314,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 1.88,
+        "pc2": 0.738,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.983,
+        "pc2": -0.583,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.025,
+        "pc2": -0.106,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.862,
+        "pc2": -1.245,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -6.949,
+        "pc2": 1.224,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.403,
+        "pc2": -0.012,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.212,
+        "pc2": 0.491,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.2,
+        "pc2": 0.013,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.005,
+        "pc2": -1.043,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.075,
+        "pc2": 0.4,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.534,
+        "pc2": -0.776,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.83,
+        "pc2": -0.598,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 0.256,
+        "pc2": -0.175,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.555,
+        "pc2": -1.315,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -5.372,
+        "pc2": 0.216,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.55,
+        "pc2": 0.691,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.967,
+        "pc2": -0.724,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.737,
+        "pc2": 0.821,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.427,
+        "pc2": -0.17,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 1.852,
+        "pc2": 0.114,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.635,
+        "pc2": 0.57,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.948,
+        "pc2": 0.728,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.339,
+        "pc2": -0.74,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 3.561,
+        "pc2": -1.163,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -3.891,
+        "pc2": 0.334,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.963,
+        "pc2": -1.042,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 1.778,
+        "pc2": -0.498,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.625,
+        "pc2": -1.218,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.473,
+        "pc2": -0.442,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.31,
+        "pc2": -0.7,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.683,
+        "pc2": -0.929,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 0.406,
+        "pc2": -0.248,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.876,
+        "pc2": -0.068,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.957,
+        "pc2": 0.701,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.872,
+        "pc2": -0.963,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.183,
+        "pc2": 0.085,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.79,
+        "pc2": -1.609,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.223,
+        "pc2": -0.663,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.762,
+        "pc2": -0.821,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.937,
+        "pc2": -0.759,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.976,
+        "pc2": 0.82,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -5.893,
+        "pc2": 1.058,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.497,
+        "pc2": -1.038,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.653,
+        "pc2": -1.485,
+        "severity": "malicious",
+        "attack": "Shellcode"
+      },
+      {
+        "pc1": 2.453,
+        "pc2": 0.84,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.328,
+        "pc2": -0.868,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.772,
+        "pc2": -0.897,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.621,
+        "pc2": -1.006,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.46,
+        "pc2": -0.883,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.975,
+        "pc2": -0.746,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 4.497,
+        "pc2": 13.659,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.614,
+        "pc2": -0.797,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.226,
+        "pc2": 0.077,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.597,
+        "pc2": 0.533,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.714,
+        "pc2": -0.816,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.716,
+        "pc2": -0.598,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.322,
+        "pc2": 0.357,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.061,
+        "pc2": -0.049,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.978,
+        "pc2": -0.425,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.798,
+        "pc2": 0.247,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.798,
+        "pc2": -0.363,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.859,
+        "pc2": 0.32,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.584,
+        "pc2": 0.698,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.047,
+        "pc2": 0.496,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.284,
+        "pc2": -0.918,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.665,
+        "pc2": -0.705,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.13,
+        "pc2": -1.983,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.158,
+        "pc2": 1.715,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.093,
+        "pc2": 0.471,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.353,
+        "pc2": -0.621,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 5.857,
+        "pc2": 16.38,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.088,
+        "pc2": -0.016,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.99,
+        "pc2": -0.451,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.55,
+        "pc2": 0.069,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.646,
+        "pc2": -0.656,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.332,
+        "pc2": 0.489,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.594,
+        "pc2": -0.567,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -1.356,
+        "pc2": -0.805,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.878,
+        "pc2": 2.454,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.627,
+        "pc2": 0.125,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.921,
+        "pc2": 0.297,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.469,
+        "pc2": 2.832,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.399,
+        "pc2": -0.697,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.389,
+        "pc2": -0.595,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.488,
+        "pc2": -0.748,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.943,
+        "pc2": -0.44,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.597,
+        "pc2": -1.885,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.567,
+        "pc2": -0.906,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -1.068,
+        "pc2": -0.908,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.791,
+        "pc2": 0.784,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.428,
+        "pc2": 0.956,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.87,
+        "pc2": 0.693,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.581,
+        "pc2": -0.513,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.979,
+        "pc2": -1.11,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -8.12,
+        "pc2": 1.94,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.951,
+        "pc2": -0.949,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.978,
+        "pc2": -1.036,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.828,
+        "pc2": -0.929,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.946,
+        "pc2": -0.978,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.776,
+        "pc2": 2.688,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.392,
+        "pc2": -0.384,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -6.123,
+        "pc2": 1.177,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.743,
+        "pc2": 0.586,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.116,
+        "pc2": 0.413,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.241,
+        "pc2": -0.971,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 1.52,
+        "pc2": 0.35,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.202,
+        "pc2": -1.247,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.758,
+        "pc2": -0.785,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.568,
+        "pc2": -1.078,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.506,
+        "pc2": 0.583,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.323,
+        "pc2": 0.504,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.183,
+        "pc2": 0.085,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.728,
+        "pc2": 0.384,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.72,
+        "pc2": -0.834,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.069,
+        "pc2": 0.383,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.894,
+        "pc2": 0.329,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.068,
+        "pc2": -1.251,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.938,
+        "pc2": -0.527,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.79,
+        "pc2": -1.097,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -6.373,
+        "pc2": 1.305,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.292,
+        "pc2": 0.068,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.143,
+        "pc2": -0.682,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.446,
+        "pc2": -0.902,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -1.03,
+        "pc2": -0.925,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.738,
+        "pc2": -0.767,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.694,
+        "pc2": 0.274,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.284,
+        "pc2": -0.831,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.341,
+        "pc2": 0.505,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 4.21,
+        "pc2": -1.742,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.889,
+        "pc2": -1.287,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -1.006,
+        "pc2": -0.932,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -8.622,
+        "pc2": 2.117,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 4.834,
+        "pc2": 9.319,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.332,
+        "pc2": 0.489,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.073,
+        "pc2": -1.084,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.723,
+        "pc2": 0.129,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.826,
+        "pc2": 0.793,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.058,
+        "pc2": -0.826,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.018,
+        "pc2": -0.554,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.172,
+        "pc2": -0.945,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.626,
+        "pc2": 1.034,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -5.048,
+        "pc2": 0.593,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.459,
+        "pc2": -1.333,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.835,
+        "pc2": -0.839,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -6.929,
+        "pc2": 1.342,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.145,
+        "pc2": -0.804,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 1.89,
+        "pc2": 0.148,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.207,
+        "pc2": 1.274,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.816,
+        "pc2": -0.798,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.419,
+        "pc2": 0.416,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 5.332,
+        "pc2": 8.169,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -5.687,
+        "pc2": 1.019,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.177,
+        "pc2": -0.147,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.351,
+        "pc2": 0.144,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -2.715,
+        "pc2": -0.152,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -6.697,
+        "pc2": 1.322,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.934,
+        "pc2": 1.871,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.318,
+        "pc2": -0.193,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.245,
+        "pc2": -0.181,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.574,
+        "pc2": -0.824,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -1.059,
+        "pc2": -0.726,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.676,
+        "pc2": 0.879,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.391,
+        "pc2": -0.103,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.053,
+        "pc2": 0.396,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.037,
+        "pc2": -0.178,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.106,
+        "pc2": 0.411,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.895,
+        "pc2": 1.655,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.845,
+        "pc2": -1.469,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -4.842,
+        "pc2": 0.034,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.112,
+        "pc2": 1.078,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.288,
+        "pc2": 0.185,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.477,
+        "pc2": -1.57,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -2.484,
+        "pc2": -0.176,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.023,
+        "pc2": 0.73,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.621,
+        "pc2": -0.752,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": -0.515,
+        "pc2": -0.911,
+        "severity": "malicious",
+        "attack": "Shellcode"
+      },
+      {
+        "pc1": 3.732,
+        "pc2": -1.169,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.445,
+        "pc2": 0.535,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.242,
+        "pc2": 0.309,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.054,
+        "pc2": -1.286,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 4.153,
+        "pc2": -1.267,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.46,
+        "pc2": 1.374,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.307,
+        "pc2": -0.824,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.983,
+        "pc2": -1.486,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.654,
+        "pc2": -1.431,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.959,
+        "pc2": -1.336,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.171,
+        "pc2": -0.672,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.345,
+        "pc2": -0.769,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.855,
+        "pc2": 1.848,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.936,
+        "pc2": -1.212,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.553,
+        "pc2": -1.005,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.178,
+        "pc2": -1.295,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.588,
+        "pc2": -0.963,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.706,
+        "pc2": 0.257,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.421,
+        "pc2": 0.365,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.029,
+        "pc2": 0.59,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.388,
+        "pc2": -0.833,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 0.302,
+        "pc2": -0.188,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.633,
+        "pc2": 0.568,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.718,
+        "pc2": -1.006,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.647,
+        "pc2": 0.191,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.514,
+        "pc2": -0.44,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.588,
+        "pc2": -0.531,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.811,
+        "pc2": 0.758,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.95,
+        "pc2": 0.722,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.474,
+        "pc2": 0.77,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -7.682,
+        "pc2": 2.498,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.378,
+        "pc2": -0.718,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.688,
+        "pc2": -0.849,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.819,
+        "pc2": 0.309,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.169,
+        "pc2": -0.815,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.069,
+        "pc2": 0.383,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.213,
+        "pc2": -0.721,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.972,
+        "pc2": -1.08,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.022,
+        "pc2": 0.165,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.035,
+        "pc2": 0.085,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.824,
+        "pc2": -1.447,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 3.06,
+        "pc2": -1.238,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.954,
+        "pc2": 0.365,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.201,
+        "pc2": -0.967,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.909,
+        "pc2": -0.869,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.36,
+        "pc2": 0.452,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.737,
+        "pc2": 1.394,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.535,
+        "pc2": -1.311,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.5,
+        "pc2": -0.798,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.04,
+        "pc2": -0.502,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.901,
+        "pc2": -0.808,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": 2.417,
+        "pc2": -0.945,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.859,
+        "pc2": -0.315,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -5.042,
+        "pc2": 0.76,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.39,
+        "pc2": -0.525,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.541,
+        "pc2": -0.895,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.043,
+        "pc2": -0.051,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -5.186,
+        "pc2": 0.811,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.082,
+        "pc2": -0.83,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": -1.235,
+        "pc2": -0.631,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.714,
+        "pc2": -1.034,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -3.788,
+        "pc2": 0.24,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.51,
+        "pc2": -0.871,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -3.784,
+        "pc2": 0.203,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.597,
+        "pc2": 1.162,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.575,
+        "pc2": 0.485,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.758,
+        "pc2": 0.29,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.9,
+        "pc2": -1.561,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.705,
+        "pc2": -0.857,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 1.36,
+        "pc2": 0.416,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.353,
+        "pc2": -0.657,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.457,
+        "pc2": -0.253,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.184,
+        "pc2": 0.48,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.106,
+        "pc2": -0.125,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.072,
+        "pc2": -0.116,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.581,
+        "pc2": 0.604,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.649,
+        "pc2": 2.536,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.343,
+        "pc2": 2.312,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.843,
+        "pc2": -0.821,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.005,
+        "pc2": -1.043,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.863,
+        "pc2": -2.122,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 1.72,
+        "pc2": 1.306,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.451,
+        "pc2": 0.412,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.779,
+        "pc2": -1.07,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.837,
+        "pc2": -1.116,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 1.132,
+        "pc2": -0.427,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.319,
+        "pc2": -1.531,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.595,
+        "pc2": 1.382,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.035,
+        "pc2": 0.386,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.825,
+        "pc2": -0.876,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.039,
+        "pc2": -0.717,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.471,
+        "pc2": 0.39,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.163,
+        "pc2": -0.787,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.594,
+        "pc2": 0.236,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.23,
+        "pc2": -0.808,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 0.198,
+        "pc2": -0.172,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.707,
+        "pc2": 0.245,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.711,
+        "pc2": -0.498,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -6.649,
+        "pc2": 1.239,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.422,
+        "pc2": 0.454,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.896,
+        "pc2": -0.951,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -2.357,
+        "pc2": -0.996,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.139,
+        "pc2": -1.478,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -2.011,
+        "pc2": 0.284,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -3.622,
+        "pc2": 0.248,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.6,
+        "pc2": -0.639,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.072,
+        "pc2": -0.414,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.105,
+        "pc2": -0.138,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.613,
+        "pc2": 0.233,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 4.032,
+        "pc2": -1.17,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.838,
+        "pc2": 1.987,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.679,
+        "pc2": 0.736,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.372,
+        "pc2": 1.169,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.055,
+        "pc2": 0.394,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.54,
+        "pc2": -0.273,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -5.012,
+        "pc2": 0.758,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.349,
+        "pc2": -0.901,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 0.223,
+        "pc2": -0.157,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.082,
+        "pc2": -0.057,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.14,
+        "pc2": -1.389,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.461,
+        "pc2": -0.929,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 0.005,
+        "pc2": -1.043,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.459,
+        "pc2": 0.708,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.901,
+        "pc2": -1.55,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.726,
+        "pc2": -0.915,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -1.252,
+        "pc2": -0.58,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.072,
+        "pc2": -0.48,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -5.388,
+        "pc2": 0.719,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.388,
+        "pc2": -0.717,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.816,
+        "pc2": 0.672,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.922,
+        "pc2": 0.75,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.876,
+        "pc2": 0.299,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.171,
+        "pc2": -0.785,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.938,
+        "pc2": -0.745,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.846,
+        "pc2": 0.686,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -2.87,
+        "pc2": -0.196,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.666,
+        "pc2": 0.262,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.84,
+        "pc2": 1.443,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.603,
+        "pc2": -1.099,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.582,
+        "pc2": -1.12,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.392,
+        "pc2": 0.713,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.721,
+        "pc2": -0.836,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.168,
+        "pc2": 0.351,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.596,
+        "pc2": -0.439,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.493,
+        "pc2": -1.194,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.528,
+        "pc2": -1.174,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.561,
+        "pc2": -1.062,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.049,
+        "pc2": 0.38,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.296,
+        "pc2": -0.631,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -0.2,
+        "pc2": -0.012,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.534,
+        "pc2": -1.674,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.963,
+        "pc2": 6.945,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.471,
+        "pc2": -0.556,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": 1.25,
+        "pc2": 0.645,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.901,
+        "pc2": -0.808,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.814,
+        "pc2": 0.686,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.444,
+        "pc2": 0.742,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 4.009,
+        "pc2": -0.088,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.524,
+        "pc2": -0.164,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.341,
+        "pc2": 0.505,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.638,
+        "pc2": -0.705,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.478,
+        "pc2": -1.367,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.112,
+        "pc2": 0.423,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.045,
+        "pc2": -1.571,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.945,
+        "pc2": -1.105,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 0.404,
+        "pc2": -0.228,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.969,
+        "pc2": 0.719,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.038,
+        "pc2": 0.389,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.395,
+        "pc2": -0.924,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.704,
+        "pc2": 0.197,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.392,
+        "pc2": -0.384,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.032,
+        "pc2": -0.841,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.538,
+        "pc2": -0.836,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 0.208,
+        "pc2": -0.15,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.759,
+        "pc2": -0.823,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": 2.545,
+        "pc2": 0.406,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.425,
+        "pc2": 0.161,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -2.103,
+        "pc2": -0.475,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.63,
+        "pc2": -0.697,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.518,
+        "pc2": 0.449,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.61,
+        "pc2": 1.323,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.183,
+        "pc2": -0.417,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.237,
+        "pc2": -0.686,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.72,
+        "pc2": -0.947,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 0.204,
+        "pc2": -0.149,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.182,
+        "pc2": 1.747,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.865,
+        "pc2": 0.21,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.53,
+        "pc2": -0.86,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.526,
+        "pc2": -1.073,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.953,
+        "pc2": -0.764,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.937,
+        "pc2": -0.739,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.281,
+        "pc2": -0.522,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.813,
+        "pc2": -1.014,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.692,
+        "pc2": -1.463,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.367,
+        "pc2": -0.891,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.201,
+        "pc2": -0.967,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.341,
+        "pc2": -0.358,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.705,
+        "pc2": -0.857,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 0.023,
+        "pc2": 0.433,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.337,
+        "pc2": -0.983,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -1.031,
+        "pc2": -0.722,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -6.81,
+        "pc2": 1.459,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.485,
+        "pc2": 0.556,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.621,
+        "pc2": 1.709,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -7.256,
+        "pc2": 1.614,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.515,
+        "pc2": -0.716,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.295,
+        "pc2": -0.202,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.244,
+        "pc2": 0.112,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.201,
+        "pc2": -0.967,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.688,
+        "pc2": 0.231,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.232,
+        "pc2": -1.213,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -6.589,
+        "pc2": 1.382,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.012,
+        "pc2": 2.437,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.106,
+        "pc2": 0.411,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.24,
+        "pc2": -0.409,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.234,
+        "pc2": 0.208,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.189,
+        "pc2": 0.019,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.974,
+        "pc2": 0.616,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.652,
+        "pc2": 1.392,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 5.129,
+        "pc2": 4.637,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.89,
+        "pc2": -0.827,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.346,
+        "pc2": 2.854,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.103,
+        "pc2": -0.475,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.739,
+        "pc2": -0.32,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": 4.097,
+        "pc2": -1.747,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -3.549,
+        "pc2": 0.192,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.799,
+        "pc2": -1.0,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -3.736,
+        "pc2": 0.281,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.009,
+        "pc2": -0.046,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.198,
+        "pc2": -0.011,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.297,
+        "pc2": -0.934,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.801,
+        "pc2": 0.405,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.582,
+        "pc2": -0.892,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.408,
+        "pc2": 1.997,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.627,
+        "pc2": -0.905,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.75,
+        "pc2": -0.809,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.357,
+        "pc2": -0.216,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.575,
+        "pc2": 0.366,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.119,
+        "pc2": -1.123,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.064,
+        "pc2": -1.146,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.855,
+        "pc2": 0.803,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.143,
+        "pc2": -0.683,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.347,
+        "pc2": -1.493,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.769,
+        "pc2": -1.035,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.147,
+        "pc2": -0.025,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.597,
+        "pc2": 0.168,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.742,
+        "pc2": -0.208,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.213,
+        "pc2": -1.087,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.201,
+        "pc2": -0.967,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.178,
+        "pc2": -0.695,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.898,
+        "pc2": -0.852,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.716,
+        "pc2": 0.613,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.3,
+        "pc2": -0.764,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.924,
+        "pc2": -1.681,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.422,
+        "pc2": -0.8,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 4.928,
+        "pc2": -1.937,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.357,
+        "pc2": -1.102,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.201,
+        "pc2": -0.967,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.017,
+        "pc2": -1.466,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.721,
+        "pc2": -0.836,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.228,
+        "pc2": -0.859,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.401,
+        "pc2": -0.691,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.843,
+        "pc2": -0.821,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.155,
+        "pc2": 6.36,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.162,
+        "pc2": -0.391,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.554,
+        "pc2": -0.808,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.628,
+        "pc2": -0.165,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.71,
+        "pc2": -0.943,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.064,
+        "pc2": 0.413,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.772,
+        "pc2": 0.117,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -6.942,
+        "pc2": 1.439,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -2.642,
+        "pc2": -0.29,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.45,
+        "pc2": 0.753,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.425,
+        "pc2": -0.364,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.868,
+        "pc2": 0.315,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.125,
+        "pc2": 0.384,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.531,
+        "pc2": 0.816,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.236,
+        "pc2": -0.849,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -1.385,
+        "pc2": -0.622,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.771,
+        "pc2": -0.066,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -6.61,
+        "pc2": 1.323,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.03,
+        "pc2": 0.44,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.872,
+        "pc2": 0.299,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.59,
+        "pc2": -1.163,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.177,
+        "pc2": -0.004,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.721,
+        "pc2": 0.411,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.978,
+        "pc2": 2.563,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.889,
+        "pc2": 0.35,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.397,
+        "pc2": 1.449,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.667,
+        "pc2": -0.671,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 1.96,
+        "pc2": 0.374,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.936,
+        "pc2": 0.338,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.477,
+        "pc2": 0.792,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.314,
+        "pc2": 0.034,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.556,
+        "pc2": -0.508,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": -4.184,
+        "pc2": 0.48,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.8,
+        "pc2": 0.312,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.624,
+        "pc2": -1.016,
+        "severity": "malicious",
+        "attack": "Worms"
+      },
+      {
+        "pc1": 2.014,
+        "pc2": 0.642,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.039,
+        "pc2": 0.35,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.047,
+        "pc2": 1.071,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.206,
+        "pc2": -0.7,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.29,
+        "pc2": -0.624,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": -7.609,
+        "pc2": 1.751,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.811,
+        "pc2": 0.021,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.569,
+        "pc2": 0.593,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.168,
+        "pc2": 0.838,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.28,
+        "pc2": 0.495,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.017,
+        "pc2": -0.743,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.319,
+        "pc2": 1.979,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.999,
+        "pc2": 0.732,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.901,
+        "pc2": -0.803,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 0.265,
+        "pc2": 1.123,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.534,
+        "pc2": -0.894,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.114,
+        "pc2": -0.035,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.07,
+        "pc2": -0.336,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.073,
+        "pc2": -1.055,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.864,
+        "pc2": -0.875,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.248,
+        "pc2": -0.18,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.245,
+        "pc2": -0.989,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.367,
+        "pc2": -0.601,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.811,
+        "pc2": -0.57,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.789,
+        "pc2": -1.112,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.456,
+        "pc2": -0.878,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 1.3,
+        "pc2": -0.78,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.991,
+        "pc2": 0.464,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.46,
+        "pc2": 1.737,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.918,
+        "pc2": -1.53,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -6.361,
+        "pc2": 1.225,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 4.529,
+        "pc2": 4.512,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.005,
+        "pc2": -1.163,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 1.958,
+        "pc2": -0.684,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.667,
+        "pc2": -0.699,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.631,
+        "pc2": -0.773,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.442,
+        "pc2": 13.626,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.588,
+        "pc2": -0.886,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.352,
+        "pc2": -1.15,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.933,
+        "pc2": -0.838,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 0.087,
+        "pc2": -0.124,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.054,
+        "pc2": -0.864,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.798,
+        "pc2": 0.247,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.7,
+        "pc2": -0.571,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": 1.898,
+        "pc2": 0.351,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.204,
+        "pc2": 0.482,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.63,
+        "pc2": -0.919,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.991,
+        "pc2": 2.327,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.098,
+        "pc2": -0.328,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": 2.809,
+        "pc2": -1.23,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.284,
+        "pc2": 0.268,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.879,
+        "pc2": -0.826,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.863,
+        "pc2": -0.954,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -0.698,
+        "pc2": -0.906,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.593,
+        "pc2": 1.398,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.126,
+        "pc2": -0.157,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.892,
+        "pc2": -0.953,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.999,
+        "pc2": -0.735,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -1.161,
+        "pc2": -0.673,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -1.983,
+        "pc2": -0.503,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.795,
+        "pc2": -0.399,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.779,
+        "pc2": 0.414,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.214,
+        "pc2": 0.036,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.494,
+        "pc2": 0.4,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.136,
+        "pc2": -0.038,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.826,
+        "pc2": -0.877,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": -0.744,
+        "pc2": -0.938,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -2.823,
+        "pc2": -0.047,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -2.664,
+        "pc2": -0.271,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.366,
+        "pc2": -0.59,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -0.56,
+        "pc2": -0.942,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -8.473,
+        "pc2": 1.399,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.037,
+        "pc2": -0.722,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": 3.381,
+        "pc2": -1.414,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -7.667,
+        "pc2": 1.118,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.156,
+        "pc2": 0.277,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.15,
+        "pc2": -0.754,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 1.628,
+        "pc2": 0.719,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.936,
+        "pc2": 0.338,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.669,
+        "pc2": 1.055,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.824,
+        "pc2": -0.374,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.714,
+        "pc2": -0.669,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -5.31,
+        "pc2": 0.692,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.308,
+        "pc2": 0.79,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.946,
+        "pc2": -0.803,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": 3.385,
+        "pc2": -0.584,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.208,
+        "pc2": -0.168,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.195,
+        "pc2": 0.519,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.355,
+        "pc2": -0.759,
+        "severity": "malicious",
+        "attack": "Shellcode"
+      },
+      {
+        "pc1": 2.523,
+        "pc2": -0.803,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 3.313,
+        "pc2": -1.583,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 3.494,
+        "pc2": -0.952,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.72,
+        "pc2": -0.834,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": -0.876,
+        "pc2": -0.905,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 1.886,
+        "pc2": 0.37,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.839,
+        "pc2": -0.807,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.994,
+        "pc2": -0.331,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.897,
+        "pc2": -0.788,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -0.88,
+        "pc2": -0.828,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -5.134,
+        "pc2": 0.625,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.546,
+        "pc2": -1.099,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -5.212,
+        "pc2": 0.833,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.59,
+        "pc2": 3.052,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.826,
+        "pc2": 0.293,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.796,
+        "pc2": -0.329,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.358,
+        "pc2": -0.797,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.055,
+        "pc2": -0.441,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.143,
+        "pc2": -0.683,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 1.497,
+        "pc2": 0.333,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.535,
+        "pc2": 0.509,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 5.285,
+        "pc2": 8.902,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.92,
+        "pc2": -0.558,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.948,
+        "pc2": -0.735,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.233,
+        "pc2": -0.18,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.534,
+        "pc2": -0.911,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -2.465,
+        "pc2": -0.382,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.243,
+        "pc2": 0.483,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.291,
+        "pc2": -0.881,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.627,
+        "pc2": 0.797,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.213,
+        "pc2": 1.234,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 6.089,
+        "pc2": -2.83,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.281,
+        "pc2": -0.411,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.678,
+        "pc2": -0.581,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.307,
+        "pc2": -0.887,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.183,
+        "pc2": -0.155,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.098,
+        "pc2": -0.236,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.132,
+        "pc2": -0.881,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 0.251,
+        "pc2": -0.182,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.649,
+        "pc2": -1.462,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -1.131,
+        "pc2": -0.655,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.783,
+        "pc2": -0.357,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.885,
+        "pc2": -0.96,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -1.5,
+        "pc2": -0.67,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -1.605,
+        "pc2": -0.692,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.408,
+        "pc2": -1.196,
+        "severity": "malicious",
+        "attack": "Shellcode"
+      },
+      {
+        "pc1": -0.976,
+        "pc2": -0.732,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": -0.998,
+        "pc2": -1.033,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -2.375,
+        "pc2": 0.189,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.999,
+        "pc2": -0.735,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": 1.844,
+        "pc2": 0.963,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.174,
+        "pc2": 0.786,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.651,
+        "pc2": -0.778,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.469,
+        "pc2": -0.566,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -3.166,
+        "pc2": -0.584,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.018,
+        "pc2": -0.14,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.72,
+        "pc2": -0.947,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 3.016,
+        "pc2": -1.257,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 0.294,
+        "pc2": -0.182,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.226,
+        "pc2": -0.151,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.006,
+        "pc2": -0.932,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": -0.66,
+        "pc2": -1.021,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -3.594,
+        "pc2": 0.236,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.324,
+        "pc2": -0.202,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.138,
+        "pc2": -1.211,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 4.052,
+        "pc2": -1.745,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.729,
+        "pc2": 2.132,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.672,
+        "pc2": 0.621,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.093,
+        "pc2": 0.098,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.126,
+        "pc2": -0.671,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.254,
+        "pc2": 0.669,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.143,
+        "pc2": -0.683,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -0.201,
+        "pc2": -0.967,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.471,
+        "pc2": 1.333,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.801,
+        "pc2": -1.023,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.388,
+        "pc2": -0.643,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.182,
+        "pc2": -0.15,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.556,
+        "pc2": -0.508,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 0.399,
+        "pc2": -0.241,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.123,
+        "pc2": -0.117,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.109,
+        "pc2": -1.527,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.707,
+        "pc2": -0.846,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 4.032,
+        "pc2": -0.695,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.673,
+        "pc2": -1.029,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.112,
+        "pc2": -0.614,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.437,
+        "pc2": -1.523,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.367,
+        "pc2": -0.597,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -5.346,
+        "pc2": 0.764,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.555,
+        "pc2": 0.116,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.381,
+        "pc2": -1.321,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.621,
+        "pc2": 0.607,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.635,
+        "pc2": 0.853,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.679,
+        "pc2": 2.451,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.282,
+        "pc2": -0.712,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": -0.804,
+        "pc2": -0.795,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.421,
+        "pc2": -0.566,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.39,
+        "pc2": 1.748,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -7.068,
+        "pc2": 1.497,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.314,
+        "pc2": -1.474,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -8.196,
+        "pc2": 1.926,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -6.183,
+        "pc2": 1.231,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.563,
+        "pc2": -1.143,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.156,
+        "pc2": -0.852,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.617,
+        "pc2": 2.598,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.011,
+        "pc2": -0.906,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.191,
+        "pc2": -1.097,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.489,
+        "pc2": -0.334,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.35,
+        "pc2": 0.339,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.609,
+        "pc2": -0.677,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 4.188,
+        "pc2": 6.009,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.343,
+        "pc2": 0.506,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.218,
+        "pc2": -0.358,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": 2.036,
+        "pc2": 0.787,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.242,
+        "pc2": 0.32,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.364,
+        "pc2": -1.12,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.387,
+        "pc2": 0.446,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.369,
+        "pc2": -1.28,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.435,
+        "pc2": -1.194,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.225,
+        "pc2": 0.46,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.103,
+        "pc2": -0.172,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.384,
+        "pc2": -0.727,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 4.97,
+        "pc2": 4.258,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.458,
+        "pc2": -0.603,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.768,
+        "pc2": 0.654,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.071,
+        "pc2": -0.709,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.849,
+        "pc2": -1.465,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": -1.855,
+        "pc2": -1.291,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.513,
+        "pc2": -0.907,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -4.839,
+        "pc2": 0.033,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.927,
+        "pc2": 0.194,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.6,
+        "pc2": 0.595,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.741,
+        "pc2": -0.809,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.143,
+        "pc2": -0.683,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.413,
+        "pc2": 0.53,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.565,
+        "pc2": 1.794,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -7.512,
+        "pc2": 1.547,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.618,
+        "pc2": -0.873,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.504,
+        "pc2": -1.934,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.261,
+        "pc2": 0.09,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.71,
+        "pc2": -0.503,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.934,
+        "pc2": -1.265,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -6.189,
+        "pc2": 1.184,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.627,
+        "pc2": -0.95,
+        "severity": "malicious",
+        "attack": "Shellcode"
+      },
+      {
+        "pc1": 2.404,
+        "pc2": 0.218,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.925,
+        "pc2": 0.544,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.28,
+        "pc2": -1.092,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.691,
+        "pc2": 0.618,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.433,
+        "pc2": -0.604,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.476,
+        "pc2": 0.541,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.031,
+        "pc2": -0.738,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.052,
+        "pc2": -0.608,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.918,
+        "pc2": -0.389,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.396,
+        "pc2": -0.572,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.211,
+        "pc2": 0.097,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.311,
+        "pc2": 1.185,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.906,
+        "pc2": -1.083,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.367,
+        "pc2": -0.846,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.488,
+        "pc2": 0.853,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -5.746,
+        "pc2": 0.355,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.71,
+        "pc2": 0.477,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.766,
+        "pc2": -0.532,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.966,
+        "pc2": -0.472,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.734,
+        "pc2": 0.645,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.773,
+        "pc2": -0.416,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.704,
+        "pc2": -0.463,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": -3.922,
+        "pc2": 0.29,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.405,
+        "pc2": 0.557,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.04,
+        "pc2": -0.808,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.031,
+        "pc2": -0.738,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": -3.871,
+        "pc2": 0.316,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.272,
+        "pc2": 0.166,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.964,
+        "pc2": -0.353,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.495,
+        "pc2": -1.091,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -2.23,
+        "pc2": -0.307,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.706,
+        "pc2": -0.817,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.872,
+        "pc2": -0.96,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -4.36,
+        "pc2": 0.501,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.404,
+        "pc2": -0.228,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.199,
+        "pc2": 1.147,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.386,
+        "pc2": -0.869,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.854,
+        "pc2": -1.164,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.806,
+        "pc2": -0.42,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.644,
+        "pc2": 0.673,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.922,
+        "pc2": -0.247,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.06,
+        "pc2": 1.12,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.107,
+        "pc2": 0.457,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -6.433,
+        "pc2": 1.32,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.305,
+        "pc2": 0.788,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.324,
+        "pc2": -0.195,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.184,
+        "pc2": -0.658,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.53,
+        "pc2": -0.745,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.311,
+        "pc2": -0.59,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 1.74,
+        "pc2": -0.722,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.464,
+        "pc2": 0.386,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.077,
+        "pc2": 0.172,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.756,
+        "pc2": -1.252,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.844,
+        "pc2": -0.972,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -4.689,
+        "pc2": 0.465,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.099,
+        "pc2": 0.098,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.214,
+        "pc2": -0.285,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.931,
+        "pc2": 0.69,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.557,
+        "pc2": -0.955,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.891,
+        "pc2": -0.801,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.884,
+        "pc2": -1.17,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.547,
+        "pc2": -1.629,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.349,
+        "pc2": -0.606,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.883,
+        "pc2": -1.059,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.157,
+        "pc2": -1.298,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.439,
+        "pc2": -0.618,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.862,
+        "pc2": -0.887,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.058,
+        "pc2": -0.697,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.591,
+        "pc2": 0.594,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.005,
+        "pc2": -1.043,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.591,
+        "pc2": 0.594,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.59,
+        "pc2": -1.148,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.628,
+        "pc2": -1.246,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.033,
+        "pc2": -0.639,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.456,
+        "pc2": -1.327,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.29,
+        "pc2": 1.584,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.055,
+        "pc2": 0.457,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.281,
+        "pc2": -1.061,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.954,
+        "pc2": -0.741,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.014,
+        "pc2": -0.812,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.901,
+        "pc2": -0.787,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.925,
+        "pc2": 0.544,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.167,
+        "pc2": -0.132,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.514,
+        "pc2": 1.929,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.159,
+        "pc2": -0.397,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.785,
+        "pc2": -1.281,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.683,
+        "pc2": -0.795,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 0.249,
+        "pc2": -0.186,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.646,
+        "pc2": 0.039,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.127,
+        "pc2": -0.686,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.376,
+        "pc2": -0.793,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.005,
+        "pc2": 0.021,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.135,
+        "pc2": 0.423,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.182,
+        "pc2": -0.918,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.96,
+        "pc2": -0.77,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 1.834,
+        "pc2": 0.571,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.082,
+        "pc2": 0.106,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.847,
+        "pc2": 0.32,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -8.907,
+        "pc2": 2.954,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.435,
+        "pc2": 1.541,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.687,
+        "pc2": 1.253,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.938,
+        "pc2": 0.651,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.492,
+        "pc2": 0.948,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.728,
+        "pc2": 0.645,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.949,
+        "pc2": -1.001,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.938,
+        "pc2": -0.842,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": 3.069,
+        "pc2": -1.33,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.027,
+        "pc2": -0.114,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.892,
+        "pc2": 1.486,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -2.919,
+        "pc2": 0.004,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.032,
+        "pc2": -0.802,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 1.759,
+        "pc2": 2.161,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.904,
+        "pc2": 0.31,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -2.315,
+        "pc2": -1.049,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.757,
+        "pc2": -1.327,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.9,
+        "pc2": 0.779,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.534,
+        "pc2": -0.911,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.818,
+        "pc2": -0.853,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 4.362,
+        "pc2": 1.802,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.581,
+        "pc2": 0.593,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.641,
+        "pc2": 0.256,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -6.899,
+        "pc2": 1.328,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.761,
+        "pc2": -0.328,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -3.832,
+        "pc2": -0.212,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.106,
+        "pc2": -1.156,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.35,
+        "pc2": -0.223,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.295,
+        "pc2": -0.662,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.161,
+        "pc2": -0.13,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.617,
+        "pc2": 0.831,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -5.011,
+        "pc2": 0.749,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.485,
+        "pc2": -0.606,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.762,
+        "pc2": -0.821,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.531,
+        "pc2": 0.853,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.874,
+        "pc2": -0.879,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.588,
+        "pc2": 0.508,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.516,
+        "pc2": -1.079,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.358,
+        "pc2": 1.548,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.65,
+        "pc2": -0.791,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.698,
+        "pc2": -0.998,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.694,
+        "pc2": -0.222,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.798,
+        "pc2": -0.914,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 1.953,
+        "pc2": 0.262,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.799,
+        "pc2": -0.845,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.623,
+        "pc2": 0.406,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.781,
+        "pc2": -0.827,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.392,
+        "pc2": -0.384,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.11,
+        "pc2": 0.324,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -3.089,
+        "pc2": -0.117,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -2.183,
+        "pc2": -0.502,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.403,
+        "pc2": -0.166,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.018,
+        "pc2": 0.29,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.196,
+        "pc2": -1.102,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.745,
+        "pc2": -1.451,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.473,
+        "pc2": -0.759,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -1.066,
+        "pc2": -0.164,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -3.8,
+        "pc2": 0.312,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.927,
+        "pc2": 0.194,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.313,
+        "pc2": 0.31,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.4,
+        "pc2": -0.912,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 0.22,
+        "pc2": -0.152,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.22,
+        "pc2": -0.682,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.59,
+        "pc2": -0.596,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -5.072,
+        "pc2": 0.701,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.301,
+        "pc2": -0.676,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.266,
+        "pc2": -0.878,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -5.953,
+        "pc2": 1.138,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.503,
+        "pc2": 0.392,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.024,
+        "pc2": 3.008,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 7.498,
+        "pc2": 17.043,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.745,
+        "pc2": -1.018,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.274,
+        "pc2": -0.832,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.887,
+        "pc2": -1.388,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.432,
+        "pc2": -0.714,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.846,
+        "pc2": 0.626,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.418,
+        "pc2": -0.781,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -1.595,
+        "pc2": -0.525,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.586,
+        "pc2": -0.51,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.903,
+        "pc2": -0.772,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.7,
+        "pc2": -0.367,
+        "severity": "malicious",
+        "attack": "Shellcode"
+      },
+      {
+        "pc1": -0.793,
+        "pc2": -0.81,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -3.762,
+        "pc2": 0.296,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.234,
+        "pc2": -0.024,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.558,
+        "pc2": -0.991,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -3.99,
+        "pc2": 0.278,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.128,
+        "pc2": -0.863,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.635,
+        "pc2": -0.861,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 0.209,
+        "pc2": -0.161,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.719,
+        "pc2": -0.751,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.495,
+        "pc2": 0.519,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.75,
+        "pc2": 0.491,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.102,
+        "pc2": 0.348,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.366,
+        "pc2": -0.398,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.027,
+        "pc2": -0.723,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.383,
+        "pc2": -0.845,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.676,
+        "pc2": 0.718,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.699,
+        "pc2": -0.4,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.491,
+        "pc2": -0.89,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.959,
+        "pc2": -0.763,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.688,
+        "pc2": -0.849,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.201,
+        "pc2": -0.967,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.476,
+        "pc2": -0.586,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.747,
+        "pc2": -0.02,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.115,
+        "pc2": -0.045,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.53,
+        "pc2": -0.079,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -6.804,
+        "pc2": 1.297,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.428,
+        "pc2": -1.273,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.635,
+        "pc2": -0.612,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.03,
+        "pc2": 0.395,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.965,
+        "pc2": -1.094,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.464,
+        "pc2": -0.545,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 0.275,
+        "pc2": -0.18,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.038,
+        "pc2": -0.844,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -5.251,
+        "pc2": 0.184,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.51,
+        "pc2": -0.546,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.683,
+        "pc2": -0.853,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.886,
+        "pc2": -1.176,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 3.931,
+        "pc2": -0.373,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.622,
+        "pc2": 3.071,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.691,
+        "pc2": 0.611,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 4.685,
+        "pc2": 0.048,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.875,
+        "pc2": -0.767,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.456,
+        "pc2": 0.132,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.125,
+        "pc2": -0.652,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.86,
+        "pc2": 0.665,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.599,
+        "pc2": 0.767,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.714,
+        "pc2": 0.559,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.797,
+        "pc2": 2.049,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.615,
+        "pc2": -1.244,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.579,
+        "pc2": -0.906,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.778,
+        "pc2": -1.223,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.066,
+        "pc2": -1.079,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -3.475,
+        "pc2": 0.014,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.356,
+        "pc2": -0.572,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.59,
+        "pc2": 2.533,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.188,
+        "pc2": -1.112,
+        "severity": "malicious",
+        "attack": "Shellcode"
+      },
+      {
+        "pc1": -4.823,
+        "pc2": 0.587,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -6.508,
+        "pc2": 1.358,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.273,
+        "pc2": -0.177,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.605,
+        "pc2": 1.383,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.873,
+        "pc2": -1.131,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.24,
+        "pc2": 0.096,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.251,
+        "pc2": 0.686,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.535,
+        "pc2": -0.31,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 1.471,
+        "pc2": 2.062,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.753,
+        "pc2": 12.375,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.796,
+        "pc2": -0.329,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.206,
+        "pc2": -0.7,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.954,
+        "pc2": -0.016,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.638,
+        "pc2": 0.922,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.702,
+        "pc2": -0.113,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.807,
+        "pc2": -0.973,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.916,
+        "pc2": 3.104,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.204,
+        "pc2": -0.656,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.11,
+        "pc2": 0.779,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.221,
+        "pc2": -1.259,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.979,
+        "pc2": -0.355,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.816,
+        "pc2": 0.672,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.263,
+        "pc2": 0.376,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.668,
+        "pc2": -1.238,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.756,
+        "pc2": -0.867,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.088,
+        "pc2": -0.049,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.865,
+        "pc2": -0.785,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.896,
+        "pc2": -1.294,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -2.071,
+        "pc2": -0.278,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.463,
+        "pc2": -0.822,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.008,
+        "pc2": 0.197,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.05,
+        "pc2": 0.363,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.232,
+        "pc2": 0.006,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.249,
+        "pc2": -1.086,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.183,
+        "pc2": 0.085,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.206,
+        "pc2": 0.448,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.668,
+        "pc2": 0.251,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.102,
+        "pc2": 3.001,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.825,
+        "pc2": 1.965,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.271,
+        "pc2": 0.417,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.003,
+        "pc2": 0.317,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.644,
+        "pc2": -0.557,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.003,
+        "pc2": -1.27,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.373,
+        "pc2": -0.599,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.131,
+        "pc2": -1.12,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.698,
+        "pc2": -0.906,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -4.482,
+        "pc2": 0.587,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.29,
+        "pc2": -0.184,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.283,
+        "pc2": -0.365,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.284,
+        "pc2": -0.595,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.185,
+        "pc2": -0.828,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.646,
+        "pc2": -0.933,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.909,
+        "pc2": -1.071,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -3.929,
+        "pc2": 0.196,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.447,
+        "pc2": -0.904,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.075,
+        "pc2": -0.056,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.99,
+        "pc2": -0.451,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 3.633,
+        "pc2": 0.578,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.066,
+        "pc2": -0.087,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.596,
+        "pc2": 0.104,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.738,
+        "pc2": -0.512,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.158,
+        "pc2": -1.104,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": -0.082,
+        "pc2": -0.081,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.728,
+        "pc2": -0.475,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -3.898,
+        "pc2": 0.183,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.992,
+        "pc2": 2.874,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.045,
+        "pc2": -0.089,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.79,
+        "pc2": 0.376,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.621,
+        "pc2": -0.752,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.544,
+        "pc2": -0.656,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 1.116,
+        "pc2": 0.611,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.868,
+        "pc2": 0.547,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.065,
+        "pc2": 0.399,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.551,
+        "pc2": 0.46,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -5.281,
+        "pc2": 0.861,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.149,
+        "pc2": -1.356,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.159,
+        "pc2": -0.397,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 0.167,
+        "pc2": -0.14,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.278,
+        "pc2": 1.138,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.847,
+        "pc2": 1.311,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.647,
+        "pc2": 1.202,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.072,
+        "pc2": -1.602,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -5.585,
+        "pc2": 0.845,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 5.82,
+        "pc2": 0.278,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.334,
+        "pc2": -1.711,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.486,
+        "pc2": -1.06,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.147,
+        "pc2": 0.426,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.405,
+        "pc2": -0.873,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.825,
+        "pc2": -0.732,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 1.673,
+        "pc2": 0.305,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.542,
+        "pc2": -0.897,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.716,
+        "pc2": -0.47,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": 2.617,
+        "pc2": -0.763,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -4.049,
+        "pc2": 0.38,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.06,
+        "pc2": -0.988,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.744,
+        "pc2": 0.647,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.439,
+        "pc2": 0.544,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.725,
+        "pc2": -0.971,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.63,
+        "pc2": 2.633,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.973,
+        "pc2": -0.806,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.87,
+        "pc2": -0.863,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 4.898,
+        "pc2": 13.745,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.418,
+        "pc2": -0.004,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.007,
+        "pc2": 1.608,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.695,
+        "pc2": -1.215,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -3.165,
+        "pc2": 0.085,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.302,
+        "pc2": 0.486,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.599,
+        "pc2": -0.517,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.67,
+        "pc2": -0.89,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.711,
+        "pc2": 0.669,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.516,
+        "pc2": -0.912,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.375,
+        "pc2": -1.018,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.824,
+        "pc2": -0.735,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.284,
+        "pc2": -0.831,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 3.02,
+        "pc2": -1.057,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.459,
+        "pc2": 1.138,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.688,
+        "pc2": -0.849,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.054,
+        "pc2": -0.705,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -1.193,
+        "pc2": -0.676,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.342,
+        "pc2": -0.722,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -2.771,
+        "pc2": -0.066,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.405,
+        "pc2": -0.575,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.482,
+        "pc2": 0.587,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.312,
+        "pc2": -0.819,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -5.388,
+        "pc2": 0.923,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.95,
+        "pc2": 0.879,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.75,
+        "pc2": -1.201,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.446,
+        "pc2": 0.724,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.788,
+        "pc2": -0.811,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.433,
+        "pc2": -1.356,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 4.238,
+        "pc2": 0.131,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -0.739,
+        "pc2": -0.857,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.356,
+        "pc2": -0.572,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.201,
+        "pc2": -0.967,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.292,
+        "pc2": -0.185,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.091,
+        "pc2": -0.688,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.069,
+        "pc2": -1.383,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.014,
+        "pc2": 0.203,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.385,
+        "pc2": 0.518,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.182,
+        "pc2": -0.656,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.767,
+        "pc2": -1.021,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -1.419,
+        "pc2": -1.217,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.86,
+        "pc2": 1.986,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.964,
+        "pc2": 1.512,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.766,
+        "pc2": -0.87,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.221,
+        "pc2": -0.625,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.235,
+        "pc2": -1.081,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.736,
+        "pc2": 0.371,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.489,
+        "pc2": 1.983,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.599,
+        "pc2": 6.956,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 1.405,
+        "pc2": 1.216,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -2.733,
+        "pc2": -0.282,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -0.201,
+        "pc2": -0.967,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.114,
+        "pc2": 1.0,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.378,
+        "pc2": -0.718,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -5.566,
+        "pc2": 1.004,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.263,
+        "pc2": 2.07,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.53,
+        "pc2": 0.934,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.148,
+        "pc2": 2.267,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.151,
+        "pc2": 0.41,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.27,
+        "pc2": -0.181,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.785,
+        "pc2": -1.481,
+        "severity": "malicious",
+        "attack": "Shellcode"
+      },
+      {
+        "pc1": 2.014,
+        "pc2": 0.754,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.214,
+        "pc2": 0.29,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.721,
+        "pc2": -0.836,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.891,
+        "pc2": 1.622,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.344,
+        "pc2": -1.078,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.281,
+        "pc2": -0.481,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.769,
+        "pc2": -0.136,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.229,
+        "pc2": -0.614,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.816,
+        "pc2": 0.672,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.899,
+        "pc2": -0.776,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.588,
+        "pc2": -0.531,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 1.496,
+        "pc2": 0.335,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.123,
+        "pc2": -1.216,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.326,
+        "pc2": -0.046,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.047,
+        "pc2": -0.865,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.097,
+        "pc2": -0.161,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.043,
+        "pc2": -1.214,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.814,
+        "pc2": 0.139,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.406,
+        "pc2": -0.813,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.77,
+        "pc2": -0.497,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.915,
+        "pc2": 2.377,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.029,
+        "pc2": -0.721,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.0,
+        "pc2": -0.776,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.612,
+        "pc2": 0.049,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.726,
+        "pc2": -0.915,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -5.702,
+        "pc2": 1.046,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 4.273,
+        "pc2": -1.583,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.433,
+        "pc2": -0.604,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.079,
+        "pc2": -0.318,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -7.44,
+        "pc2": 1.521,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.516,
+        "pc2": -0.912,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.961,
+        "pc2": -0.938,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.259,
+        "pc2": 0.4,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.527,
+        "pc2": -0.604,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.249,
+        "pc2": -0.637,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.152,
+        "pc2": -1.052,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.287,
+        "pc2": -0.617,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -2.089,
+        "pc2": -0.34,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.677,
+        "pc2": -1.126,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.094,
+        "pc2": 0.941,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.113,
+        "pc2": 2.748,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.73,
+        "pc2": -1.223,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 4.401,
+        "pc2": 0.581,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.425,
+        "pc2": -0.237,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.18,
+        "pc2": -0.392,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.4,
+        "pc2": 0.236,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.966,
+        "pc2": -0.817,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.719,
+        "pc2": -1.205,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 4.062,
+        "pc2": -0.801,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.6,
+        "pc2": 0.356,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.972,
+        "pc2": 0.694,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.503,
+        "pc2": 0.459,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.889,
+        "pc2": -0.615,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.019,
+        "pc2": -0.695,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.694,
+        "pc2": -0.759,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.977,
+        "pc2": 0.513,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.54,
+        "pc2": -1.058,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -4.953,
+        "pc2": 0.54,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.036,
+        "pc2": -1.022,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.975,
+        "pc2": -0.778,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -5.887,
+        "pc2": 1.097,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.684,
+        "pc2": -0.527,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.881,
+        "pc2": -1.069,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.516,
+        "pc2": 1.812,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.081,
+        "pc2": -0.708,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.006,
+        "pc2": -0.932,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -1.901,
+        "pc2": -0.458,
+        "severity": "malicious",
+        "attack": "Backdoor"
+      },
+      {
+        "pc1": 2.108,
+        "pc2": -0.506,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.87,
+        "pc2": -0.863,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.342,
+        "pc2": -0.993,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -3.423,
+        "pc2": 0.137,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.041,
+        "pc2": 0.745,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.537,
+        "pc2": -0.897,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -1.134,
+        "pc2": -0.653,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.332,
+        "pc2": -0.428,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -3.419,
+        "pc2": 0.174,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.852,
+        "pc2": -0.936,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 5.457,
+        "pc2": -0.229,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": 2.849,
+        "pc2": -1.093,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.415,
+        "pc2": 0.532,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -6.811,
+        "pc2": 1.301,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.002,
+        "pc2": -1.157,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -8.723,
+        "pc2": 2.187,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.619,
+        "pc2": -0.738,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.387,
+        "pc2": -0.954,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.816,
+        "pc2": 0.672,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.269,
+        "pc2": -0.571,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.388,
+        "pc2": -0.717,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.751,
+        "pc2": -1.11,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 2.678,
+        "pc2": -1.332,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.229,
+        "pc2": -0.165,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.803,
+        "pc2": -0.366,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.238,
+        "pc2": 0.385,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.573,
+        "pc2": 0.425,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.405,
+        "pc2": 0.521,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.755,
+        "pc2": 2.238,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.685,
+        "pc2": 0.259,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.897,
+        "pc2": -0.788,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.776,
+        "pc2": -0.292,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.981,
+        "pc2": -0.877,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.169,
+        "pc2": 0.442,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.382,
+        "pc2": -0.349,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.052,
+        "pc2": -0.14,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.895,
+        "pc2": 0.54,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.775,
+        "pc2": 0.66,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 4.144,
+        "pc2": 0.045,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.348,
+        "pc2": -0.235,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.023,
+        "pc2": 0.377,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.459,
+        "pc2": 0.931,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -4.505,
+        "pc2": 0.533,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.326,
+        "pc2": -0.195,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.196,
+        "pc2": -0.949,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.901,
+        "pc2": 2.294,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.264,
+        "pc2": -0.171,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.067,
+        "pc2": -0.367,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.269,
+        "pc2": 0.479,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.206,
+        "pc2": -0.858,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.925,
+        "pc2": 0.705,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.496,
+        "pc2": 0.215,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.716,
+        "pc2": 0.504,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.505,
+        "pc2": 0.568,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.285,
+        "pc2": 0.682,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -2.303,
+        "pc2": -1.404,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.07,
+        "pc2": -0.757,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.685,
+        "pc2": 0.088,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.059,
+        "pc2": -0.04,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.183,
+        "pc2": 1.231,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.634,
+        "pc2": -0.704,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -1.378,
+        "pc2": -0.718,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 0.805,
+        "pc2": 0.852,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.168,
+        "pc2": -1.172,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.787,
+        "pc2": -0.094,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.035,
+        "pc2": 1.097,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.447,
+        "pc2": -1.474,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -4.363,
+        "pc2": 0.509,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.768,
+        "pc2": -0.929,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 3.447,
+        "pc2": -1.717,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.19,
+        "pc2": 0.07,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.466,
+        "pc2": -1.441,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -6.899,
+        "pc2": 1.328,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.951,
+        "pc2": -0.92,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.005,
+        "pc2": -1.043,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -3.848,
+        "pc2": 0.284,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.985,
+        "pc2": -0.555,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.483,
+        "pc2": -0.883,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.541,
+        "pc2": -0.958,
+        "severity": "malicious",
+        "attack": "Shellcode"
+      },
+      {
+        "pc1": -2.184,
+        "pc2": -0.289,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.138,
+        "pc2": -1.121,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.781,
+        "pc2": -1.435,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.2,
+        "pc2": -1.126,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.081,
+        "pc2": -0.086,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.504,
+        "pc2": -1.179,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.534,
+        "pc2": -0.882,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.693,
+        "pc2": 0.105,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -4.35,
+        "pc2": 0.339,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.825,
+        "pc2": -0.813,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -0.201,
+        "pc2": -0.967,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -8.743,
+        "pc2": 2.095,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -1.242,
+        "pc2": -0.598,
+        "severity": "malicious",
+        "attack": "Shellcode"
+      },
+      {
+        "pc1": 2.701,
+        "pc2": -1.345,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -2.805,
+        "pc2": -0.872,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -1.104,
+        "pc2": -0.717,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.987,
+        "pc2": -1.114,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 0.24,
+        "pc2": -0.163,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.704,
+        "pc2": -1.29,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -0.793,
+        "pc2": -0.81,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 2.932,
+        "pc2": -0.804,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.692,
+        "pc2": -0.895,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": 3.602,
+        "pc2": -1.535,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.454,
+        "pc2": 1.413,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -7.27,
+        "pc2": 1.467,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.631,
+        "pc2": -0.918,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.967,
+        "pc2": -1.069,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.662,
+        "pc2": -0.426,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -2.019,
+        "pc2": -0.338,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.902,
+        "pc2": -0.091,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.713,
+        "pc2": -0.791,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 1.672,
+        "pc2": 0.093,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.053,
+        "pc2": 0.396,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.086,
+        "pc2": 0.721,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.42,
+        "pc2": -0.573,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.859,
+        "pc2": -0.785,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -0.893,
+        "pc2": -0.773,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -4.36,
+        "pc2": 0.35,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.341,
+        "pc2": -0.199,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.256,
+        "pc2": 1.165,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -2.87,
+        "pc2": -0.196,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.371,
+        "pc2": -0.719,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 0.106,
+        "pc2": -0.078,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.422,
+        "pc2": 0.079,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.35,
+        "pc2": -0.599,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.137,
+        "pc2": -1.089,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 1.462,
+        "pc2": 1.726,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.012,
+        "pc2": 0.389,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.894,
+        "pc2": -0.038,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.04,
+        "pc2": -0.15,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.287,
+        "pc2": 0.448,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.735,
+        "pc2": -1.167,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.992,
+        "pc2": -0.978,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": -6.373,
+        "pc2": 1.305,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.44,
+        "pc2": -0.916,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -3.086,
+        "pc2": 0.024,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.945,
+        "pc2": -1.203,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.34,
+        "pc2": -0.808,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 0.198,
+        "pc2": -0.143,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.374,
+        "pc2": 1.909,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -6.436,
+        "pc2": 1.315,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -2.723,
+        "pc2": -0.9,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 0.123,
+        "pc2": -0.117,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.227,
+        "pc2": -0.81,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.272,
+        "pc2": -1.377,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.929,
+        "pc2": -0.948,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -3.938,
+        "pc2": 0.367,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 1.142,
+        "pc2": 0.16,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.641,
+        "pc2": -1.554,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 1.565,
+        "pc2": -0.698,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -5.01,
+        "pc2": 0.342,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.101,
+        "pc2": -1.427,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.676,
+        "pc2": 0.717,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.1,
+        "pc2": -0.031,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.214,
+        "pc2": -0.489,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": 2.529,
+        "pc2": 1.417,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.213,
+        "pc2": -1.132,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.327,
+        "pc2": -1.198,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.282,
+        "pc2": -0.712,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": -4.33,
+        "pc2": 0.342,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.266,
+        "pc2": 0.827,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.31,
+        "pc2": 0.456,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -4.317,
+        "pc2": 0.386,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 0.056,
+        "pc2": -0.089,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.74,
+        "pc2": -0.026,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 3.363,
+        "pc2": -0.406,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": 2.789,
+        "pc2": 2.668,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -1.055,
+        "pc2": -0.889,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": 3.048,
+        "pc2": 0.744,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.241,
+        "pc2": 0.008,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 2.666,
+        "pc2": -0.808,
+        "severity": "malicious",
+        "attack": "Reconnaissance"
+      },
+      {
+        "pc1": -1.738,
+        "pc2": -0.461,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 2.383,
+        "pc2": 2.21,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 3.849,
+        "pc2": -1.671,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": -0.918,
+        "pc2": -0.815,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -0.944,
+        "pc2": -0.74,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -3.561,
+        "pc2": 0.21,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.681,
+        "pc2": -0.865,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -0.86,
+        "pc2": -0.865,
+        "severity": "malicious",
+        "attack": "Analysis"
+      },
+      {
+        "pc1": 2.703,
+        "pc2": -0.83,
+        "severity": "malicious",
+        "attack": "Shellcode"
+      },
+      {
+        "pc1": -4.065,
+        "pc2": 0.399,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -5.657,
+        "pc2": 1.008,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 2.516,
+        "pc2": 0.725,
+        "severity": "benign",
+        "attack": "Normal"
+      },
+      {
+        "pc1": 4.225,
+        "pc2": -1.018,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.843,
+        "pc2": -0.84,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": 3.326,
+        "pc2": -1.203,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -3.281,
+        "pc2": -0.044,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": -0.851,
+        "pc2": -0.932,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      },
+      {
+        "pc1": -1.029,
+        "pc2": -0.721,
+        "severity": "malicious",
+        "attack": "DoS"
+      },
+      {
+        "pc1": -5.026,
+        "pc2": 0.709,
+        "severity": "malicious",
+        "attack": "Generic"
+      },
+      {
+        "pc1": 3.714,
+        "pc2": -1.637,
+        "severity": "malicious",
+        "attack": "Exploits"
+      },
+      {
+        "pc1": -0.822,
+        "pc2": -0.823,
+        "severity": "malicious",
+        "attack": "Fuzzers"
+      }
+    ]
+  },
+  "mark": {
+    "type": "circle",
+    "size": 34,
+    "opacity": 0.5
+  },
+  "encoding": {
+    "x": {
+      "field": "pc1",
+      "type": "quantitative",
+      "title": "PC1"
+    },
+    "y": {
+      "field": "pc2",
+      "type": "quantitative",
+      "title": "PC2"
+    },
+    "color": {
+      "field": "severity",
+      "type": "nominal",
+      "title": "label",
+      "scale": {
+        "domain": [
+          "benign",
+          "malicious"
+        ],
+        "range": [
+          "#5b6b7a",
+          "#d2483f"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "attack",
+        "title": "attack_cat"
+      },
+      {
+        "field": "severity"
+      }
+    ]
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "KEV deadlines and ransomware share, grouped by the year added",
+    "subtitle": "Top: which deadline each group got (as a percentage) \u2014 the ~181-day deadline is a leftover from the 2021-22 load-in. Bottom: ransomware share (2025-26 is a rough guide, since confirmations come in late)."
+  },
+  "vconcat": [
+    {
+      "width": "container",
+      "height": 240,
+      "data": {
+        "values": [
+          {
+            "addYear": 2021,
+            "tier": "backlog (>=180d)",
+            "count": 200
+          },
+          {
+            "addYear": 2021,
+            "tier": "standard (<=21d)",
+            "count": 111
+          },
+          {
+            "addYear": 2022,
+            "tier": "backlog (>=180d)",
+            "count": 57
+          },
+          {
+            "addYear": 2022,
+            "tier": "other",
+            "count": 6
+          },
+          {
+            "addYear": 2022,
+            "tier": "standard (<=21d)",
+            "count": 492
+          },
+          {
+            "addYear": 2023,
+            "tier": "other",
+            "count": 1
+          },
+          {
+            "addYear": 2023,
+            "tier": "standard (<=21d)",
+            "count": 186
+          },
+          {
+            "addYear": 2024,
+            "tier": "standard (<=21d)",
+            "count": 186
+          },
+          {
+            "addYear": 2025,
+            "tier": "standard (<=21d)",
+            "count": 245
+          },
+          {
+            "addYear": 2026,
+            "tier": "standard (<=21d)",
+            "count": 143
+          }
+        ]
+      },
+      "mark": {
+        "type": "bar"
+      },
+      "encoding": {
+        "x": {
+          "field": "addYear",
+          "type": "ordinal",
+          "title": "Cohort = year added"
+        },
+        "y": {
+          "field": "count",
+          "type": "quantitative",
+          "stack": "normalize",
+          "title": "Share of cohort",
+          "axis": {
+            "format": "%"
+          }
+        },
+        "color": {
+          "field": "tier",
+          "type": "nominal",
+          "title": "Deadline tier",
+          "scale": {
+            "domain": [
+              "standard (<=21d)",
+              "backlog (>=180d)",
+              "other"
+            ],
+            "range": [
+              "#3b82f6",
+              "#e0a341",
+              "#8a94a6"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "addYear",
+            "type": "ordinal",
+            "title": "Cohort"
+          },
+          {
+            "field": "tier",
+            "type": "nominal",
+            "title": "Tier"
+          },
+          {
+            "field": "count",
+            "type": "quantitative",
+            "title": "CVEs"
+          }
+        ]
+      }
+    },
+    {
+      "width": "container",
+      "height": 180,
+      "data": {
+        "values": [
+          {
+            "addYear": 2021,
+            "share": 0.244,
+            "n": 311,
+            "censored": false
+          },
+          {
+            "addYear": 2022,
+            "share": 0.225,
+            "n": 555,
+            "censored": false
+          },
+          {
+            "addYear": 2023,
+            "share": 0.23,
+            "n": 187,
+            "censored": false
+          },
+          {
+            "addYear": 2024,
+            "share": 0.226,
+            "n": 186,
+            "censored": false
+          },
+          {
+            "addYear": 2025,
+            "share": 0.102,
+            "n": 245,
+            "censored": true
+          },
+          {
+            "addYear": 2026,
+            "share": 0.112,
+            "n": 143,
+            "censored": true
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "line",
+            "color": "#d2483f",
+            "strokeWidth": 2
+          },
+          "encoding": {
+            "x": {
+              "field": "addYear",
+              "type": "ordinal",
+              "title": "Cohort = year added"
+            },
+            "y": {
+              "field": "share",
+              "type": "quantitative",
+              "title": "Known-ransomware share",
+              "axis": {
+                "format": "%"
+              }
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "filled": true,
+            "size": 70
+          },
+          "encoding": {
+            "x": {
+              "field": "addYear",
+              "type": "ordinal"
+            },
+            "y": {
+              "field": "share",
+              "type": "quantitative"
+            },
+            "color": {
+              "field": "censored",
+              "type": "nominal",
+              "title": "Right-censored?",
+              "scale": {
+                "domain": [
+                  false,
+                  true
+                ],
+                "range": [
+                  "#d2483f",
+                  "#8a94a6"
+                ]
+              }
+            },
+            "tooltip": [
+              {
+                "field": "addYear",
+                "type": "ordinal",
+                "title": "Cohort"
+              },
+              {
+                "field": "share",
+                "type": "quantitative",
+                "format": ".1%",
+                "title": "Ransom share"
+              },
+              {
+                "field": "n",
+                "type": "quantitative",
+                "title": "Cohort size"
+              },
+              {
+                "field": "censored",
+                "type": "nominal",
+                "title": "Censored"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
